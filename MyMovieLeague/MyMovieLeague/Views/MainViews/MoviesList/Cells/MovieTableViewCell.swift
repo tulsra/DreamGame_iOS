@@ -12,6 +12,7 @@ class MovieTableViewCell: UITableViewCell {
 
       @IBOutlet weak var collView: UICollectionView!
     var moviesList:[String]?
+    var titlesList:[String]?
     var isCurrent = true
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -61,6 +62,9 @@ extension MovieTableViewCell:UICollectionViewDataSource,UICollectionViewDelegate
         if let images = self.moviesList {
             cell.imgView.image = UIImage(named: images[indexPath.row])
         }
+        if let title = self.titlesList {
+            cell.lblTitle.text = title[indexPath.row]
+        }
         
          return cell
       }
@@ -70,10 +74,10 @@ extension MovieTableViewCell:UICollectionViewDataSource,UICollectionViewDelegate
                           layout collectionViewLayout: UICollectionViewLayout,
                           sizeForItemAt indexPath: IndexPath) -> CGSize {
         if isCurrent {
-        return CGSize(width: ((UIScreen.main.bounds.size.width - 60)/2.0), height: (((UIScreen.main.bounds.size.width - 60)/2.0) * (3.0/2.0)) + 44)
+        return CGSize(width: ((UIScreen.main.bounds.size.width - 60)/2.0), height: (((UIScreen.main.bounds.size.width - 60)/2.0) * (4.0/3.0)) + 44)
         }
         
-         return CGSize(width: ((UIScreen.main.bounds.size.width - 60)/2.0), height: ((UIScreen.main.bounds.size.width - 60)/2.0) * (3.0/2.0))
+         return CGSize(width: ((UIScreen.main.bounds.size.width - 60)/2.0), height: ((UIScreen.main.bounds.size.width - 60)/2.0) * (4.0/3.0))
         
       }
 

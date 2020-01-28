@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+let themeColor = UIColor(red: 254.0/255.0, green: 0, blue: 66.0/255.0, alpha: 1.0)
 class AppController {
     static let shared = AppController()
     private init(){}

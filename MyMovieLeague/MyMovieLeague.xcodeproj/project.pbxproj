@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -71,6 +71,14 @@
 		006ADD7A23D1E99300A929BA /* VerifyMobileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006ADD7823D1E99300A929BA /* VerifyMobileViewController.xib */; };
 		006ADD7F23D1EA2600A929BA /* MoviesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006ADD7D23D1EA2600A929BA /* MoviesListViewController.swift */; };
 		006ADD8023D1EA2600A929BA /* MoviesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006ADD7E23D1EA2600A929BA /* MoviesListViewController.xib */; };
+		8CE50A2A23E0CFF800FC443C /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE50A2823E0CFF800FC443C /* HelpViewController.swift */; };
+		8CE50A2B23E0CFF800FC443C /* HelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CE50A2923E0CFF800FC443C /* HelpViewController.xib */; };
+		8CE50A3123E0EB4800FC443C /* CommentInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CE50A2F23E0EB4800FC443C /* CommentInputView.xib */; };
+		8CE50A3223E0EB4800FC443C /* CommentInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE50A3023E0EB4800FC443C /* CommentInputView.swift */; };
+		8CE50A3523E0EB6C00FC443C /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE50A3323E0EB6C00FC443C /* InputView.swift */; };
+		8CE50A3623E0EB6C00FC443C /* InputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CE50A3423E0EB6C00FC443C /* InputView.xib */; };
+		8CE50A3B23E0F64600FC443C /* AcknowledgeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CE50A3923E0F64500FC443C /* AcknowledgeViewController.xib */; };
+		8CE50A3C23E0F64600FC443C /* AcknowledgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE50A3A23E0F64500FC443C /* AcknowledgeViewController.swift */; };
 		91EED82D73A97576A4EA1928 /* Pods_MyMovieLeague.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB73502DFDD3598AF8661466 /* Pods_MyMovieLeague.framework */; };
 /* End PBXBuildFile section */
 
@@ -143,6 +151,14 @@
 		006ADD7E23D1EA2600A929BA /* MoviesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesListViewController.xib; sourceTree = "<group>"; };
 		47762608A05FB9F61C80A2D7 /* Pods-MyMovieLeague.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMovieLeague.release.xcconfig"; path = "Target Support Files/Pods-MyMovieLeague/Pods-MyMovieLeague.release.xcconfig"; sourceTree = "<group>"; };
 		5C2BAD483152CB7752BE81A0 /* Pods-MyMovieLeague.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMovieLeague.debug.xcconfig"; path = "Target Support Files/Pods-MyMovieLeague/Pods-MyMovieLeague.debug.xcconfig"; sourceTree = "<group>"; };
+		8CE50A2823E0CFF800FC443C /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		8CE50A2923E0CFF800FC443C /* HelpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelpViewController.xib; sourceTree = "<group>"; };
+		8CE50A2F23E0EB4800FC443C /* CommentInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentInputView.xib; sourceTree = "<group>"; };
+		8CE50A3023E0EB4800FC443C /* CommentInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentInputView.swift; sourceTree = "<group>"; };
+		8CE50A3323E0EB6C00FC443C /* InputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		8CE50A3423E0EB6C00FC443C /* InputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputView.xib; sourceTree = "<group>"; };
+		8CE50A3923E0F64500FC443C /* AcknowledgeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AcknowledgeViewController.xib; sourceTree = "<group>"; };
+		8CE50A3A23E0F64500FC443C /* AcknowledgeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowledgeViewController.swift; sourceTree = "<group>"; };
 		FB73502DFDD3598AF8661466 /* Pods_MyMovieLeague.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMovieLeague.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -278,6 +294,7 @@
 		006ADD4C23D1DF3900A929BA /* MyMovieLeague */ = {
 			isa = PBXGroup;
 			children = (
+				8CE50A2E23E0EB3600FC443C /* CommonViews */,
 				0029D15F23D8CB570087396A /* Resources */,
 				006ADD6423D1E0D500A929BA /* Views */,
 				006ADD6123D1E01A00A929BA /* Application */,
@@ -301,11 +318,10 @@
 		006ADD6423D1E0D500A929BA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8CE50A3723E0F62D00FC443C /* CommonViews */,
+				8CE50A2423E0CFB800FC443C /* PreLogin */,
 				006ADD7B23D1EA0100A929BA /* MainViews */,
-				006ADD7623D1E98000A929BA /* VerifyMobile */,
-				006ADD7123D1E77E00A929BA /* ComeAndPlay */,
 				006ADD6A23D1E10800A929BA /* Splash */,
-				006ADD6523D1E0DB00A929BA /* Login */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -374,8 +390,55 @@
 				5C2BAD483152CB7752BE81A0 /* Pods-MyMovieLeague.debug.xcconfig */,
 				47762608A05FB9F61C80A2D7 /* Pods-MyMovieLeague.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		8CE50A2423E0CFB800FC443C /* PreLogin */ = {
+			isa = PBXGroup;
+			children = (
+				8CE50A2523E0CFD500FC443C /* Help */,
+				006ADD7623D1E98000A929BA /* VerifyMobile */,
+				006ADD7123D1E77E00A929BA /* ComeAndPlay */,
+				006ADD6523D1E0DB00A929BA /* Login */,
+			);
+			path = PreLogin;
+			sourceTree = "<group>";
+		};
+		8CE50A2523E0CFD500FC443C /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				8CE50A2823E0CFF800FC443C /* HelpViewController.swift */,
+				8CE50A2923E0CFF800FC443C /* HelpViewController.xib */,
+			);
+			path = Help;
+			sourceTree = "<group>";
+		};
+		8CE50A2E23E0EB3600FC443C /* CommonViews */ = {
+			isa = PBXGroup;
+			children = (
+				8CE50A3323E0EB6C00FC443C /* InputView.swift */,
+				8CE50A3423E0EB6C00FC443C /* InputView.xib */,
+				8CE50A3023E0EB4800FC443C /* CommentInputView.swift */,
+				8CE50A2F23E0EB4800FC443C /* CommentInputView.xib */,
+			);
+			path = CommonViews;
+			sourceTree = "<group>";
+		};
+		8CE50A3723E0F62D00FC443C /* CommonViews */ = {
+			isa = PBXGroup;
+			children = (
+				8CE50A3823E0F63B00FC443C /* AlertView */,
+			);
+			path = CommonViews;
+			sourceTree = "<group>";
+		};
+		8CE50A3823E0F63B00FC443C /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				8CE50A3A23E0F64500FC443C /* AcknowledgeViewController.swift */,
+				8CE50A3923E0F64500FC443C /* AcknowledgeViewController.xib */,
+			);
+			path = AlertView;
 			sourceTree = "<group>";
 		};
 		A3496E81C964F01C98BA9FDD /* Frameworks */ = {
@@ -453,10 +516,12 @@
 				006ADD6923D1E0F100A929BA /* LoginViewController.xib in Resources */,
 				0029D17B23D8CC420087396A /* SansSerifBldFLFCond.otf in Resources */,
 				0029D19C23D8CC500087396A /* RobotoCondensed-Regular.ttf in Resources */,
+				8CE50A3123E0EB4800FC443C /* CommentInputView.xib in Resources */,
 				0029D19A23D8CC500087396A /* Roboto-BoldItalic.ttf in Resources */,
 				0029D19523D8CC500087396A /* RobotoCondensed-Italic.ttf in Resources */,
 				0029D19E23D8CC500087396A /* Roboto-Bold.ttf in Resources */,
 				0029D17623D8CC420087396A /* SansSerifBldFLF-Italic.otf in Resources */,
+				8CE50A2B23E0CFF800FC443C /* HelpViewController.xib in Resources */,
 				0029D17C23D8CC420087396A /* SansSerifBookFLF.otf in Resources */,
 				0029D1A823D8CC600087396A /* Poppins-Light.ttf in Resources */,
 				0029D19623D8CC500087396A /* Roboto-Regular.ttf in Resources */,
@@ -464,6 +529,7 @@
 				0029D19923D8CC500087396A /* Roboto-Thin.ttf in Resources */,
 				0029D1AA23D8CC600087396A /* Poppins-SemiBold.ttf in Resources */,
 				006ADD5A23D1DF5000A929BA /* LaunchScreen.storyboard in Resources */,
+				8CE50A3623E0EB6C00FC443C /* InputView.xib in Resources */,
 				004AB39723DDDF7900FA5A28 /* MovieCollectionViewCell.xib in Resources */,
 				0029D19323D8CC500087396A /* Roboto-BlackItalic.ttf in Resources */,
 				0029D1BE23D908090087396A /* SVPinView.xib in Resources */,
@@ -484,6 +550,7 @@
 				0029D17823D8CC420087396A /* SansSerifFLF-DemiItalic.otf in Resources */,
 				0029D17D23D8CC420087396A /* SansSerifBldFLF.otf in Resources */,
 				0029D1A123D8CC500087396A /* Roboto-Medium.ttf in Resources */,
+				8CE50A3B23E0F64600FC443C /* AcknowledgeViewController.xib in Resources */,
 				0029D17423D8CC420087396A /* SansSerifFLF-Italic.otf in Resources */,
 				0029D17523D8CC420087396A /* SansSerifFLF.otf in Resources */,
 				0029D19423D8CC500087396A /* RobotoCondensed-BoldItalic.ttf in Resources */,
@@ -552,14 +619,18 @@
 				0029D1C023D9176F0087396A /* VerifyMobileViewModel.swift in Sources */,
 				0029D15C23D8B40B0087396A /* ComeAndPlayViewModel.swift in Sources */,
 				006ADD4E23D1DF3900A929BA /* AppDelegate.swift in Sources */,
+				8CE50A2A23E0CFF800FC443C /* HelpViewController.swift in Sources */,
+				8CE50A3223E0EB4800FC443C /* CommentInputView.swift in Sources */,
 				004AB39A23DDED8200FA5A28 /* MovieTableViewCell.swift in Sources */,
 				0029D1B923D908030087396A /* SVPinView.swift in Sources */,
 				0029D15A23D8B3F30087396A /* SplashViewModel.swift in Sources */,
 				006ADD7923D1E99300A929BA /* VerifyMobileViewController.swift in Sources */,
+				8CE50A3523E0EB6C00FC443C /* InputView.swift in Sources */,
 				006ADD6823D1E0F100A929BA /* LoginViewController.swift in Sources */,
 				006ADD6323D1E05300A929BA /* AppController.swift in Sources */,
 				006ADD6D23D1E11A00A929BA /* SplashViewController.swift in Sources */,
 				004AB39623DDDF7900FA5A28 /* MovieCollectionViewCell.swift in Sources */,
+				8CE50A3C23E0F64600FC443C /* AcknowledgeViewController.swift in Sources */,
 				0029D1BA23D908030087396A /* SVPinField.swift in Sources */,
 				006ADD7F23D1EA2600A929BA /* MoviesListViewController.swift in Sources */,
 			);

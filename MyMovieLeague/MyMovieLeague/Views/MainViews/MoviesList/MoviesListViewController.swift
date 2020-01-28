@@ -10,6 +10,9 @@ import UIKit
 
 class MoviesListViewController: UIViewController {
 
+    @IBOutlet weak var viewQuizMain: UIView!
+    @IBOutlet weak var viewQuizBG: UIView!
+    
     @IBOutlet weak var tblView: UITableView!
      let cellReuseIdendifier = "MovieTableViewCell"
     
@@ -48,6 +51,12 @@ class MoviesListViewController: UIViewController {
     func setupUI() {
         
         self.tblView.register(UINib.init(nibName: cellReuseIdendifier, bundle: nil), forCellReuseIdentifier: cellReuseIdendifier)
+        self.viewQuizMain.backgroundColor = UIColor.black.withAlphaComponent(0.2)
+        self.viewQuizBG.backgroundColor = themeColor.withAlphaComponent(0.30)
+        self.viewQuizBG.layer.masksToBounds = true
+        self.viewQuizBG.layer.cornerRadius = 30
+        self.viewQuizBG.layer.borderWidth = 1.0
+        self.viewQuizBG.layer.borderColor = themeColor.withAlphaComponent(0.20).cgColor
         
     }
     
@@ -75,9 +84,9 @@ extension MoviesListViewController:UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
-            return (((UIScreen.main.bounds.size.width - 60)/2.0) * (3.0/2.0)) + 44
+            return (((UIScreen.main.bounds.size.width - 60)/2.0) * (4.0/3.0)) + 44
         }
-        return (((UIScreen.main.bounds.size.width - 60)/2.0) * (3.0/2.0))
+        return (((UIScreen.main.bounds.size.width - 60)/2.0) * (4.0/3.0))
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -86,10 +95,12 @@ extension MoviesListViewController:UITableViewDelegate,UITableViewDataSource {
         if indexPath.section == 0 {
             cell.isCurrent = true
             cell.moviesList = ["Recent1","Recent2","Recent3","Recent4"]
+            cell.titlesList = ["Tanhaji: The Unsung Warrior", "Street Dancer 3", "Good Newwz", "Panga"]
         }
         if indexPath.section == 1 {
             cell.isCurrent = false
             cell.moviesList = ["Upcoming1","Upcoming2","Upcoming3","Upcoming4"]
+            cell.titlesList = ["83", "Sooryavanshi", "Coolie No 1", "Shubh Mangal Zyada Saavdhan"]
         }
     
         cell.collView.reloadData()
@@ -108,13 +119,13 @@ extension MoviesListViewController:UITableViewDelegate,UITableViewDataSource {
         let titleLabel = UILabel(frame: CGRect(x: 20, y: 0, width: UIScreen.main.bounds.size.width - 40, height: 50))
         titleLabel.backgroundColor = .clear
         titleLabel.textColor = .white
-        titleLabel.font = UIFont(name: "RobotoCondensed-Regular", size: 24)
+        titleLabel.font = UIFont(name: "RobotoCondensed-Regular", size: 18)
         
         if section == 0 {
-            titleLabel.text = "Current games"
+            titleLabel.text = "Current Games"
         }
         if section == 1 {
-            titleLabel.text = "Upcoming games"
+            titleLabel.text = "Upcoming Games"
         }
         view.addSubview(titleLabel)
         return view

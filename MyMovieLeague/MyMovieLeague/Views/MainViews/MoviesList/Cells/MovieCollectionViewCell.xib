@@ -39,7 +39,7 @@
                         </state>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suryavanshi" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sEu-NE-xaL">
-                        <rect key="frame" x="2" y="197.5" width="184" height="21.5"/>
+                        <rect key="frame" x="0.0" y="197.5" width="188" height="21.5"/>
                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -55,8 +55,8 @@
                 <constraint firstItem="C8c-db-GBE" firstAttribute="top" secondItem="Lz0-DR-mmr" secondAttribute="bottom" constant="4" id="aAr-s0-qdU"/>
                 <constraint firstItem="C8c-db-GBE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="idP-kL-dfX"/>
                 <constraint firstAttribute="trailing" secondItem="C8c-db-GBE" secondAttribute="trailing" id="ng6-6v-YrM"/>
-                <constraint firstAttribute="trailing" secondItem="sEu-NE-xaL" secondAttribute="trailing" constant="2" id="nlM-Kv-Da4"/>
-                <constraint firstItem="sEu-NE-xaL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="oxg-Gr-9pX"/>
+                <constraint firstAttribute="trailing" secondItem="sEu-NE-xaL" secondAttribute="trailing" id="nlM-Kv-Da4"/>
+                <constraint firstItem="sEu-NE-xaL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="oxg-Gr-9pX"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="188" height="263"/>

@@ -10,7 +10,7 @@ import UIKit
 
 class ComeAndPlayViewController: UIViewController {
     
-    let movieNames = ["Radhe2", "Movie2", "Movie4", "Movie5"]
+    let movieNames = ["Radhe2", "Movie2", "Movie4"]
 
         
     @IBOutlet weak var btnLogin: UIButton!
@@ -43,6 +43,11 @@ class ComeAndPlayViewController: UIViewController {
     @IBAction func btnComeAndPlayAction(_ sender: UIButton) {
         let moviesListVC = MoviesListViewController()
         self.navigationController?.pushViewController(moviesListVC, animated: true)
+    }
+    
+    @IBAction func btnHelpAction(_ sender: UIButton) {
+        let helpVC = HelpViewController()
+        self.navigationController?.pushViewController(helpVC, animated: true)
     }
     
     

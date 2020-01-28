@@ -8,5 +8,6 @@ target 'MyMovieLeague' do
   # Pods for MyMovieLeague
 
   pod 'ObjectMapper'
-   pod 'RealmSwift'
+  pod 'RealmSwift'
+  pod 'UITextView+Placeholder'
 end

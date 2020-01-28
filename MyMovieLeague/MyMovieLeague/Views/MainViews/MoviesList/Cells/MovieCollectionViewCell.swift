@@ -25,6 +25,13 @@ class MovieCollectionViewCell: UICollectionViewCell {
     func setupUI() {
         self.btnPlay.layer.cornerRadius = 2.0
         self.btnPlay.layer.masksToBounds = true
+        
+        self.btnPlay.backgroundColor = UIColor.clear
+        self.btnPlay.layer.cornerRadius = 20
+        self.btnPlay.layer.borderWidth = 1.5
+        self.btnPlay.layer.borderColor = themeColor.cgColor
+        self.btnPlay.setTitleColor(themeColor, for: .normal)
+        
         self.lblTitle.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
     }
 }
