@@ -11,6 +11,8 @@ import UIKit
 class MovieTableViewCell: UITableViewCell {
 
       @IBOutlet weak var collView: UICollectionView!
+    var moviesList:[String]?
+    var isCurrent = true
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -50,21 +52,16 @@ extension MovieTableViewCell:UICollectionViewDataSource,UICollectionViewDelegate
       func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
           let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieCollectionViewCell", for: indexPath as IndexPath) as! MovieCollectionViewCell
 
-        if indexPath.row == 0 {
-            cell.imgView.image = UIImage(named: "Recent1")
+        cell.imgBottomSpaceConstraint.constant = 0
+        cell.btnPlayHeightConstraint.constant = 0
+        if isCurrent {
+            cell.imgBottomSpaceConstraint.constant = 4
+            cell.btnPlayHeightConstraint.constant = 40
+        }
+        if let images = self.moviesList {
+            cell.imgView.image = UIImage(named: images[indexPath.row])
         }
         
-        if indexPath.row == 1 {
-            cell.imgView.image = UIImage(named: "Recent2")
-        }
-        if indexPath.row == 2 {
-            cell.imgView.image = UIImage(named: "Recent3")
-        }
-        if indexPath.row == 3 {
-            cell.imgView.image = UIImage(named: "Recent4")
-        }
-        
-//         cell.backgroundColor = UIColor.green
          return cell
       }
       
@@ -72,7 +69,12 @@ extension MovieTableViewCell:UICollectionViewDataSource,UICollectionViewDelegate
       func collectionView(_ collectionView: UICollectionView,
                           layout collectionViewLayout: UICollectionViewLayout,
                           sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: ((UIScreen.main.bounds.size.width - 60)/2.0), height: ((UIScreen.main.bounds.size.width - 60)/2.0) * (3.0/2.0))
+        if isCurrent {
+        return CGSize(width: ((UIScreen.main.bounds.size.width - 60)/2.0), height: (((UIScreen.main.bounds.size.width - 60)/2.0) * (3.0/2.0)) + 44)
+        }
+        
+         return CGSize(width: ((UIScreen.main.bounds.size.width - 60)/2.0), height: ((UIScreen.main.bounds.size.width - 60)/2.0) * (3.0/2.0))
+        
       }
 
       // item spacing = vertical spacing in horizontal flow

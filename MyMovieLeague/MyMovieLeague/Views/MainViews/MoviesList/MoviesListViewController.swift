@@ -24,8 +24,25 @@ class MoviesListViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = false
-        setupUI()
 
+        
+        let menubutton = UIButton(type: .custom)
+        menubutton.frame = CGRect(x: 0, y: 0, width: 18, height: 22)
+        menubutton.setImage(UIImage(named: "menu"), for: .normal)
+        menubutton.addTarget(self, action: #selector(menuBtnAction), for: .touchUpInside)
+        
+        let barButton1 = UIBarButtonItem(customView: menubutton)
+        let currWidth1 = barButton1.customView?.widthAnchor.constraint(equalToConstant: 18)
+        currWidth1?.isActive = true
+        let currHeight1 = barButton1.customView?.heightAnchor.constraint(equalToConstant: 22)
+        currHeight1?.isActive = true
+        navigationItem.leftBarButtonItem = barButton1
+        
+        let image: UIImage = UIImage(named: "app-logo-small")!
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 36, height: 36))
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = image
+        self.navigationItem.titleView = imageView
     }
 
     func setupUI() {
@@ -33,20 +50,15 @@ class MoviesListViewController: UIViewController {
         self.tblView.register(UINib.init(nibName: cellReuseIdendifier, bundle: nil), forCellReuseIdentifier: cellReuseIdendifier)
         
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     deinit {
         print("DEINIT MoviesListViewController")
     }
-
+    
+    
+    @objc func menuBtnAction() {
+        
+    }
 }
 
 
@@ -62,11 +74,23 @@ extension MoviesListViewController:UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 240
+        if indexPath.section == 0 {
+            return (((UIScreen.main.bounds.size.width - 60)/2.0) * (3.0/2.0)) + 44
+        }
+        return (((UIScreen.main.bounds.size.width - 60)/2.0) * (3.0/2.0))
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdendifier, for: indexPath) as! MovieTableViewCell
+        
+        if indexPath.section == 0 {
+            cell.isCurrent = true
+            cell.moviesList = ["Recent1","Recent2","Recent3","Recent4"]
+        }
+        if indexPath.section == 1 {
+            cell.isCurrent = false
+            cell.moviesList = ["Upcoming1","Upcoming2","Upcoming3","Upcoming4"]
+        }
     
         cell.collView.reloadData()
         return cell
@@ -85,7 +109,13 @@ extension MoviesListViewController:UITableViewDelegate,UITableViewDataSource {
         titleLabel.backgroundColor = .clear
         titleLabel.textColor = .white
         titleLabel.font = UIFont(name: "RobotoCondensed-Regular", size: 24)
-        titleLabel.text = "Current games"
+        
+        if section == 0 {
+            titleLabel.text = "Current games"
+        }
+        if section == 1 {
+            titleLabel.text = "Upcoming games"
+        }
         view.addSubview(titleLabel)
         return view
     }

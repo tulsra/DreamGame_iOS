@@ -1,37 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MovieCollectionViewCell" customModule="MyMovieLeague" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <rect key="frame" x="0.0" y="0.0" width="188" height="263"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <rect key="frame" x="0.0" y="0.0" width="188" height="263"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lz0-DR-mmr">
-                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Recent1" translatesAutoresizingMaskIntoConstraints="NO" id="Lz0-DR-mmr">
+                        <rect key="frame" x="0.0" y="0.0" width="188" height="219"/>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C8c-db-GBE">
+                        <rect key="frame" x="0.0" y="223" width="188" height="40"/>
+                        <color key="backgroundColor" red="0.94935733079910278" green="0.11509700864553452" blue="0.25959178805351257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="cSy-b8-AjC"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
+                        <state key="normal" title="Play">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suryavanshi" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sEu-NE-xaL">
+                        <rect key="frame" x="2" y="197.5" width="184" height="21.5"/>
+                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstItem="Lz0-DR-mmr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="6BO-te-yQu"/>
                 <constraint firstItem="Lz0-DR-mmr" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="6kf-5s-tY8"/>
+                <constraint firstItem="sEu-NE-xaL" firstAttribute="bottom" secondItem="Lz0-DR-mmr" secondAttribute="bottom" id="Bij-U8-Q55"/>
+                <constraint firstAttribute="bottom" secondItem="C8c-db-GBE" secondAttribute="bottom" id="LjB-Re-WIX"/>
                 <constraint firstAttribute="trailing" secondItem="Lz0-DR-mmr" secondAttribute="trailing" id="NaJ-zT-d2w"/>
-                <constraint firstAttribute="bottom" secondItem="Lz0-DR-mmr" secondAttribute="bottom" id="tJz-dL-H8B"/>
+                <constraint firstItem="C8c-db-GBE" firstAttribute="top" secondItem="Lz0-DR-mmr" secondAttribute="bottom" constant="4" id="aAr-s0-qdU"/>
+                <constraint firstItem="C8c-db-GBE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="idP-kL-dfX"/>
+                <constraint firstAttribute="trailing" secondItem="C8c-db-GBE" secondAttribute="trailing" id="ng6-6v-YrM"/>
+                <constraint firstAttribute="trailing" secondItem="sEu-NE-xaL" secondAttribute="trailing" constant="2" id="nlM-Kv-Da4"/>
+                <constraint firstItem="sEu-NE-xaL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="oxg-Gr-9pX"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="188" height="263"/>
             <connections>
+                <outlet property="btnPlay" destination="C8c-db-GBE" id="Wv3-fR-SG6"/>
+                <outlet property="btnPlayHeightConstraint" destination="cSy-b8-AjC" id="88N-7O-Lo3"/>
+                <outlet property="imgBottomSpaceConstraint" destination="aAr-s0-qdU" id="79Z-Dl-caf"/>
                 <outlet property="imgView" destination="Lz0-DR-mmr" id="1cw-it-VLg"/>
+                <outlet property="lblTitle" destination="sEu-NE-xaL" id="jxL-zo-anu"/>
             </connections>
-            <point key="canvasLocation" x="139" y="108"/>
+            <point key="canvasLocation" x="20.289855072463769" y="44.53125"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="Recent1" width="360" height="480"/>
+    </resources>
 </document>
