@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="FER-FF-DzQ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie-college" translatesAutoresizingMaskIntoConstraints="NO" id="U4b-g5-pQ9">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg4" translatesAutoresizingMaskIntoConstraints="NO" id="S1H-hg-JxD">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app-logo" translatesAutoresizingMaskIntoConstraints="NO" id="VZz-Z2-FIg">
+                                        <rect key="frame" x="0.0" y="383" width="414" height="140"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="140" id="QQS-20-uW6"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ae-xd-akP">
+                                        <rect key="frame" x="0.0" y="775" width="414" height="121"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INDIA's BIGGEST MOVIE GAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P10-nU-PrM">
+                                        <rect key="frame" x="20" y="533" width="374" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="cDs-BG-kZk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="21"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="A2q-mX-xnT" firstAttribute="trailing" secondItem="VZz-Z2-FIg" secondAttribute="trailing" id="0EN-RG-QeT"/>
+                                    <constraint firstItem="S1H-hg-JxD" firstAttribute="height" secondItem="U4b-g5-pQ9" secondAttribute="height" id="0M4-12-IIe"/>
+                                    <constraint firstItem="S1H-hg-JxD" firstAttribute="centerX" secondItem="U4b-g5-pQ9" secondAttribute="centerX" id="4Vt-uJ-kJa"/>
+                                    <constraint firstItem="U4b-g5-pQ9" firstAttribute="top" secondItem="FER-FF-DzQ" secondAttribute="top" id="66j-KB-ZFq"/>
+                                    <constraint firstItem="A2q-mX-xnT" firstAttribute="trailing" secondItem="U4b-g5-pQ9" secondAttribute="trailing" id="6EG-aB-PQp"/>
+                                    <constraint firstItem="U4b-g5-pQ9" firstAttribute="leading" secondItem="FER-FF-DzQ" secondAttribute="leading" id="8Q9-Ww-ThR"/>
+                                    <constraint firstAttribute="bottom" secondItem="U4b-g5-pQ9" secondAttribute="bottom" id="8yS-lm-9EI"/>
+                                    <constraint firstItem="VZz-Z2-FIg" firstAttribute="leading" secondItem="A2q-mX-xnT" secondAttribute="leading" id="Czd-5a-hqG"/>
+                                    <constraint firstItem="S1H-hg-JxD" firstAttribute="centerY" secondItem="U4b-g5-pQ9" secondAttribute="centerY" id="DsY-3E-zqY"/>
+                                    <constraint firstItem="S1H-hg-JxD" firstAttribute="width" secondItem="U4b-g5-pQ9" secondAttribute="width" id="TZt-fV-ufI"/>
+                                    <constraint firstItem="P10-nU-PrM" firstAttribute="leading" secondItem="A2q-mX-xnT" secondAttribute="leading" constant="20" id="ZaT-Kb-Bc2"/>
+                                    <constraint firstItem="VZz-Z2-FIg" firstAttribute="centerX" secondItem="A2q-mX-xnT" secondAttribute="centerX" id="c6o-lJ-4vi"/>
+                                    <constraint firstItem="P10-nU-PrM" firstAttribute="top" secondItem="VZz-Z2-FIg" secondAttribute="bottom" constant="10" id="g8X-H0-YeA"/>
+                                    <constraint firstItem="VZz-Z2-FIg" firstAttribute="centerY" secondItem="A2q-mX-xnT" secondAttribute="centerY" id="kn7-zB-btw"/>
+                                    <constraint firstItem="A2q-mX-xnT" firstAttribute="trailing" secondItem="P10-nU-PrM" secondAttribute="trailing" constant="20" id="vVh-XX-n0l"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="A2q-mX-xnT"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="app-logo" width="1077" height="354"/>
+        <image name="bg4" width="2880" height="5120"/>
+        <image name="movie-college" width="800" height="480"/>
+    </resources>
+</document>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MoviesListViewController" customModule="MyMovieLeague" customModuleProvider="target">
+            <connections>
+                <outlet property="tblView" destination="Daq-cW-1FM" id="ggd-5T-DAq"/>
+                <outlet property="view" destination="RzO-EM-Yns" id="0hD-yt-Dsx"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="RzO-EM-Yns">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie-college" translatesAutoresizingMaskIntoConstraints="NO" id="enO-o9-qtI">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg4" translatesAutoresizingMaskIntoConstraints="NO" id="Y4o-Ab-cAL">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Daq-cW-1FM">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="zrp-ei-lzk"/>
+                        <outlet property="delegate" destination="-1" id="NQb-ty-TIk"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Y4o-Ab-cAL" firstAttribute="centerY" secondItem="enO-o9-qtI" secondAttribute="centerY" id="GCe-K4-0nx"/>
+                <constraint firstItem="Daq-cW-1FM" firstAttribute="top" secondItem="5fn-At-sXG" secondAttribute="top" id="KPO-Bw-Ynv"/>
+                <constraint firstAttribute="bottom" secondItem="enO-o9-qtI" secondAttribute="bottom" id="ROK-DC-Nce"/>
+                <constraint firstItem="Y4o-Ab-cAL" firstAttribute="centerX" secondItem="enO-o9-qtI" secondAttribute="centerX" id="Sru-fl-F8h"/>
+                <constraint firstItem="Y4o-Ab-cAL" firstAttribute="height" secondItem="enO-o9-qtI" secondAttribute="height" id="Yka-yr-4it"/>
+                <constraint firstItem="5fn-At-sXG" firstAttribute="trailing" secondItem="enO-o9-qtI" secondAttribute="trailing" id="Zhg-Ai-8eg"/>
+                <constraint firstItem="Daq-cW-1FM" firstAttribute="leading" secondItem="5fn-At-sXG" secondAttribute="leading" id="bTz-b3-XC0"/>
+                <constraint firstItem="5fn-At-sXG" firstAttribute="trailing" secondItem="Daq-cW-1FM" secondAttribute="trailing" id="bkZ-4e-d70"/>
+                <constraint firstItem="enO-o9-qtI" firstAttribute="leading" secondItem="RzO-EM-Yns" secondAttribute="leading" id="jHa-5z-Cvz"/>
+                <constraint firstItem="5fn-At-sXG" firstAttribute="bottom" secondItem="Daq-cW-1FM" secondAttribute="bottom" id="lQb-4F-13T"/>
+                <constraint firstItem="Y4o-Ab-cAL" firstAttribute="width" secondItem="enO-o9-qtI" secondAttribute="width" id="m4v-ax-QdY"/>
+                <constraint firstItem="enO-o9-qtI" firstAttribute="top" secondItem="RzO-EM-Yns" secondAttribute="top" id="oBf-3X-u8c"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="5fn-At-sXG"/>
+            <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg4" width="2880" height="5120"/>
+        <image name="movie-college" width="800" height="480"/>
+    </resources>
+</document>
