@@ -57,8 +57,8 @@ class VerifyMobileViewController: UIViewController {
     
     @IBAction func btnVerifyAction(_ sender: UIButton) {
         
-        let moviesListVC = MoviesListViewController()
-        self.navigationController?.pushViewController(moviesListVC, animated: true)
+         let mainView = MainViewController()
+        self.navigationController?.pushViewController(mainView, animated: true)
     }
     /*
     // MARK: - Navigation

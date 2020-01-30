@@ -45,12 +45,12 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zdA-aG-d4y">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We would love to hear your thoughts, concerns or problems with anything so we can improve!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozH-QU-Whm">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We would love to hear your thoughts, concerns or problems with anything so we can improve!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ozH-QU-Whm">
                                             <rect key="frame" x="30" y="0.0" width="354" height="80"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="80" id="Tnk-4u-l93"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -70,7 +70,7 @@
                                         <constraint firstAttribute="height" constant="10" id="0rl-xp-jdE"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eGa-f7-OPJ" customClass="InputView" customModule="BES" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eGa-f7-OPJ" customClass="InputView" customModule="MyMovieLeague" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="90" width="414" height="60"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
@@ -93,7 +93,7 @@
                                         <constraint firstAttribute="height" constant="20" id="upd-Wb-ltx"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PaU-9Q-8x8" customClass="CommentInputView" customModule="BES" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PaU-9Q-8x8" customClass="CommentInputView" customModule="MyMovieLeague" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="170" width="414" height="160"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>

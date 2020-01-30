@@ -8,13 +8,14 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     
     @IBOutlet weak var btnNext: UIButton!
     @IBOutlet weak var btnFacebook: UIButton!
     @IBOutlet weak var btnGoogle: UIButton!
     
+    @IBOutlet weak var txtFieldPhoneNumber: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +54,9 @@ class LoginViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     @IBAction func btnNextAction(_ sender: UIButton) {
+        NetworkManager().post(method: .verifyPhoneNumber, urlParam: ["api-version":"v1.0"], bodyParm: ["phoneNumber":txtFieldPhoneNumber.text ?? ""]) { (response, error) in
+            
+        }
         let verifyVC = VerifyMobileViewController()
         self.navigationController?.pushViewController(verifyVC, animated: true)
        }

@@ -36,7 +36,7 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </imageView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Daq-cW-1FM">
-                    <rect key="frame" x="0.0" y="124" width="414" height="738"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
@@ -45,7 +45,7 @@
                     </connections>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4nf-cY-ixt">
-                    <rect key="frame" x="0.0" y="44" width="414" height="80"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="0.0"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vle-u7-dkY">
                             <rect key="frame" x="20" y="10" width="374" height="60"/>
@@ -91,7 +91,7 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="vle-u7-dkY" firstAttribute="leading" secondItem="4nf-cY-ixt" secondAttribute="leading" constant="20" id="5Kk-OK-ixt"/>
-                        <constraint firstAttribute="height" constant="80" id="8a0-PM-NUC"/>
+                        <constraint firstAttribute="height" id="8a0-PM-NUC"/>
                         <constraint firstAttribute="trailing" secondItem="vle-u7-dkY" secondAttribute="trailing" constant="20" id="CUy-1S-9Ge"/>
                         <constraint firstItem="vle-u7-dkY" firstAttribute="top" secondItem="4nf-cY-ixt" secondAttribute="top" constant="10" id="ElG-6Q-oty"/>
                         <constraint firstAttribute="bottom" secondItem="vle-u7-dkY" secondAttribute="bottom" constant="10" id="xmL-yy-38D"/>

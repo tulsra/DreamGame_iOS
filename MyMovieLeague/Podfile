@@ -8,6 +8,10 @@ target 'MyMovieLeague' do
   # Pods for MyMovieLeague
 
   pod 'ObjectMapper'
+  pod 'Alamofire'
   pod 'RealmSwift'
   pod 'UITextView+Placeholder'
+  pod 'IQKeyboardManager'
+  pod 'Fabric'
+  pod 'Crashlytics'
 end
