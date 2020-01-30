@@ -67,7 +67,7 @@ class MoviesListViewController: UIViewController {
     
     
     @objc func backBtnAction() {
-        
+        self.navigationController?.popViewController(animated: true)
     }
 }
 

@@ -37,8 +37,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nlZ-tb-YFy">
                     <rect key="frame" x="20" y="134" width="374" height="60"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play Box Office Game" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFL-mC-ww7">
-                            <rect key="frame" x="30" y="8" width="207" height="30"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Box Office Game" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFL-mC-ww7">
+                            <rect key="frame" x="30" y="8" width="161" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="ZUg-gh-jJa"/>
                             </constraints>
@@ -88,8 +88,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dsY-qV-Js6">
                     <rect key="frame" x="20" y="234" width="374" height="60"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play Quiz Game" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftS-ec-5i6">
-                            <rect key="frame" x="30" y="8" width="151" height="30"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz Game" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftS-ec-5i6">
+                            <rect key="frame" x="30" y="8" width="105" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="O4O-Rw-i8U"/>
                             </constraints>

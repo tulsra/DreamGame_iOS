@@ -283,12 +283,12 @@
 			path = DataModels;
 			sourceTree = "<group>";
 		};
-		00335E3A23E1835E0028C9D8 /* SharedClasses */ = {
+		00335E3A23E1835E0028C9D8 /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				00335E3B23E1836F0028C9D8 /* NetworkManager.swift */,
 			);
-			path = SharedClasses;
+			path = Network;
 			sourceTree = "<group>";
 		};
 		00335E4123E18B9E0028C9D8 /* Extensions */ = {
@@ -334,9 +334,8 @@
 			isa = PBXGroup;
 			children = (
 				00335E4123E18B9E0028C9D8 /* Extensions */,
-				00335E3A23E1835E0028C9D8 /* SharedClasses */,
+				00335E3A23E1835E0028C9D8 /* Network */,
 				00335E3923E183450028C9D8 /* DataModels */,
-				8CE50A2E23E0EB3600FC443C /* CommonViews */,
 				0029D15F23D8CB570087396A /* Resources */,
 				006ADD6423D1E0D500A929BA /* Views */,
 				006ADD6123D1E01A00A929BA /* Application */,
@@ -481,6 +480,7 @@
 		8CE50A3723E0F62D00FC443C /* CommonViews */ = {
 			isa = PBXGroup;
 			children = (
+				8CE50A2E23E0EB3600FC443C /* CommonViews */,
 				8CE50A3823E0F63B00FC443C /* AlertView */,
 			);
 			path = CommonViews;

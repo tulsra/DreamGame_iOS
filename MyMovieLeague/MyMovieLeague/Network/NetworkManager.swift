@@ -23,6 +23,7 @@ public enum Method: String {
     case appLatestVersion = "/api/Public/GetAppLatestVersion"
     case splashSettings = "/api/Public/GetSplashSettings"
     case verifyPhoneNumber = "/api/verify_phone_number"
+    case verifyToken = "/connect/token"
 
     case getProfile = "/api/Profile"
     case saveProfile = "/api/Profile/SaveProfile"

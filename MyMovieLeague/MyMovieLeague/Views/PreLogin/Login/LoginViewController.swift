@@ -54,8 +54,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.navigationController?.popViewController(animated: true)
     }
     @IBAction func btnNextAction(_ sender: UIButton) {
-        NetworkManager().post(method: .verifyPhoneNumber, urlParam: ["api-version":"v1.0"], bodyParm: ["phoneNumber":txtFieldPhoneNumber.text ?? ""]) { (response, error) in
-            
+        if txtFieldPhoneNumber.text?.count == 10 {
+            NetworkManager().post(method: .verifyPhoneNumber, urlParam: ["api-version":"v1.0"], bodyParm: ["phoneNumber":txtFieldPhoneNumber.text ?? ""]) { (response, error) in
+                
+            }
         }
         let verifyVC = VerifyMobileViewController()
         self.navigationController?.pushViewController(verifyVC, animated: true)
