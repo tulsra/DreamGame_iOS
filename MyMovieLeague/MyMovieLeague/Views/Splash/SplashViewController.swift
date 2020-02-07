@@ -19,8 +19,7 @@ class SplashViewController: UIViewController {
     }
     
     @objc func delayedAction() {
-        let comeAndPlay = ComeAndPlayViewController()
-        self.navigationController?.pushViewController(comeAndPlay, animated: true)
+        AppController.shared.loadComeAndPlay()
     }
     
     deinit {

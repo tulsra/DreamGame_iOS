@@ -98,7 +98,8 @@ extension MovieTableViewCell:UICollectionViewDataSource,UICollectionViewDelegate
           return UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0)
       }
     
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.cellTapped()
     }
+    
   }

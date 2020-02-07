@@ -41,8 +41,7 @@ class ComeAndPlayViewController: UIViewController {
         self.btnComeAndPlay.layer.masksToBounds = true
     }
     @IBAction func btnComeAndPlayAction(_ sender: UIButton) {
-        let mainView = MainViewController()
-        self.navigationController?.pushViewController(mainView, animated: true)
+        AppController.shared.loadMainView()
     }
     
     @IBAction func btnHelpAction(_ sender: UIButton) {

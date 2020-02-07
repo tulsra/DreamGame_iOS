@@ -57,8 +57,7 @@ class VerifyMobileViewController: UIViewController {
     
     @IBAction func btnVerifyAction(_ sender: UIButton) {
         
-         let mainView = MainViewController()
-        self.navigationController?.pushViewController(mainView, animated: true)
+        AppController.shared.loadMainView()
     }
     /*
     // MARK: - Navigation

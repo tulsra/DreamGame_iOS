@@ -26,19 +26,19 @@ class GameCardViewController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = false
 
-//        self.title = "BOX OFFICE GAMES"
-//
-//        let menubutton = UIButton(type: .custom)
-//        menubutton.frame = CGRect(x: 0, y: 0, width: 18, height: 22)
-//        menubutton.setImage(UIImage(named: "back-arrow-white"), for: .normal)
-//        menubutton.addTarget(self, action: #selector(backBtnAction), for: .touchUpInside)
-//
-//        let barButton1 = UIBarButtonItem(customView: menubutton)
-//        let currWidth1 = barButton1.customView?.widthAnchor.constraint(equalToConstant: 18)
-//        currWidth1?.isActive = true
-//        let currHeight1 = barButton1.customView?.heightAnchor.constraint(equalToConstant: 22)
-//        currHeight1?.isActive = true
-//        navigationItem.leftBarButtonItem = barButton1
+        self.title = "My Games".uppercased()
+
+        let menubutton = UIButton(type: .custom)
+        menubutton.frame = CGRect(x: 0, y: 0, width: 18, height: 22)
+        menubutton.setImage(UIImage(named: "back-arrow-white"), for: .normal)
+        menubutton.addTarget(self, action: #selector(backBtnAction), for: .touchUpInside)
+
+        let barButton1 = UIBarButtonItem(customView: menubutton)
+        let currWidth1 = barButton1.customView?.widthAnchor.constraint(equalToConstant: 18)
+        currWidth1?.isActive = true
+        let currHeight1 = barButton1.customView?.heightAnchor.constraint(equalToConstant: 22)
+        currHeight1?.isActive = true
+        navigationItem.leftBarButtonItem = barButton1
         
 //        let image: UIImage = UIImage(named: "app-logo-small")!
 //        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 36, height: 36))

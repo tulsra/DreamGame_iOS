@@ -18,36 +18,26 @@ class MainTabbarViewController: UITabBarController {
         
 //        self.view.backgroundColor   =   UIColor.clear
    
-        let home     =   GameCardViewController()
+        let home     =   MainViewController()
         let homeBarItem = UITabBarItem(title: "Home".uppercased(), image: UIImage(named: "home"), selectedImage: UIImage(named: "home"))
         home.tabBarItem = homeBarItem
         
-        let gamesVC = MoviesListViewController()
-        let locationsBarItem = UITabBarItem(title: "Games".uppercased(), image: UIImage(named: "games"), selectedImage: UIImage(named: "games"))
+        let gamesVC = GameCardViewController()
+        let locationsBarItem = UITabBarItem(title: "My Games".uppercased(), image: UIImage(named: "games"), selectedImage: UIImage(named: "games"))
         gamesVC.tabBarItem = locationsBarItem
     
-        let resultsVC = UIViewController()
+        let resultsVC = ResultsViewController()
         let invoiceBarItem = UITabBarItem(title: "Results".uppercased(), image: UIImage(named: "winners"), selectedImage: UIImage(named: "winners"))
         resultsVC.tabBarItem = invoiceBarItem
 
-        let accountVC = UIViewController()
+        let accountVC = AccountViewController()
         let documentationBarItem = UITabBarItem(title: "Account".uppercased(), image: UIImage(named: "account"), selectedImage: UIImage(named: "account"))
 
         accountVC.tabBarItem = documentationBarItem
         
         self.viewControllers = [home, gamesVC, resultsVC, accountVC]
-    
-        //Tabbar appearance
-        let appearance = UITabBarAppearance()
-        appearance.configureWithTransparentBackground()
-        appearance.backgroundColor = UIColor.black.withAlphaComponent(0.2)
-        appearance.shadowImage = UIImage()
-        appearance.shadowColor = .clear
-        appearance.stackedLayoutAppearance.normal.iconColor = .white
-        appearance.stackedLayoutAppearance.normal.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        appearance.stackedLayoutAppearance.selected.iconColor = themeColor
-        appearance.stackedLayoutAppearance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor: themeColor]
-        self.tabBar.standardAppearance = appearance
+        
+        self.setTabbarAppearance()
 
     }
     
@@ -71,6 +61,20 @@ class MainTabbarViewController: UITabBarController {
      */
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }
+    
+    func setTabbarAppearance() {
+      //Tabbar appearance
+      let appearance = UITabBarAppearance()
+      appearance.configureWithTransparentBackground()
+      appearance.backgroundColor = UIColor.black.withAlphaComponent(0.2)
+      appearance.shadowImage = UIImage()
+      appearance.shadowColor = .clear
+      appearance.stackedLayoutAppearance.normal.iconColor = .white
+      appearance.stackedLayoutAppearance.normal.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+      appearance.stackedLayoutAppearance.selected.iconColor = themeColor
+      appearance.stackedLayoutAppearance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor: themeColor]
+      self.tabBar.standardAppearance = appearance
     }
     
 }
