@@ -9,9 +9,6 @@
 import UIKit
 
 class MoviesListViewController: UIViewController {
-
-    @IBOutlet weak var viewQuizMain: UIView!
-    @IBOutlet weak var viewQuizBG: UIView!
     
     @IBOutlet weak var tblView: UITableView!
      let cellReuseIdendifier = "MovieTableViewCell"
@@ -28,19 +25,19 @@ class MoviesListViewController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = false
 
-        self.title = "BOX OFFICE GAMES"
-        
-        let menubutton = UIButton(type: .custom)
-        menubutton.frame = CGRect(x: 0, y: 0, width: 18, height: 22)
-        menubutton.setImage(UIImage(named: "back-arrow-white"), for: .normal)
-        menubutton.addTarget(self, action: #selector(backBtnAction), for: .touchUpInside)
-        
-        let barButton1 = UIBarButtonItem(customView: menubutton)
-        let currWidth1 = barButton1.customView?.widthAnchor.constraint(equalToConstant: 18)
-        currWidth1?.isActive = true
-        let currHeight1 = barButton1.customView?.heightAnchor.constraint(equalToConstant: 22)
-        currHeight1?.isActive = true
-        navigationItem.leftBarButtonItem = barButton1
+//        self.title = "BOX OFFICE GAMES"
+//        
+//        let menubutton = UIButton(type: .custom)
+//        menubutton.frame = CGRect(x: 0, y: 0, width: 18, height: 22)
+//        menubutton.setImage(UIImage(named: "back-arrow-white"), for: .normal)
+//        menubutton.addTarget(self, action: #selector(backBtnAction), for: .touchUpInside)
+//        
+//        let barButton1 = UIBarButtonItem(customView: menubutton)
+//        let currWidth1 = barButton1.customView?.widthAnchor.constraint(equalToConstant: 18)
+//        currWidth1?.isActive = true
+//        let currHeight1 = barButton1.customView?.heightAnchor.constraint(equalToConstant: 22)
+//        currHeight1?.isActive = true
+//        navigationItem.leftBarButtonItem = barButton1
         
 //        let image: UIImage = UIImage(named: "app-logo-small")!
 //        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 36, height: 36))
@@ -52,13 +49,6 @@ class MoviesListViewController: UIViewController {
     func setupUI() {
         
         self.tblView.register(UINib.init(nibName: cellReuseIdendifier, bundle: nil), forCellReuseIdentifier: cellReuseIdendifier)
-        self.viewQuizMain.backgroundColor = UIColor.black.withAlphaComponent(0.2)
-        self.viewQuizBG.backgroundColor = themeColor.withAlphaComponent(0.30)
-        self.viewQuizBG.layer.masksToBounds = true
-        self.viewQuizBG.layer.cornerRadius = 30
-        self.viewQuizBG.layer.borderWidth = 1.0
-        self.viewQuizBG.layer.borderColor = themeColor.withAlphaComponent(0.20).cgColor
-        
     }
     
     deinit {
@@ -68,6 +58,9 @@ class MoviesListViewController: UIViewController {
     
     @objc func backBtnAction() {
         self.navigationController?.popViewController(animated: true)
+    }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 }
 
@@ -105,6 +98,11 @@ extension MoviesListViewController:UITableViewDelegate,UITableViewDataSource {
         }
     
         cell.collView.reloadData()
+        
+        cell.cellTapped = {
+            let moviesListVC = GameCardViewController()
+            self.navigationController?.pushViewController(moviesListVC, animated: true)
+        }
         return cell
     }
     

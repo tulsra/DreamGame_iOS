@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="RobotoCondensed-Regular.ttf">
+            <string>RobotoCondensed-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="119" id="hgO-gB-8FW" customClass="PrizeBreakupTableViewCell" customModule="MyMovieLeague" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="36"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hgO-gB-8FW" id="TnL-QB-kuF">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="36"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6SE-wb-Lgy">
+                        <rect key="frame" x="20" y="0.0" width="280" height="35"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#Rank 2001 To 5000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KoM-hK-9t9">
+                                <rect key="frame" x="15" y="0.0" width="104" height="35"/>
+                                <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₹1500" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJ8-P4-tSr">
+                                <rect key="frame" x="232.5" y="0.0" width="32.5" height="35"/>
+                                <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="LJ8-P4-tSr" secondAttribute="bottom" id="1r7-1f-gIN"/>
+                            <constraint firstItem="KoM-hK-9t9" firstAttribute="leading" secondItem="6SE-wb-Lgy" secondAttribute="leading" constant="15" id="7wT-gC-KP5"/>
+                            <constraint firstAttribute="trailing" secondItem="LJ8-P4-tSr" secondAttribute="trailing" constant="15" id="Ktt-XK-4c9"/>
+                            <constraint firstItem="LJ8-P4-tSr" firstAttribute="top" secondItem="6SE-wb-Lgy" secondAttribute="top" id="PnT-TF-7fN"/>
+                            <constraint firstItem="LJ8-P4-tSr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KoM-hK-9t9" secondAttribute="trailing" id="S1E-ep-8sf"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="bV1-5B-Dmt"/>
+                            <constraint firstItem="KoM-hK-9t9" firstAttribute="top" secondItem="6SE-wb-Lgy" secondAttribute="top" id="baL-b1-sYm"/>
+                            <constraint firstAttribute="bottom" secondItem="KoM-hK-9t9" secondAttribute="bottom" id="mM7-lb-elV"/>
+                        </constraints>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vrv-An-kX3">
+                        <rect key="frame" x="20" y="35" width="280" height="1"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="MuQ-UP-ma2"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="vrv-An-kX3" secondAttribute="bottom" id="79h-3i-EH4"/>
+                    <constraint firstAttribute="trailing" secondItem="vrv-An-kX3" secondAttribute="trailing" constant="20" id="SaD-z0-vmT"/>
+                    <constraint firstAttribute="trailing" secondItem="6SE-wb-Lgy" secondAttribute="trailing" constant="20" id="dnm-uz-RK8"/>
+                    <constraint firstItem="vrv-An-kX3" firstAttribute="leading" secondItem="TnL-QB-kuF" secondAttribute="leading" constant="20" id="itD-S3-SuK"/>
+                    <constraint firstItem="6SE-wb-Lgy" firstAttribute="leading" secondItem="TnL-QB-kuF" secondAttribute="leading" constant="20" id="lCH-WF-x3a"/>
+                    <constraint firstAttribute="bottom" secondItem="6SE-wb-Lgy" secondAttribute="bottom" constant="1" id="zNY-SE-IO1"/>
+                    <constraint firstItem="6SE-wb-Lgy" firstAttribute="top" secondItem="TnL-QB-kuF" secondAttribute="top" id="zOa-Rc-9WW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="Ikv-Co-DqR"/>
+            <connections>
+                <outlet property="bgView" destination="6SE-wb-Lgy" id="u4T-VX-4ZY"/>
+                <outlet property="lblAmount" destination="LJ8-P4-tSr" id="B3a-mi-pMb"/>
+                <outlet property="lblRank" destination="KoM-hK-9t9" id="vKA-JQ-tYj"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="130.58035714285714"/>
+        </tableViewCell>
+    </objects>
+</document>

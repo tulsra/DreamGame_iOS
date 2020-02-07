@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PrizeBreakupViewController" customModule="MyMovieLeague" customModuleProvider="target">
+            <connections>
+                <outlet property="tblView" destination="wwZ-SI-wLe" id="uij-Lc-Hik"/>
+                <outlet property="view" destination="0zW-Yg-IF7" id="bc5-Ix-GSs"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="0zW-Yg-IF7">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie-college" translatesAutoresizingMaskIntoConstraints="NO" id="eIr-gu-xcD">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.98000001907348633" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg4" translatesAutoresizingMaskIntoConstraints="NO" id="8ZS-fJ-ypG">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wwZ-SI-wLe">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="bFL-oQ-36M"/>
+                        <outlet property="delegate" destination="-1" id="6HZ-Ta-3wO"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="8ZS-fJ-ypG" firstAttribute="centerX" secondItem="eIr-gu-xcD" secondAttribute="centerX" id="2rc-uN-ARv"/>
+                <constraint firstItem="wwZ-SI-wLe" firstAttribute="top" secondItem="Xco-b5-nel" secondAttribute="top" id="400-KA-dWq"/>
+                <constraint firstItem="eIr-gu-xcD" firstAttribute="top" secondItem="0zW-Yg-IF7" secondAttribute="top" id="7ee-wB-rRm"/>
+                <constraint firstItem="Xco-b5-nel" firstAttribute="bottom" secondItem="wwZ-SI-wLe" secondAttribute="bottom" id="8ob-k0-Jk6"/>
+                <constraint firstItem="8ZS-fJ-ypG" firstAttribute="width" secondItem="eIr-gu-xcD" secondAttribute="width" id="AZK-rZ-wZS"/>
+                <constraint firstItem="8ZS-fJ-ypG" firstAttribute="centerY" secondItem="eIr-gu-xcD" secondAttribute="centerY" id="EiU-yR-JY8"/>
+                <constraint firstItem="8ZS-fJ-ypG" firstAttribute="height" secondItem="eIr-gu-xcD" secondAttribute="height" id="Gyw-30-nts"/>
+                <constraint firstItem="wwZ-SI-wLe" firstAttribute="leading" secondItem="Xco-b5-nel" secondAttribute="leading" id="KtN-Fq-jPg"/>
+                <constraint firstItem="Xco-b5-nel" firstAttribute="trailing" secondItem="wwZ-SI-wLe" secondAttribute="trailing" id="UuO-MZ-LVm"/>
+                <constraint firstAttribute="bottom" secondItem="eIr-gu-xcD" secondAttribute="bottom" id="aVv-Xe-4Qn"/>
+                <constraint firstItem="Xco-b5-nel" firstAttribute="trailing" secondItem="eIr-gu-xcD" secondAttribute="trailing" id="ek1-2e-MqH"/>
+                <constraint firstItem="eIr-gu-xcD" firstAttribute="leading" secondItem="0zW-Yg-IF7" secondAttribute="leading" id="ydg-4W-J6b"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Xco-b5-nel"/>
+            <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg4" width="2880" height="5120"/>
+        <image name="movie-college" width="800" height="480"/>
+    </resources>
+</document>

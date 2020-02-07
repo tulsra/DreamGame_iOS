@@ -11,6 +11,11 @@ import UIKit
 
 extension String {
     
+    var currencyStamped: String? {
+        get {
+            return "₹"+self
+        }
+    }
     var date: Date? {
         get {
             let dateFormatterPrint = DateFormatter()
@@ -137,6 +142,17 @@ extension UILabel {
         text.boundingRect(with: self.frame.size, options: NSStringDrawingOptions.usesLineFragmentOrigin, context: context)
         let adjustedFontSize: CGFloat = self.font.pointSize * context.actualScaleFactor
         return adjustedFontSize
+    }
+}
+
+extension Int {
+    var indianString: String? {
+        get {
+            let numberFormatter = NumberFormatter()
+            numberFormatter.locale = Locale(identifier: "en_IN")
+            numberFormatter.numberStyle = .decimal
+            return numberFormatter.string(from: NSNumber(value:self)) ?? ""
+        }
     }
 }
 

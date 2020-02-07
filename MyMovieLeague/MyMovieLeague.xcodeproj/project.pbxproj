@@ -77,6 +77,29 @@
 		006ADD7A23D1E99300A929BA /* VerifyMobileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006ADD7823D1E99300A929BA /* VerifyMobileViewController.xib */; };
 		006ADD7F23D1EA2600A929BA /* MoviesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006ADD7D23D1EA2600A929BA /* MoviesListViewController.swift */; };
 		006ADD8023D1EA2600A929BA /* MoviesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006ADD7E23D1EA2600A929BA /* MoviesListViewController.xib */; };
+		006C7D6A23EDC6F200B2CBC1 /* GameCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006C7D6923EDC6F200B2CBC1 /* GameCard.swift */; };
+		006CF0E523E88E2E0042F57A /* MainTabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CF0E423E88E2E0042F57A /* MainTabbarView.swift */; };
+		006CF0E823E88E360042F57A /* SideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006CF0E623E88E360042F57A /* SideViewController.xib */; };
+		006CF0E923E88E360042F57A /* SideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CF0E723E88E360042F57A /* SideViewController.swift */; };
+		006CF0EB23E88E3C0042F57A /* SideMenuMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CF0EA23E88E3C0042F57A /* SideMenuMainController.swift */; };
+		006CF0EE23E88EF00042F57A /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CF0EC23E88EF00042F57A /* SideMenuCell.swift */; };
+		006CF0EF23E88EF00042F57A /* SideMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006CF0ED23E88EF00042F57A /* SideMenuCell.xib */; };
+		006CF0F223E88FB20042F57A /* SideProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CF0F023E88FB20042F57A /* SideProfileView.swift */; };
+		006CF0F323E88FB20042F57A /* SideProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006CF0F123E88FB20042F57A /* SideProfileView.xib */; };
+		00B4D94923EC8F13001BFFA9 /* GameCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B4D94723EC8F13001BFFA9 /* GameCardViewController.swift */; };
+		00B4D94A23EC8F13001BFFA9 /* GameCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00B4D94823EC8F13001BFFA9 /* GameCardViewController.xib */; };
+		00B4D94E23EC8F58001BFFA9 /* GameCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B4D94C23EC8F58001BFFA9 /* GameCardTableViewCell.swift */; };
+		00B4D94F23EC8F58001BFFA9 /* GameCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00B4D94D23EC8F58001BFFA9 /* GameCardTableViewCell.xib */; };
+		00B4D95323ECBAAD001BFFA9 /* PrizeBreakupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B4D95123ECBAAD001BFFA9 /* PrizeBreakupViewController.swift */; };
+		00B4D95423ECBAAD001BFFA9 /* PrizeBreakupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00B4D95223ECBAAD001BFFA9 /* PrizeBreakupViewController.xib */; };
+		00B4D95823ECBACE001BFFA9 /* PrizeBreakupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B4D95623ECBACE001BFFA9 /* PrizeBreakupTableViewCell.swift */; };
+		00B4D95923ECBACE001BFFA9 /* PrizeBreakupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00B4D95723ECBACE001BFFA9 /* PrizeBreakupTableViewCell.xib */; };
+		00B4D95C23ECBB1B001BFFA9 /* PrizeBreakupHeaaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B4D95A23ECBB1B001BFFA9 /* PrizeBreakupHeaaderTableViewCell.swift */; };
+		00B4D95D23ECBB1B001BFFA9 /* PrizeBreakupHeaaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00B4D95B23ECBB1B001BFFA9 /* PrizeBreakupHeaaderTableViewCell.xib */; };
+		00B4D96123ED6791001BFFA9 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B4D95F23ED6791001BFFA9 /* NotificationViewController.swift */; };
+		00B4D96223ED6791001BFFA9 /* NotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00B4D96023ED6791001BFFA9 /* NotificationViewController.xib */; };
+		00B4D96623ED67B4001BFFA9 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B4D96423ED67B4001BFFA9 /* NotificationTableViewCell.swift */; };
+		00B4D96723ED67B4001BFFA9 /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00B4D96523ED67B4001BFFA9 /* NotificationTableViewCell.xib */; };
 		8C32FE3423E1C2F400879853 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32FE3223E1C2F400879853 /* MainViewController.swift */; };
 		8C32FE3523E1C2F400879853 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C32FE3323E1C2F400879853 /* MainViewController.xib */; };
 		8C32FE3923E2680300879853 /* PinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32FE3723E2680300879853 /* PinView.swift */; };
@@ -165,6 +188,29 @@
 		006ADD7823D1E99300A929BA /* VerifyMobileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerifyMobileViewController.xib; sourceTree = "<group>"; };
 		006ADD7D23D1EA2600A929BA /* MoviesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListViewController.swift; sourceTree = "<group>"; };
 		006ADD7E23D1EA2600A929BA /* MoviesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesListViewController.xib; sourceTree = "<group>"; };
+		006C7D6923EDC6F200B2CBC1 /* GameCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCard.swift; sourceTree = "<group>"; };
+		006CF0E423E88E2E0042F57A /* MainTabbarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabbarView.swift; path = MainControllers/MainTabbarView.swift; sourceTree = "<group>"; };
+		006CF0E623E88E360042F57A /* SideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SideViewController.xib; path = ../../MainControllers/SideViewController.xib; sourceTree = "<group>"; };
+		006CF0E723E88E360042F57A /* SideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SideViewController.swift; path = ../../MainControllers/SideViewController.swift; sourceTree = "<group>"; };
+		006CF0EA23E88E3C0042F57A /* SideMenuMainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SideMenuMainController.swift; path = ../../MainControllers/SideMenuMainController.swift; sourceTree = "<group>"; };
+		006CF0EC23E88EF00042F57A /* SideMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SideMenuCell.swift; path = ../../../MainControllers/SideMenuCell.swift; sourceTree = "<group>"; };
+		006CF0ED23E88EF00042F57A /* SideMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SideMenuCell.xib; path = ../../../MainControllers/SideMenuCell.xib; sourceTree = "<group>"; };
+		006CF0F023E88FB20042F57A /* SideProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SideProfileView.swift; path = ../../../MainControllers/SideProfileView.swift; sourceTree = "<group>"; };
+		006CF0F123E88FB20042F57A /* SideProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SideProfileView.xib; path = ../../../MainControllers/SideProfileView.xib; sourceTree = "<group>"; };
+		00B4D94723EC8F13001BFFA9 /* GameCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCardViewController.swift; sourceTree = "<group>"; };
+		00B4D94823EC8F13001BFFA9 /* GameCardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameCardViewController.xib; sourceTree = "<group>"; };
+		00B4D94C23EC8F58001BFFA9 /* GameCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCardTableViewCell.swift; sourceTree = "<group>"; };
+		00B4D94D23EC8F58001BFFA9 /* GameCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameCardTableViewCell.xib; sourceTree = "<group>"; };
+		00B4D95123ECBAAD001BFFA9 /* PrizeBreakupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrizeBreakupViewController.swift; sourceTree = "<group>"; };
+		00B4D95223ECBAAD001BFFA9 /* PrizeBreakupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrizeBreakupViewController.xib; sourceTree = "<group>"; };
+		00B4D95623ECBACE001BFFA9 /* PrizeBreakupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrizeBreakupTableViewCell.swift; sourceTree = "<group>"; };
+		00B4D95723ECBACE001BFFA9 /* PrizeBreakupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrizeBreakupTableViewCell.xib; sourceTree = "<group>"; };
+		00B4D95A23ECBB1B001BFFA9 /* PrizeBreakupHeaaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrizeBreakupHeaaderTableViewCell.swift; sourceTree = "<group>"; };
+		00B4D95B23ECBB1B001BFFA9 /* PrizeBreakupHeaaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrizeBreakupHeaaderTableViewCell.xib; sourceTree = "<group>"; };
+		00B4D95F23ED6791001BFFA9 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		00B4D96023ED6791001BFFA9 /* NotificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationViewController.xib; sourceTree = "<group>"; };
+		00B4D96423ED67B4001BFFA9 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
+		00B4D96523ED67B4001BFFA9 /* NotificationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationTableViewCell.xib; sourceTree = "<group>"; };
 		47762608A05FB9F61C80A2D7 /* Pods-MyMovieLeague.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMovieLeague.release.xcconfig"; path = "Target Support Files/Pods-MyMovieLeague/Pods-MyMovieLeague.release.xcconfig"; sourceTree = "<group>"; };
 		5C2BAD483152CB7752BE81A0 /* Pods-MyMovieLeague.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMovieLeague.debug.xcconfig"; path = "Target Support Files/Pods-MyMovieLeague/Pods-MyMovieLeague.debug.xcconfig"; sourceTree = "<group>"; };
 		8C32FE3223E1C2F400879853 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -279,6 +325,7 @@
 			children = (
 				00335E3D23E1839A0028C9D8 /* ParameterDetail.swift */,
 				00335E3F23E183A00028C9D8 /* User.swift */,
+				006C7D6923EDC6F200B2CBC1 /* GameCard.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -359,6 +406,7 @@
 		006ADD6423D1E0D500A929BA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				006CF0E423E88E2E0042F57A /* MainTabbarView.swift */,
 				8CE50A3723E0F62D00FC443C /* CommonViews */,
 				8CE50A2423E0CFB800FC443C /* PreLogin */,
 				006ADD7B23D1EA0100A929BA /* MainViews */,
@@ -410,6 +458,10 @@
 		006ADD7B23D1EA0100A929BA /* MainViews */ = {
 			isa = PBXGroup;
 			children = (
+				8C9AF80723EDE73E008A939D /* SideMenu */,
+				00B4D95E23ED6753001BFFA9 /* Notification */,
+				00B4D95023ECBA83001BFFA9 /* PrizeBreakup */,
+				00B4D94623EC8EE7001BFFA9 /* GameCard */,
 				8C32FE3123E1C2D700879853 /* MainView */,
 				006ADD7C23D1EA0A00A929BA /* MoviesList */,
 			);
@@ -424,6 +476,65 @@
 				006ADD7E23D1EA2600A929BA /* MoviesListViewController.xib */,
 			);
 			path = MoviesList;
+			sourceTree = "<group>";
+		};
+		00B4D94623EC8EE7001BFFA9 /* GameCard */ = {
+			isa = PBXGroup;
+			children = (
+				00B4D94B23EC8F2F001BFFA9 /* Cells */,
+				00B4D94723EC8F13001BFFA9 /* GameCardViewController.swift */,
+				00B4D94823EC8F13001BFFA9 /* GameCardViewController.xib */,
+			);
+			path = GameCard;
+			sourceTree = "<group>";
+		};
+		00B4D94B23EC8F2F001BFFA9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				00B4D94C23EC8F58001BFFA9 /* GameCardTableViewCell.swift */,
+				00B4D94D23EC8F58001BFFA9 /* GameCardTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		00B4D95023ECBA83001BFFA9 /* PrizeBreakup */ = {
+			isa = PBXGroup;
+			children = (
+				00B4D95523ECBAB5001BFFA9 /* Cells */,
+				00B4D95123ECBAAD001BFFA9 /* PrizeBreakupViewController.swift */,
+				00B4D95223ECBAAD001BFFA9 /* PrizeBreakupViewController.xib */,
+			);
+			path = PrizeBreakup;
+			sourceTree = "<group>";
+		};
+		00B4D95523ECBAB5001BFFA9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				00B4D95623ECBACE001BFFA9 /* PrizeBreakupTableViewCell.swift */,
+				00B4D95723ECBACE001BFFA9 /* PrizeBreakupTableViewCell.xib */,
+				00B4D95A23ECBB1B001BFFA9 /* PrizeBreakupHeaaderTableViewCell.swift */,
+				00B4D95B23ECBB1B001BFFA9 /* PrizeBreakupHeaaderTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		00B4D95E23ED6753001BFFA9 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				00B4D96323ED6797001BFFA9 /* Cells */,
+				00B4D95F23ED6791001BFFA9 /* NotificationViewController.swift */,
+				00B4D96023ED6791001BFFA9 /* NotificationViewController.xib */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		00B4D96323ED6797001BFFA9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				00B4D96423ED67B4001BFFA9 /* NotificationTableViewCell.swift */,
+				00B4D96523ED67B4001BFFA9 /* NotificationTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		81EDA7BAC88C5AA5B32352B5 /* Pods */ = {
@@ -442,6 +553,28 @@
 				8C32FE3323E1C2F400879853 /* MainViewController.xib */,
 			);
 			path = MainView;
+			sourceTree = "<group>";
+		};
+		8C9AF80723EDE73E008A939D /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				8C9AF80823EDE766008A939D /* Cells */,
+				006CF0EA23E88E3C0042F57A /* SideMenuMainController.swift */,
+				006CF0E723E88E360042F57A /* SideViewController.swift */,
+				006CF0E623E88E360042F57A /* SideViewController.xib */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		8C9AF80823EDE766008A939D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				006CF0F023E88FB20042F57A /* SideProfileView.swift */,
+				006CF0F123E88FB20042F57A /* SideProfileView.xib */,
+				006CF0EC23E88EF00042F57A /* SideMenuCell.swift */,
+				006CF0ED23E88EF00042F57A /* SideMenuCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		8CE50A2423E0CFB800FC443C /* PreLogin */ = {
@@ -567,6 +700,7 @@
 				0029D19D23D8CC500087396A /* RobotoCondensed-Light.ttf in Resources */,
 				0029D19F23D8CC500087396A /* Roboto-Italic.ttf in Resources */,
 				0029D17223D8CC420087396A /* SansSerifFLF-Demibold.otf in Resources */,
+				00B4D95923ECBACE001BFFA9 /* PrizeBreakupTableViewCell.xib in Resources */,
 				006ADD6923D1E0F100A929BA /* LoginViewController.xib in Resources */,
 				0029D17B23D8CC420087396A /* SansSerifBldFLFCond.otf in Resources */,
 				0029D19C23D8CC500087396A /* RobotoCondensed-Regular.ttf in Resources */,
@@ -579,7 +713,10 @@
 				0029D17C23D8CC420087396A /* SansSerifBookFLF.otf in Resources */,
 				8C32FE3523E1C2F400879853 /* MainViewController.xib in Resources */,
 				0029D1A823D8CC600087396A /* Poppins-Light.ttf in Resources */,
+				00B4D96723ED67B4001BFFA9 /* NotificationTableViewCell.xib in Resources */,
 				0029D19623D8CC500087396A /* Roboto-Regular.ttf in Resources */,
+				006CF0E823E88E360042F57A /* SideViewController.xib in Resources */,
+				006CF0F323E88FB20042F57A /* SideProfileView.xib in Resources */,
 				006ADD8023D1EA2600A929BA /* MoviesListViewController.xib in Resources */,
 				0029D19923D8CC500087396A /* Roboto-Thin.ttf in Resources */,
 				0029D1AA23D8CC600087396A /* Poppins-SemiBold.ttf in Resources */,
@@ -592,12 +729,14 @@
 				006ADD7523D1E79900A929BA /* ComeAndPlayViewController.xib in Resources */,
 				0029D1A923D8CC600087396A /* Poppins-Medium.ttf in Resources */,
 				0029D17A23D8CC420087396A /* SansSerifExbFLFCond-Italic.otf in Resources */,
+				00B4D94F23EC8F58001BFFA9 /* GameCardTableViewCell.xib in Resources */,
 				004AB39B23DDED8200FA5A28 /* MovieTableViewCell.xib in Resources */,
 				006ADD6E23D1E11A00A929BA /* SplashViewController.xib in Resources */,
 				0029D17123D8CC420087396A /* SansSerifBookFLF-Italic.otf in Resources */,
 				0029D17E23D8CC420087396A /* SansSerifExbFLF-Italic.otf in Resources */,
 				0029D1A023D8CC500087396A /* Roboto-LightItalic.ttf in Resources */,
 				0029D17723D8CC420087396A /* SansSerifExbFLFCond.otf in Resources */,
+				00B4D95D23ECBB1B001BFFA9 /* PrizeBreakupHeaaderTableViewCell.xib in Resources */,
 				8C32FE3A23E2680300879853 /* PinView.xib in Resources */,
 				0029D1A223D8CC500087396A /* RobotoCondensed-Bold.ttf in Resources */,
 				0029D19123D8CC500087396A /* Roboto-Light.ttf in Resources */,
@@ -608,13 +747,17 @@
 				8CE50A3B23E0F64600FC443C /* AcknowledgeViewController.xib in Resources */,
 				0029D17423D8CC420087396A /* SansSerifFLF-Italic.otf in Resources */,
 				0029D17523D8CC420087396A /* SansSerifFLF.otf in Resources */,
+				00B4D96223ED6791001BFFA9 /* NotificationViewController.xib in Resources */,
 				0029D19423D8CC500087396A /* RobotoCondensed-BoldItalic.ttf in Resources */,
 				0029D17323D8CC420087396A /* SansSerifBldFLFCond-Italic.otf in Resources */,
+				006CF0EF23E88EF00042F57A /* SideMenuCell.xib in Resources */,
 				0029D19723D8CC500087396A /* Roboto-ThinItalic.ttf in Resources */,
 				006ADD7A23D1E99300A929BA /* VerifyMobileViewController.xib in Resources */,
 				0029D1AB23D8CC600087396A /* Poppins-Bold.ttf in Resources */,
 				0029D19223D8CC500087396A /* Roboto-Black.ttf in Resources */,
+				00B4D95423ECBAAD001BFFA9 /* PrizeBreakupViewController.xib in Resources */,
 				0029D19B23D8CC500087396A /* RobotoCondensed-LightItalic.ttf in Resources */,
+				00B4D94A23EC8F13001BFFA9 /* GameCardViewController.xib in Resources */,
 				0029D17923D8CC420087396A /* SansSerifExbFLF.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -685,6 +828,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00B4D96623ED67B4001BFFA9 /* NotificationTableViewCell.swift in Sources */,
+				00B4D94E23EC8F58001BFFA9 /* GameCardTableViewCell.swift in Sources */,
 				006ADD7423D1E79900A929BA /* ComeAndPlayViewController.swift in Sources */,
 				006ADD7023D1E66800A929BA /* SceneDelegate.swift in Sources */,
 				00335E4723E18BA80028C9D8 /* StringExtension.swift in Sources */,
@@ -694,27 +839,38 @@
 				00335E4023E183A00028C9D8 /* User.swift in Sources */,
 				0029D15C23D8B40B0087396A /* ComeAndPlayViewModel.swift in Sources */,
 				006ADD4E23D1DF3900A929BA /* AppDelegate.swift in Sources */,
+				006CF0E523E88E2E0042F57A /* MainTabbarView.swift in Sources */,
+				006C7D6A23EDC6F200B2CBC1 /* GameCard.swift in Sources */,
 				8CE50A2A23E0CFF800FC443C /* HelpViewController.swift in Sources */,
 				8C32FE3923E2680300879853 /* PinView.swift in Sources */,
 				8CE50A3223E0EB4800FC443C /* CommentInputView.swift in Sources */,
 				004AB39A23DDED8200FA5A28 /* MovieTableViewCell.swift in Sources */,
 				0029D15A23D8B3F30087396A /* SplashViewModel.swift in Sources */,
 				006ADD7923D1E99300A929BA /* VerifyMobileViewController.swift in Sources */,
+				006CF0EB23E88E3C0042F57A /* SideMenuMainController.swift in Sources */,
+				00B4D95C23ECBB1B001BFFA9 /* PrizeBreakupHeaaderTableViewCell.swift in Sources */,
 				8CE50A3523E0EB6C00FC443C /* InputView.swift in Sources */,
 				00335E4623E18BA80028C9D8 /* DateExtension.swift in Sources */,
+				00B4D95323ECBAAD001BFFA9 /* PrizeBreakupViewController.swift in Sources */,
 				8C32FE3423E1C2F400879853 /* MainViewController.swift in Sources */,
+				006CF0F223E88FB20042F57A /* SideProfileView.swift in Sources */,
 				00335E3E23E1839A0028C9D8 /* ParameterDetail.swift in Sources */,
 				006ADD6823D1E0F100A929BA /* LoginViewController.swift in Sources */,
 				00335E4523E18BA80028C9D8 /* EncodableExtension.swift in Sources */,
 				006ADD6323D1E05300A929BA /* AppController.swift in Sources */,
+				006CF0E923E88E360042F57A /* SideViewController.swift in Sources */,
 				006ADD6D23D1E11A00A929BA /* SplashViewController.swift in Sources */,
+				00B4D95823ECBACE001BFFA9 /* PrizeBreakupTableViewCell.swift in Sources */,
 				004AB39623DDDF7900FA5A28 /* MovieCollectionViewCell.swift in Sources */,
 				00335E3823E183260028C9D8 /* CommonFunctions.swift in Sources */,
 				00335E3523E1831B0028C9D8 /* Reachability.swift in Sources */,
+				00B4D94923EC8F13001BFFA9 /* GameCardViewController.swift in Sources */,
+				00B4D96123ED6791001BFFA9 /* NotificationViewController.swift in Sources */,
 				8CE50A3C23E0F64600FC443C /* AcknowledgeViewController.swift in Sources */,
 				00335E3C23E1836F0028C9D8 /* NetworkManager.swift in Sources */,
 				00335E3623E1831B0028C9D8 /* Toast.swift in Sources */,
 				006ADD7F23D1EA2600A929BA /* MoviesListViewController.swift in Sources */,
+				006CF0EE23E88EF00042F57A /* SideMenuCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

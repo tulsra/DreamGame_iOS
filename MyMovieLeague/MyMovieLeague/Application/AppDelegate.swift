@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
 //        application.statusBarStyle = .lightContent
         
-
+        
         Fabric.with([Crashlytics.self])
         return true
     }

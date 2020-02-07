@@ -15,15 +15,35 @@ class AppController {
     private init(){}
 
     var window: UIWindow?
+    var mainView   =   SSASideMenu()
     
     func loadStartView() {
            window?.rootViewController  =   nil
-           let splashVC                 =   SplashViewController()
-           let navigationController = UINavigationController(rootViewController: splashVC)
-        navigationController.isNavigationBarHidden = true
-           window?.rootViewController  =   navigationController
+        
+        
+//           let splashVC                 =   SplashViewController()
+//           let navigationController = UINavigationController(rootViewController: splashVC)
+//        navigationController.isNavigationBarHidden = true
+//           window?.rootViewController  =   navigationController
+        
+        let VC1 =   MainTabbarViewController()
+        let VC2 =   SideViewController()
+        
+        VC2.menuTapped = { index in
+            print(index)
+//            if index == 7 {
+//                self.logoutAction()
+//            } else {
+//                VC1.selectedIndex = index
+//            }
+        }
+        let nav = UINavigationController(rootViewController: VC1)
+        mainView   =   SSASideMenu(contentViewController: nav, leftMenuViewController: VC2)
+        window?.rootViewController  =    mainView
+        
+        
+        
            setNavigationBarAppearance()
-    
         
         for family in UIFont.familyNames.sorted() {
             let names = UIFont.fontNames(forFamilyName: family)
@@ -36,6 +56,8 @@ class AppController {
         
        }
     
+
+    
     func loadLoginView() {
         window?.rootViewController  =   nil
         let loginVC                 =   LoginViewController()
@@ -45,7 +67,7 @@ class AppController {
 
     }
     
-    func setNavigationBarAppearance () {
+    func setNavigationBarAppearance() {
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
 //        UINavigationBar.appearance().barTintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
@@ -56,8 +78,19 @@ class AppController {
         UINavigationBar.appearance().isTranslucent = true
     }
     
+    func setTabbarAppearance() {
+        let tabBar = UITabBar.appearance()
+        tabBar.barTintColor = UIColor.clear
+        tabBar.backgroundImage = UIImage()
+        tabBar.shadowImage = UIImage()
+        
+        tabBar.backgroundColor = UIColor.black.withAlphaComponent(0.2)
+                
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: themeColor], for: .selected)
+    }
     func addNavigationButtons(navigationItem:UINavigationItem) {
-        let logo = UIImage(named: "logo")
+        let logo = UIImage(named: "app-logo")
         let imageView = UIImageView(image:logo)
         imageView.contentMode = .scaleAspectFit
         imageView.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
@@ -65,45 +98,51 @@ class AppController {
         
         let menubutton = UIButton(type: .custom)
         menubutton.setImage(UIImage(named: "menu"), for: .normal)
-//        menubutton.addTarget(self, action: #selector(menuBtnAction), for: .touchUpInside)
+        menubutton.addTarget(self, action: #selector(menuBtnAction), for: .touchUpInside)
         
         let barButton1 = UIBarButtonItem(customView: menubutton)
         
-        let currWidth1 = barButton1.customView?.widthAnchor.constraint(equalToConstant: 28)
+        let currWidth1 = barButton1.customView?.widthAnchor.constraint(equalToConstant: 24)
         currWidth1?.isActive = true
-        let currHeight1 = barButton1.customView?.heightAnchor.constraint(equalToConstant: 28)
+        let currHeight1 = barButton1.customView?.heightAnchor.constraint(equalToConstant: 24)
         currHeight1?.isActive = true
         navigationItem.leftBarButtonItem = barButton1
         
         
         let lopgoutbutton = UIButton(type: .custom)
-        lopgoutbutton.setImage(UIImage(named: "logout_white_nav"), for: .normal)
-        lopgoutbutton.addTarget(self, action: #selector(logoutAction), for: .touchUpInside)
+        lopgoutbutton.setImage(UIImage(named: "notification-2"), for: .normal)
+        lopgoutbutton.addTarget(self, action: #selector(notificationAction), for: .touchUpInside)
         
         let barButton2 = UIBarButtonItem(customView: lopgoutbutton)
         
-        let currWidth2 = barButton2.customView?.widthAnchor.constraint(equalToConstant: 24)
+        let currWidth2 = barButton2.customView?.widthAnchor.constraint(equalToConstant: 28)
         currWidth2?.isActive = true
-        let currHeight2 = barButton2.customView?.heightAnchor.constraint(equalToConstant: 24)
+        let currHeight2 = barButton2.customView?.heightAnchor.constraint(equalToConstant: 28)
         currHeight2?.isActive = true
         navigationItem.rightBarButtonItem = barButton2
         
     }
     
     
+    @objc func menuBtnAction() {
+         self.mainView.contentViewController?.presentLeftMenuViewController()
+    }
     
     
-    @objc func logoutAction() {
+    @objc func notificationAction() {
         
-        let alert = UIAlertController(title: "BES", message: "Are You Sure Want to Logout!", preferredStyle:.alert)
-        let yesButton = UIAlertAction(title: "Yes", style: .default) { (action) in
-            self.forceLogoutAction()
-        }
-        let noButton = UIAlertAction(title: "Cancel", style: .default) { (action) in
-            
-        }
-        alert.addAction(yesButton)
-        alert.addAction(noButton)
+        let notificatonVC = NotificationViewController()
+        (self.mainView.contentViewController as! UINavigationController).pushViewController(notificatonVC, animated: true)
+        
+//        let alert = UIAlertController(title: "BES", message: "Are You Sure Want to Logout!", preferredStyle:.alert)
+//        let yesButton = UIAlertAction(title: "Yes", style: .default) { (action) in
+//            self.forceLogoutAction()
+//        }
+//        let noButton = UIAlertAction(title: "Cancel", style: .default) { (action) in
+//            
+//        }
+//        alert.addAction(yesButton)
+//        alert.addAction(noButton)
         
     }
     

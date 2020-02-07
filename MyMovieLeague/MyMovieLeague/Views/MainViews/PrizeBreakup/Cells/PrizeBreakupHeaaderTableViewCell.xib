@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="RobotoCondensed-Bold.ttf">
+            <string>RobotoCondensed-Bold</string>
+        </array>
+        <array key="RobotoCondensed-Regular.ttf">
+            <string>RobotoCondensed-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="119" id="KGk-i7-Jjw" customClass="PrizeBreakupHeaaderTableViewCell" customModule="MyMovieLeague" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kvO-7A-xnt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WINNING BREAKUP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7br-c4-I3o">
+                                <rect key="frame" x="20" y="0.0" width="124.5" height="40"/>
+                                <fontDescription key="fontDescription" name="RobotoCondensed-Bold" family="Roboto Condensed" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₹25 Lakh" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPt-s4-3FA">
+                                <rect key="frame" x="234" y="0.0" width="66" height="40"/>
+                                <fontDescription key="fontDescription" name="RobotoCondensed-Bold" family="Roboto Condensed" pointSize="18"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="2GK-6l-hed"/>
+                            <constraint firstItem="xPt-s4-3FA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7br-c4-I3o" secondAttribute="trailing" id="2rr-Wh-etz"/>
+                            <constraint firstItem="7br-c4-I3o" firstAttribute="top" secondItem="kvO-7A-xnt" secondAttribute="top" id="BQj-SQ-Fuq"/>
+                            <constraint firstAttribute="bottom" secondItem="xPt-s4-3FA" secondAttribute="bottom" id="Qcc-ua-YGx"/>
+                            <constraint firstItem="xPt-s4-3FA" firstAttribute="top" secondItem="kvO-7A-xnt" secondAttribute="top" id="VkJ-Og-TAu"/>
+                            <constraint firstItem="7br-c4-I3o" firstAttribute="leading" secondItem="kvO-7A-xnt" secondAttribute="leading" constant="20" id="X1F-u9-w3m"/>
+                            <constraint firstAttribute="trailing" secondItem="xPt-s4-3FA" secondAttribute="trailing" constant="20" id="dVl-BJ-EUV"/>
+                            <constraint firstAttribute="bottom" secondItem="7br-c4-I3o" secondAttribute="bottom" id="w4I-BF-fhZ"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jRg-lB-Pvo">
+                        <rect key="frame" x="20" y="40" width="280" height="24"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RANK" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0e-OZ-tNk">
+                                <rect key="frame" x="10" y="0.0" width="30" height="24"/>
+                                <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WINNING AMOUNT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugB-H9-pSs">
+                                <rect key="frame" x="173.5" y="0.0" width="96.5" height="24"/>
+                                <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="r0e-OZ-tNk" firstAttribute="top" secondItem="jRg-lB-Pvo" secondAttribute="top" id="00J-vS-vKV"/>
+                            <constraint firstAttribute="bottom" secondItem="r0e-OZ-tNk" secondAttribute="bottom" id="2Gj-ga-RLx"/>
+                            <constraint firstAttribute="trailing" secondItem="ugB-H9-pSs" secondAttribute="trailing" constant="10" id="Ci3-NH-Mrp"/>
+                            <constraint firstItem="r0e-OZ-tNk" firstAttribute="leading" secondItem="jRg-lB-Pvo" secondAttribute="leading" constant="10" id="FPW-zd-Af6"/>
+                            <constraint firstItem="ugB-H9-pSs" firstAttribute="top" secondItem="jRg-lB-Pvo" secondAttribute="top" id="LF5-Av-AOQ"/>
+                            <constraint firstAttribute="bottom" secondItem="ugB-H9-pSs" secondAttribute="bottom" id="VJd-uW-qpO"/>
+                            <constraint firstItem="ugB-H9-pSs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="r0e-OZ-tNk" secondAttribute="trailing" id="pf2-S3-lAa"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="t4e-2J-7PJ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="kvO-7A-xnt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="0Ri-i0-zse"/>
+                    <constraint firstAttribute="trailing" secondItem="jRg-lB-Pvo" secondAttribute="trailing" constant="20" id="1rc-cM-XrG"/>
+                    <constraint firstItem="jRg-lB-Pvo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="LWV-yF-pdg"/>
+                    <constraint firstAttribute="trailing" secondItem="kvO-7A-xnt" secondAttribute="trailing" id="Yfm-B6-gX8"/>
+                    <constraint firstAttribute="bottom" secondItem="jRg-lB-Pvo" secondAttribute="bottom" constant="1" id="bef-LW-3Z9"/>
+                    <constraint firstItem="jRg-lB-Pvo" firstAttribute="top" secondItem="kvO-7A-xnt" secondAttribute="bottom" id="fBP-Yp-8QV"/>
+                    <constraint firstItem="kvO-7A-xnt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="w7N-Sw-rv5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="lblTotalPrize" destination="xPt-s4-3FA" id="489-GG-k8m"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="130.58035714285714"/>
+        </tableViewCell>
+    </objects>
+</document>

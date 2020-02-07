@@ -75,6 +75,9 @@ extension Date {
         let time = dateFormatter.string(from: self)
         return time    // prints "Today, 5:10 PM"
     }
+    func secondsToHoursMinutesSeconds (seconds : Int) -> (Int, Int, Int) {
+      return (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
+    }
         
 }
 
