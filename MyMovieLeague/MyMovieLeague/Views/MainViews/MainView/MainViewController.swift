@@ -60,7 +60,7 @@ class MainViewController: UIViewController {
     }
 
     @IBAction func btnBoxOfficeAction(_ sender: UIButton) {
-        let moviesListVC = MoviesListViewController()
+        let moviesListVC = AccountSummeryViewController()
         self.navigationController?.pushViewController(moviesListVC, animated: true)
     }
     

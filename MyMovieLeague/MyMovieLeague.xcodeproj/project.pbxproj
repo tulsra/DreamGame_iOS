@@ -104,6 +104,10 @@
 		8C32FE3523E1C2F400879853 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C32FE3323E1C2F400879853 /* MainViewController.xib */; };
 		8C32FE3923E2680300879853 /* PinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32FE3723E2680300879853 /* PinView.swift */; };
 		8C32FE3A23E2680300879853 /* PinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C32FE3823E2680300879853 /* PinView.xib */; };
+		8C97C32623FC4984000B7F16 /* AccountSummeryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C97C32423FC4984000B7F16 /* AccountSummeryViewController.swift */; };
+		8C97C32723FC4984000B7F16 /* AccountSummeryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C97C32523FC4984000B7F16 /* AccountSummeryViewController.xib */; };
+		8C97C32A23FC4C88000B7F16 /* ProfileHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C97C32823FC4C88000B7F16 /* ProfileHeaderView.xib */; };
+		8C97C32B23FC4C88000B7F16 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C97C32923FC4C88000B7F16 /* ProfileHeaderView.swift */; };
 		8C9AF80D23EDE82D008A939D /* TermsAndConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9AF80B23EDE82D008A939D /* TermsAndConditionsViewController.swift */; };
 		8C9AF80E23EDE82D008A939D /* TermsAndConditionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C9AF80C23EDE82D008A939D /* TermsAndConditionsViewController.xib */; };
 		8C9AF81123EDE8BC008A939D /* Terms-and-Conditions-Template.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8C9AF81023EDE8BC008A939D /* Terms-and-Conditions-Template.pdf */; };
@@ -227,6 +231,10 @@
 		8C32FE3323E1C2F400879853 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		8C32FE3723E2680300879853 /* PinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinView.swift; sourceTree = "<group>"; };
 		8C32FE3823E2680300879853 /* PinView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PinView.xib; sourceTree = "<group>"; };
+		8C97C32423FC4984000B7F16 /* AccountSummeryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummeryViewController.swift; sourceTree = "<group>"; };
+		8C97C32523FC4984000B7F16 /* AccountSummeryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountSummeryViewController.xib; sourceTree = "<group>"; };
+		8C97C32823FC4C88000B7F16 /* ProfileHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileHeaderView.xib; sourceTree = "<group>"; };
+		8C97C32923FC4C88000B7F16 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		8C9AF80B23EDE82D008A939D /* TermsAndConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsViewController.swift; sourceTree = "<group>"; };
 		8C9AF80C23EDE82D008A939D /* TermsAndConditionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermsAndConditionsViewController.xib; sourceTree = "<group>"; };
 		8C9AF81023EDE8BC008A939D /* Terms-and-Conditions-Template.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Terms-and-Conditions-Template.pdf"; sourceTree = "<group>"; };
@@ -479,6 +487,7 @@
 		006ADD7B23D1EA0100A929BA /* MainViews */ = {
 			isa = PBXGroup;
 			children = (
+				8C97C32323FC495F000B7F16 /* AccountSummery */,
 				8C9AF81A23EDFA83008A939D /* Account */,
 				8C9AF81923EDFA7C008A939D /* Results */,
 				8C9AF80923EDE803008A939D /* SideMenuViews */,
@@ -577,6 +586,15 @@
 				8C32FE3323E1C2F400879853 /* MainViewController.xib */,
 			);
 			path = MainView;
+			sourceTree = "<group>";
+		};
+		8C97C32323FC495F000B7F16 /* AccountSummery */ = {
+			isa = PBXGroup;
+			children = (
+				8C97C32423FC4984000B7F16 /* AccountSummeryViewController.swift */,
+				8C97C32523FC4984000B7F16 /* AccountSummeryViewController.xib */,
+			);
+			path = AccountSummery;
 			sourceTree = "<group>";
 		};
 		8C9AF80723EDE73E008A939D /* SideMenu */ = {
@@ -678,6 +696,8 @@
 		8CE50A2E23E0EB3600FC443C /* CommonViews */ = {
 			isa = PBXGroup;
 			children = (
+				8C97C32923FC4C88000B7F16 /* ProfileHeaderView.swift */,
+				8C97C32823FC4C88000B7F16 /* ProfileHeaderView.xib */,
 				8C32FE3723E2680300879853 /* PinView.swift */,
 				8C32FE3823E2680300879853 /* PinView.xib */,
 				8CE50A3323E0EB6C00FC443C /* InputView.swift */,
@@ -794,6 +814,7 @@
 				0029D1A823D8CC600087396A /* Poppins-Light.ttf in Resources */,
 				00B4D96723ED67B4001BFFA9 /* NotificationTableViewCell.xib in Resources */,
 				0029D19623D8CC500087396A /* Roboto-Regular.ttf in Resources */,
+				8C97C32A23FC4C88000B7F16 /* ProfileHeaderView.xib in Resources */,
 				006CF0E823E88E360042F57A /* SideViewController.xib in Resources */,
 				006CF0F323E88FB20042F57A /* SideProfileView.xib in Resources */,
 				8C9AF81E23EDFA91008A939D /* ResultsViewController.xib in Resources */,
@@ -829,6 +850,7 @@
 				8CE50A3B23E0F64600FC443C /* AcknowledgeViewController.xib in Resources */,
 				0029D17423D8CC420087396A /* SansSerifFLF-Italic.otf in Resources */,
 				0029D17523D8CC420087396A /* SansSerifFLF.otf in Resources */,
+				8C97C32723FC4984000B7F16 /* AccountSummeryViewController.xib in Resources */,
 				00B4D96223ED6791001BFFA9 /* NotificationViewController.xib in Resources */,
 				0029D19423D8CC500087396A /* RobotoCondensed-BoldItalic.ttf in Resources */,
 				0029D17323D8CC420087396A /* SansSerifBldFLFCond-Italic.otf in Resources */,
@@ -919,6 +941,7 @@
 				006ADD7023D1E66800A929BA /* SceneDelegate.swift in Sources */,
 				00335E4723E18BA80028C9D8 /* StringExtension.swift in Sources */,
 				0029D15E23D8B4210087396A /* LoginViewModel.swift in Sources */,
+				8C97C32623FC4984000B7F16 /* AccountSummeryViewController.swift in Sources */,
 				00335E3423E1831B0028C9D8 /* ImagePicker.swift in Sources */,
 				0029D1C023D9176F0087396A /* VerifyMobileViewModel.swift in Sources */,
 				00335E4023E183A00028C9D8 /* User.swift in Sources */,
@@ -957,6 +980,7 @@
 				8CE50A3C23E0F64600FC443C /* AcknowledgeViewController.swift in Sources */,
 				00335E3C23E1836F0028C9D8 /* NetworkManager.swift in Sources */,
 				00335E3623E1831B0028C9D8 /* Toast.swift in Sources */,
+				8C97C32B23FC4C88000B7F16 /* ProfileHeaderView.swift in Sources */,
 				006ADD7F23D1EA2600A929BA /* MoviesListViewController.swift in Sources */,
 				006CF0EE23E88EF00042F57A /* SideMenuCell.swift in Sources */,
 			);
