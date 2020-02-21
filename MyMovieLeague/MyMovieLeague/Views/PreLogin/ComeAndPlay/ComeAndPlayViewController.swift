@@ -45,7 +45,7 @@ class ComeAndPlayViewController: UIViewController {
     }
     
     @IBAction func btnHelpAction(_ sender: UIButton) {
-        let helpVC = HelpViewController()
+        let helpVC = ProfileViewController()
         self.navigationController?.pushViewController(helpVC, animated: true)
     }
     

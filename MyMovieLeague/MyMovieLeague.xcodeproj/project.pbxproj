@@ -86,6 +86,10 @@
 		006CF0EF23E88EF00042F57A /* SideMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006CF0ED23E88EF00042F57A /* SideMenuCell.xib */; };
 		006CF0F223E88FB20042F57A /* SideProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CF0F023E88FB20042F57A /* SideProfileView.swift */; };
 		006CF0F323E88FB20042F57A /* SideProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006CF0F123E88FB20042F57A /* SideProfileView.xib */; };
+		00A190FC23FE8B2900ED2FA7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A190FA23FE8B2900ED2FA7 /* ProfileViewController.swift */; };
+		00A190FD23FE8B2900ED2FA7 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00A190FB23FE8B2900ED2FA7 /* ProfileViewController.xib */; };
+		00A1910023FE918100ED2FA7 /* ProfileImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00A190FE23FE918100ED2FA7 /* ProfileImageView.xib */; };
+		00A1910123FE918100ED2FA7 /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A190FF23FE918100ED2FA7 /* ProfileImageView.swift */; };
 		00B4D94923EC8F13001BFFA9 /* GameCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B4D94723EC8F13001BFFA9 /* GameCardViewController.swift */; };
 		00B4D94A23EC8F13001BFFA9 /* GameCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00B4D94823EC8F13001BFFA9 /* GameCardViewController.xib */; };
 		00B4D94E23EC8F58001BFFA9 /* GameCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B4D94C23EC8F58001BFFA9 /* GameCardTableViewCell.swift */; };
@@ -100,6 +104,8 @@
 		00B4D96223ED6791001BFFA9 /* NotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00B4D96023ED6791001BFFA9 /* NotificationViewController.xib */; };
 		00B4D96623ED67B4001BFFA9 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B4D96423ED67B4001BFFA9 /* NotificationTableViewCell.swift */; };
 		00B4D96723ED67B4001BFFA9 /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00B4D96523ED67B4001BFFA9 /* NotificationTableViewCell.xib */; };
+		8C284EC123FF02CD003952E3 /* PlayGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C284EBF23FF02CD003952E3 /* PlayGameViewController.swift */; };
+		8C284EC223FF02CD003952E3 /* PlayGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C284EC023FF02CD003952E3 /* PlayGameViewController.xib */; };
 		8C32FE3423E1C2F400879853 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32FE3223E1C2F400879853 /* MainViewController.swift */; };
 		8C32FE3523E1C2F400879853 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C32FE3323E1C2F400879853 /* MainViewController.xib */; };
 		8C32FE3923E2680300879853 /* PinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32FE3723E2680300879853 /* PinView.swift */; };
@@ -211,6 +217,10 @@
 		006CF0ED23E88EF00042F57A /* SideMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SideMenuCell.xib; path = ../../../MainControllers/SideMenuCell.xib; sourceTree = "<group>"; };
 		006CF0F023E88FB20042F57A /* SideProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SideProfileView.swift; path = ../../../MainControllers/SideProfileView.swift; sourceTree = "<group>"; };
 		006CF0F123E88FB20042F57A /* SideProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SideProfileView.xib; path = ../../../MainControllers/SideProfileView.xib; sourceTree = "<group>"; };
+		00A190FA23FE8B2900ED2FA7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		00A190FB23FE8B2900ED2FA7 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		00A190FE23FE918100ED2FA7 /* ProfileImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileImageView.xib; sourceTree = "<group>"; };
+		00A190FF23FE918100ED2FA7 /* ProfileImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
 		00B4D94723EC8F13001BFFA9 /* GameCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCardViewController.swift; sourceTree = "<group>"; };
 		00B4D94823EC8F13001BFFA9 /* GameCardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameCardViewController.xib; sourceTree = "<group>"; };
 		00B4D94C23EC8F58001BFFA9 /* GameCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCardTableViewCell.swift; sourceTree = "<group>"; };
@@ -227,6 +237,8 @@
 		00B4D96523ED67B4001BFFA9 /* NotificationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationTableViewCell.xib; sourceTree = "<group>"; };
 		47762608A05FB9F61C80A2D7 /* Pods-MyMovieLeague.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMovieLeague.release.xcconfig"; path = "Target Support Files/Pods-MyMovieLeague/Pods-MyMovieLeague.release.xcconfig"; sourceTree = "<group>"; };
 		5C2BAD483152CB7752BE81A0 /* Pods-MyMovieLeague.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMovieLeague.debug.xcconfig"; path = "Target Support Files/Pods-MyMovieLeague/Pods-MyMovieLeague.debug.xcconfig"; sourceTree = "<group>"; };
+		8C284EBF23FF02CD003952E3 /* PlayGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayGameViewController.swift; sourceTree = "<group>"; };
+		8C284EC023FF02CD003952E3 /* PlayGameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayGameViewController.xib; sourceTree = "<group>"; };
 		8C32FE3223E1C2F400879853 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8C32FE3323E1C2F400879853 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		8C32FE3723E2680300879853 /* PinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinView.swift; sourceTree = "<group>"; };
@@ -487,6 +499,8 @@
 		006ADD7B23D1EA0100A929BA /* MainViews */ = {
 			isa = PBXGroup;
 			children = (
+				8C284EBE23FF02B1003952E3 /* PlayGameView */,
+				00A190F923FE8AF100ED2FA7 /* Profile */,
 				8C97C32323FC495F000B7F16 /* AccountSummery */,
 				8C9AF81A23EDFA83008A939D /* Account */,
 				8C9AF81923EDFA7C008A939D /* Results */,
@@ -509,6 +523,15 @@
 				006ADD7E23D1EA2600A929BA /* MoviesListViewController.xib */,
 			);
 			path = MoviesList;
+			sourceTree = "<group>";
+		};
+		00A190F923FE8AF100ED2FA7 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				00A190FA23FE8B2900ED2FA7 /* ProfileViewController.swift */,
+				00A190FB23FE8B2900ED2FA7 /* ProfileViewController.xib */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		00B4D94623EC8EE7001BFFA9 /* GameCard */ = {
@@ -577,6 +600,15 @@
 				47762608A05FB9F61C80A2D7 /* Pods-MyMovieLeague.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		8C284EBE23FF02B1003952E3 /* PlayGameView */ = {
+			isa = PBXGroup;
+			children = (
+				8C284EBF23FF02CD003952E3 /* PlayGameViewController.swift */,
+				8C284EC023FF02CD003952E3 /* PlayGameViewController.xib */,
+			);
+			path = PlayGameView;
 			sourceTree = "<group>";
 		};
 		8C32FE3123E1C2D700879853 /* MainView */ = {
@@ -696,6 +728,8 @@
 		8CE50A2E23E0EB3600FC443C /* CommonViews */ = {
 			isa = PBXGroup;
 			children = (
+				00A190FF23FE918100ED2FA7 /* ProfileImageView.swift */,
+				00A190FE23FE918100ED2FA7 /* ProfileImageView.xib */,
 				8C97C32923FC4C88000B7F16 /* ProfileHeaderView.swift */,
 				8C97C32823FC4C88000B7F16 /* ProfileHeaderView.xib */,
 				8C32FE3723E2680300879853 /* PinView.swift */,
@@ -805,7 +839,9 @@
 				8CE50A3123E0EB4800FC443C /* CommentInputView.xib in Resources */,
 				0029D19A23D8CC500087396A /* Roboto-BoldItalic.ttf in Resources */,
 				0029D19523D8CC500087396A /* RobotoCondensed-Italic.ttf in Resources */,
+				00A190FD23FE8B2900ED2FA7 /* ProfileViewController.xib in Resources */,
 				8C9AF80E23EDE82D008A939D /* TermsAndConditionsViewController.xib in Resources */,
+				00A1910023FE918100ED2FA7 /* ProfileImageView.xib in Resources */,
 				0029D19E23D8CC500087396A /* Roboto-Bold.ttf in Resources */,
 				0029D17623D8CC420087396A /* SansSerifBldFLF-Italic.otf in Resources */,
 				8CE50A2B23E0CFF800FC443C /* HelpViewController.xib in Resources */,
@@ -829,6 +865,7 @@
 				0029D1AC23D8CC600087396A /* Poppins-Regular.ttf in Resources */,
 				006ADD7523D1E79900A929BA /* ComeAndPlayViewController.xib in Resources */,
 				0029D1A923D8CC600087396A /* Poppins-Medium.ttf in Resources */,
+				8C284EC223FF02CD003952E3 /* PlayGameViewController.xib in Resources */,
 				0029D17A23D8CC420087396A /* SansSerifExbFLFCond-Italic.otf in Resources */,
 				8C9AF82223EDFAA0008A939D /* AccountViewController.xib in Resources */,
 				00B4D94F23EC8F58001BFFA9 /* GameCardTableViewCell.xib in Resources */,
@@ -952,10 +989,12 @@
 				006C7D6A23EDC6F200B2CBC1 /* GameCard.swift in Sources */,
 				8CE50A2A23E0CFF800FC443C /* HelpViewController.swift in Sources */,
 				8C32FE3923E2680300879853 /* PinView.swift in Sources */,
+				00A1910123FE918100ED2FA7 /* ProfileImageView.swift in Sources */,
 				8CE50A3223E0EB4800FC443C /* CommentInputView.swift in Sources */,
 				004AB39A23DDED8200FA5A28 /* MovieTableViewCell.swift in Sources */,
 				0029D15A23D8B3F30087396A /* SplashViewModel.swift in Sources */,
 				006ADD7923D1E99300A929BA /* VerifyMobileViewController.swift in Sources */,
+				00A190FC23FE8B2900ED2FA7 /* ProfileViewController.swift in Sources */,
 				006CF0EB23E88E3C0042F57A /* SideMenuMainController.swift in Sources */,
 				00B4D95C23ECBB1B001BFFA9 /* PrizeBreakupHeaaderTableViewCell.swift in Sources */,
 				8CE50A3523E0EB6C00FC443C /* InputView.swift in Sources */,
@@ -970,6 +1009,7 @@
 				006ADD6323D1E05300A929BA /* AppController.swift in Sources */,
 				006CF0E923E88E360042F57A /* SideViewController.swift in Sources */,
 				006ADD6D23D1E11A00A929BA /* SplashViewController.swift in Sources */,
+				8C284EC123FF02CD003952E3 /* PlayGameViewController.swift in Sources */,
 				00B4D95823ECBACE001BFFA9 /* PrizeBreakupTableViewCell.swift in Sources */,
 				004AB39623DDDF7900FA5A28 /* MovieCollectionViewCell.swift in Sources */,
 				00335E3823E183260028C9D8 /* CommonFunctions.swift in Sources */,

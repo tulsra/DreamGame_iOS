@@ -36,6 +36,19 @@ class InputView: UIView, UITextFieldDelegate {
         }
     }
     
+    @IBInspectable var text: String = ""{
+        didSet{
+            self.txtField.text = text
+            
+        }
+    }
+    @IBInspectable var isSecuredTextEntry: Bool = false{
+        didSet{
+            self.txtField.isSecureTextEntry = isSecuredTextEntry
+            
+        }
+    }
+    
     @IBInspectable var accessoryImage: UIImage = UIImage(named: "iconNavigationCheck") ?? UIImage() {
         didSet{
             self.accessoryImgView.image = accessoryImage
@@ -50,10 +63,16 @@ class InputView: UIView, UITextFieldDelegate {
         }
     }
     
-    @IBInspectable var isDropDown: Bool = false {
+    @IBInspectable var showAccesoryImage: Bool = true {
         didSet{
-            self.accessoryImgView.isHidden  =   false
-            self.accessoryImgBtn.isHidden = false
+            self.accessoryImgView.isHidden  =   !showAccesoryImage
+            self.accessoryImgBtn.isHidden = !showAccesoryImage
+        }
+    }
+    
+    @IBInspectable var isDropDown: Bool = false {
+        didSet {
+            
         }
     }
     
@@ -72,9 +91,6 @@ class InputView: UIView, UITextFieldDelegate {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-    
-        self.accessoryImgView.isHidden  =   true
-        self.accessoryImgBtn.isHidden = true
         self.txtField.delegate = self
     }
     

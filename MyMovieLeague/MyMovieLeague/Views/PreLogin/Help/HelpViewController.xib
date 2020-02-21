@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -46,7 +46,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We would love to hear your thoughts, concerns or problems with anything so we can improve!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ozH-QU-Whm">
-                                            <rect key="frame" x="30" y="0.0" width="354" height="80"/>
+                                            <rect key="frame" x="20" y="0.0" width="374" height="80"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="80" id="Tnk-4u-l93"/>
                                             </constraints>
@@ -59,8 +59,8 @@
                                     <constraints>
                                         <constraint firstItem="ozH-QU-Whm" firstAttribute="top" secondItem="zdA-aG-d4y" secondAttribute="top" id="FDw-3y-gNw"/>
                                         <constraint firstAttribute="bottom" secondItem="ozH-QU-Whm" secondAttribute="bottom" id="Yff-Lh-aHz"/>
-                                        <constraint firstAttribute="trailing" secondItem="ozH-QU-Whm" secondAttribute="trailing" constant="30" id="e4u-q8-Dq4"/>
-                                        <constraint firstItem="ozH-QU-Whm" firstAttribute="leading" secondItem="zdA-aG-d4y" secondAttribute="leading" constant="30" id="rOn-Kl-LKQ"/>
+                                        <constraint firstAttribute="trailing" secondItem="ozH-QU-Whm" secondAttribute="trailing" constant="20" id="e4u-q8-Dq4"/>
+                                        <constraint firstItem="ozH-QU-Whm" firstAttribute="leading" secondItem="zdA-aG-d4y" secondAttribute="leading" constant="20" id="rOn-Kl-LKQ"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jVR-ir-Az8">
@@ -114,7 +114,7 @@
                                     <rect key="frame" x="0.0" y="360" width="414" height="50"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3M-Sm-mY0">
-                                            <rect key="frame" x="30" y="0.0" width="354" height="50"/>
+                                            <rect key="frame" x="20" y="0.0" width="374" height="50"/>
                                             <color key="backgroundColor" red="0.94935733079910278" green="0.11509700864553452" blue="0.25959178805351257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="hKq-3e-p4v"/>
@@ -132,8 +132,8 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="5Ic-5T-3EF"/>
                                         <constraint firstItem="z3M-Sm-mY0" firstAttribute="top" secondItem="gpU-dB-DFZ" secondAttribute="top" id="5Se-uE-Ki7"/>
-                                        <constraint firstItem="z3M-Sm-mY0" firstAttribute="leading" secondItem="gpU-dB-DFZ" secondAttribute="leading" constant="30" id="Y4q-QM-2YX"/>
-                                        <constraint firstAttribute="trailing" secondItem="z3M-Sm-mY0" secondAttribute="trailing" constant="30" id="fWg-qX-AlC"/>
+                                        <constraint firstItem="z3M-Sm-mY0" firstAttribute="leading" secondItem="gpU-dB-DFZ" secondAttribute="leading" constant="20" id="Y4q-QM-2YX"/>
+                                        <constraint firstAttribute="trailing" secondItem="z3M-Sm-mY0" secondAttribute="trailing" constant="20" id="fWg-qX-AlC"/>
                                         <constraint firstAttribute="bottom" secondItem="z3M-Sm-mY0" secondAttribute="bottom" id="wxG-MN-W7p"/>
                                     </constraints>
                                 </view>

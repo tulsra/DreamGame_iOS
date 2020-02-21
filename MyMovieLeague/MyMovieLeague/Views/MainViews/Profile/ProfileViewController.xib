@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="MyMovieLeague" customModuleProvider="target">
+            <connections>
+                <outlet property="btnSubmit" destination="qF2-tK-1Cv" id="k7x-Y1-Fub"/>
+                <outlet property="view" destination="hJG-Cy-VSL" id="Xhv-CH-7nh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="hJG-Cy-VSL">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie-college" translatesAutoresizingMaskIntoConstraints="NO" id="dX0-Uh-AeM">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.94999998807907104" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg4" translatesAutoresizingMaskIntoConstraints="NO" id="71N-QP-ZXJ">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </imageView>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mzF-9Z-eMG">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jvp-U0-kkL">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="990"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IsO-Aa-2xw">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="ZMz-vP-q6Y"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UDB-oI-TCZ" customClass="ProfileImageView" customModule="MyMovieLeague" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="30" width="414" height="100"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="100" id="HQj-EQ-c7k"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehG-2s-iS2">
+                                    <rect key="frame" x="0.0" y="130" width="414" height="20"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="TbH-Jd-52w"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jkj-ub-zod" customClass="InputView" customModule="MyMovieLeague" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="150" width="414" height="60"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="pm6-j0-LBQ"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="accessoryImage" value="iconNavigationCheck"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="accessoryImageSize">
+                                            <real key="value" value="16"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Name"/>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isDropDown" value="NO"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="Thulasi Ram Boddu"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Enter Name"/>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="showAccesoryImage" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5kO-ek-hRw">
+                                    <rect key="frame" x="0.0" y="210" width="414" height="20"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="FlZ-8q-J9V"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ros-eL-Ajm" customClass="InputView" customModule="MyMovieLeague" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="230" width="414" height="60"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="62N-ak-8ml"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="accessoryImage" value="iconNavigationCheck"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="accessoryImageSize">
+                                            <real key="value" value="16"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Email"/>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isDropDown" value="NO"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="tulsra@gmail.com"/>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="showAccesoryImage" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jTW-9S-nA0">
+                                    <rect key="frame" x="0.0" y="290" width="414" height="20"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="IhU-g6-ZYF"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WU4-nG-epm" customClass="InputView" customModule="MyMovieLeague" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="310" width="414" height="60"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="6yI-ku-koB"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="accessoryImage" value="iconNavigationCheck"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="accessoryImageSize">
+                                            <real key="value" value="16"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Mobile Number"/>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isDropDown" value="NO"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="9746234115"/>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="showAccesoryImage" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y6B-Wt-ZEg">
+                                    <rect key="frame" x="0.0" y="370" width="414" height="20"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="YXX-fk-eGm"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gPc-CB-ffg" customClass="InputView" customModule="MyMovieLeague" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="390" width="414" height="60"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="pcY-gf-6DJ"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="accessoryImage" value="iconNavigationCheck"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="accessoryImageSize">
+                                            <real key="value" value="16"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Password"/>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isDropDown" value="NO"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Enter Pasword"/>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSecuredTextEntry" value="YES"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="kjefnked"/>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="showAccesoryImage" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2vw-sB-J7t">
+                                    <rect key="frame" x="0.0" y="450" width="414" height="20"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="iP6-cz-lZD"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YAl-Il-igL" customClass="InputView" customModule="MyMovieLeague" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="470" width="414" height="60"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="Nt1-ck-rwj"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="accessoryImage" value="iconNavigationCheck"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="accessoryImageSize">
+                                            <real key="value" value="16"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Address Line 1"/>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isDropDown" value="NO"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Enter Address"/>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="showAccesoryImage" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="srk-XS-mKs">
+                                    <rect key="frame" x="0.0" y="530" width="414" height="20"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="hkO-7M-bNb"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SHk-54-eGp" customClass="InputView" customModule="MyMovieLeague" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="550" width="414" height="60"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="gzU-Lv-kKK"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="accessoryImage" value="iconNavigationCheck"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="accessoryImageSize">
+                                            <real key="value" value="16"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Address Line 2"/>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isDropDown" value="NO"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Enter Address"/>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="showAccesoryImage" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="doK-YJ-HKZ">
+                                    <rect key="frame" x="0.0" y="610" width="414" height="20"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="mzY-xM-2JJ"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0mY-7r-DiQ" customClass="InputView" customModule="MyMovieLeague" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="630" width="414" height="60"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="tJv-Hu-ez9"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="accessoryImage" value="iconNavigationCheck"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="accessoryImageSize">
+                                            <real key="value" value="16"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="City"/>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isDropDown" value="NO"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Enter City"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="Vijayawada"/>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="showAccesoryImage" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2YQ-zI-lyA">
+                                    <rect key="frame" x="0.0" y="690" width="414" height="20"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="MSz-Cv-gAo"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ldI-2P-DL6" customClass="InputView" customModule="MyMovieLeague" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="710" width="414" height="60"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="FUm-Wi-brP"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="accessoryImage" value="iconNavigationCheck"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="accessoryImageSize">
+                                            <real key="value" value="16"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Pincode"/>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isDropDown" value="NO"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Enter Pincode"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="523225"/>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="showAccesoryImage" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x8t-lr-ULb">
+                                    <rect key="frame" x="0.0" y="770" width="414" height="20"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="6KL-wa-HKl"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UQR-sb-yBH" customClass="InputView" customModule="MyMovieLeague" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="790" width="414" height="60"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="ydf-IY-apz"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="accessoryImage" value="expand_more_24px"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="accessoryImageSize">
+                                            <real key="value" value="32"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="State"/>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isDropDown" value="YES"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Enter State"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="Andhra Pradesh"/>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="showAccesoryImage" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="feH-Mj-x7j">
+                                    <rect key="frame" x="0.0" y="850" width="414" height="30"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="eQS-ed-hGN"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eMN-5N-P7n">
+                                    <rect key="frame" x="0.0" y="880" width="414" height="50"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qF2-tK-1Cv">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="50"/>
+                                            <color key="backgroundColor" red="0.94935733079999995" green="0.11509700859999999" blue="0.2595917881" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="gra-pU-geL"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
+                                            <state key="normal" title="UPDATE PROFILE">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="TPY-P6-taz"/>
+                                        <constraint firstItem="qF2-tK-1Cv" firstAttribute="top" secondItem="eMN-5N-P7n" secondAttribute="top" id="bsJ-Uf-rAY"/>
+                                        <constraint firstAttribute="bottom" secondItem="qF2-tK-1Cv" secondAttribute="bottom" id="cUa-JI-7g1"/>
+                                        <constraint firstAttribute="trailing" secondItem="qF2-tK-1Cv" secondAttribute="trailing" constant="20" id="eVx-tu-kcq"/>
+                                        <constraint firstItem="qF2-tK-1Cv" firstAttribute="leading" secondItem="eMN-5N-P7n" secondAttribute="leading" constant="20" id="g99-SR-A9w"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4FV-qK-sIb">
+                                    <rect key="frame" x="0.0" y="930" width="414" height="60"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="q0o-0k-6BN"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="IsO-Aa-2xw" secondAttribute="trailing" id="2vG-IX-YkS"/>
+                                <constraint firstItem="4FV-qK-sIb" firstAttribute="leading" secondItem="jvp-U0-kkL" secondAttribute="leading" id="5YI-wU-v3L"/>
+                                <constraint firstItem="5kO-ek-hRw" firstAttribute="leading" secondItem="jvp-U0-kkL" secondAttribute="leading" id="Anh-p9-Pkx"/>
+                                <constraint firstItem="eMN-5N-P7n" firstAttribute="leading" secondItem="jvp-U0-kkL" secondAttribute="leading" id="Bu3-2f-yyJ"/>
+                                <constraint firstAttribute="trailing" secondItem="UDB-oI-TCZ" secondAttribute="trailing" id="EWF-gn-QnR"/>
+                                <constraint firstItem="Jkj-ub-zod" firstAttribute="leading" secondItem="jvp-U0-kkL" secondAttribute="leading" id="I0Z-pQ-c5w"/>
+                                <constraint firstAttribute="trailing" secondItem="feH-Mj-x7j" secondAttribute="trailing" id="IfH-1H-tqK"/>
+                                <constraint firstItem="UDB-oI-TCZ" firstAttribute="leading" secondItem="jvp-U0-kkL" secondAttribute="leading" id="MOB-L9-FTg"/>
+                                <constraint firstItem="UDB-oI-TCZ" firstAttribute="top" secondItem="IsO-Aa-2xw" secondAttribute="bottom" id="Pgv-jx-yRg"/>
+                                <constraint firstItem="ehG-2s-iS2" firstAttribute="top" secondItem="UDB-oI-TCZ" secondAttribute="bottom" id="RAo-lE-2Dg"/>
+                                <constraint firstItem="eMN-5N-P7n" firstAttribute="top" secondItem="feH-Mj-x7j" secondAttribute="bottom" id="VC5-K9-s83"/>
+                                <constraint firstItem="IsO-Aa-2xw" firstAttribute="leading" secondItem="jvp-U0-kkL" secondAttribute="leading" id="XcQ-Jh-J0d"/>
+                                <constraint firstAttribute="bottom" secondItem="4FV-qK-sIb" secondAttribute="bottom" id="Xxy-90-o6h"/>
+                                <constraint firstItem="IsO-Aa-2xw" firstAttribute="top" secondItem="jvp-U0-kkL" secondAttribute="top" id="Zdu-i0-XNf"/>
+                                <constraint firstAttribute="trailing" secondItem="eMN-5N-P7n" secondAttribute="trailing" id="Zfl-JC-B96"/>
+                                <constraint firstAttribute="trailing" secondItem="UDB-oI-TCZ" secondAttribute="trailing" id="bFU-1g-PAX"/>
+                                <constraint firstAttribute="trailing" secondItem="Jkj-ub-zod" secondAttribute="trailing" id="i2f-b7-u9u"/>
+                                <constraint firstAttribute="trailing" secondItem="4FV-qK-sIb" secondAttribute="trailing" id="qsM-3u-o3J"/>
+                                <constraint firstItem="5kO-ek-hRw" firstAttribute="top" secondItem="Jkj-ub-zod" secondAttribute="bottom" id="sQa-fI-R0t"/>
+                                <constraint firstItem="UDB-oI-TCZ" firstAttribute="leading" secondItem="jvp-U0-kkL" secondAttribute="leading" id="sje-WC-0Bh"/>
+                                <constraint firstAttribute="trailing" secondItem="5kO-ek-hRw" secondAttribute="trailing" id="ukA-q0-9II"/>
+                                <constraint firstItem="feH-Mj-x7j" firstAttribute="leading" secondItem="jvp-U0-kkL" secondAttribute="leading" id="yLd-v5-0l3"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="jvp-U0-kkL" firstAttribute="leading" secondItem="mzF-9Z-eMG" secondAttribute="leading" id="6B7-3l-ZnX"/>
+                        <constraint firstItem="jvp-U0-kkL" firstAttribute="width" secondItem="mzF-9Z-eMG" secondAttribute="width" id="RSe-Xn-tUn"/>
+                        <constraint firstAttribute="trailing" secondItem="jvp-U0-kkL" secondAttribute="trailing" id="dfN-hZ-UAz"/>
+                        <constraint firstItem="jvp-U0-kkL" firstAttribute="top" secondItem="mzF-9Z-eMG" secondAttribute="top" id="gcu-9w-Jsh"/>
+                        <constraint firstAttribute="bottom" secondItem="jvp-U0-kkL" secondAttribute="bottom" id="wzb-VZ-ikI"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="0.95687168840000003" green="0.95685106519999996" blue="0.95685511830000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="0fg-82-CST" firstAttribute="bottom" secondItem="mzF-9Z-eMG" secondAttribute="bottom" id="2ER-hq-twq"/>
+                <constraint firstItem="mzF-9Z-eMG" firstAttribute="leading" secondItem="71N-QP-ZXJ" secondAttribute="leading" id="4rL-9n-OeN"/>
+                <constraint firstItem="mzF-9Z-eMG" firstAttribute="width" secondItem="hJG-Cy-VSL" secondAttribute="width" id="7Dr-FK-9ND"/>
+                <constraint firstItem="mzF-9Z-eMG" firstAttribute="top" secondItem="0fg-82-CST" secondAttribute="top" id="CUD-Fd-6aY"/>
+                <constraint firstItem="dX0-Uh-AeM" firstAttribute="top" secondItem="hJG-Cy-VSL" secondAttribute="top" id="Eip-Jr-8CJ"/>
+                <constraint firstItem="mzF-9Z-eMG" firstAttribute="leading" secondItem="0fg-82-CST" secondAttribute="leading" id="L55-lk-VCo"/>
+                <constraint firstItem="dX0-Uh-AeM" firstAttribute="trailing" secondItem="0fg-82-CST" secondAttribute="trailing" id="LYC-lc-uW0"/>
+                <constraint firstItem="mzF-9Z-eMG" firstAttribute="trailing" secondItem="71N-QP-ZXJ" secondAttribute="trailing" id="TAw-AM-KCZ"/>
+                <constraint firstItem="dX0-Uh-AeM" firstAttribute="leading" secondItem="0fg-82-CST" secondAttribute="leading" id="b1Z-IM-vrj"/>
+                <constraint firstItem="71N-QP-ZXJ" firstAttribute="top" secondItem="dX0-Uh-AeM" secondAttribute="top" id="lec-Hl-g9e"/>
+                <constraint firstItem="71N-QP-ZXJ" firstAttribute="bottom" secondItem="dX0-Uh-AeM" secondAttribute="bottom" id="r2V-A5-eTH"/>
+                <constraint firstAttribute="bottom" secondItem="dX0-Uh-AeM" secondAttribute="bottom" id="sb0-cT-dSf"/>
+                <constraint firstItem="0fg-82-CST" firstAttribute="trailing" secondItem="mzF-9Z-eMG" secondAttribute="trailing" id="uy8-SR-vK2"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="0fg-82-CST"/>
+            <point key="canvasLocation" x="47.826086956521742" y="35.491071428571423"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg4" width="2880" height="5120"/>
+        <image name="expand_more_24px" width="40" height="40"/>
+        <image name="iconNavigationCheck" width="29.5" height="22.5"/>
+        <image name="movie-college" width="800" height="480"/>
+    </resources>
+</document>
