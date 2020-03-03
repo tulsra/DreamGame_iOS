@@ -13,8 +13,13 @@ class MovieTableViewCell: UITableViewCell {
       @IBOutlet weak var collView: UICollectionView!
     var moviesList:[String]?
     var titlesList:[String]?
+    var genreList:[String]?
+    var releaseDateList:[String]?
+    var releaseTimeList:[String]?
+    var expectedRanges:[[[String]]]?
+    var stars:[[Star]]?
     var isCurrent = true
-    var cellTapped:()->Void = {
+    var cellTapped:(String, String, String, String,String,[[String]],[Star])->Void = { (title,genre,releaseDate, releaseTime,image,expected,stars) in
            
        }
     override func awakeFromNib() {
@@ -99,7 +104,27 @@ extension MovieTableViewCell:UICollectionViewDataSource,UICollectionViewDelegate
       }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.cellTapped()
+        var image = ""
+        var title = ""
+        var genre = ""
+        var releaseDate = ""
+        var releaseTime = ""
+        if let images = self.moviesList {
+            image = images[indexPath.row]
+        }
+        if let titles = self.titlesList {
+            title =  titles[indexPath.row]
+        }
+        if let genres = self.genreList {
+            genre =  genres[indexPath.row]
+        }
+        if let releaseDates = self.releaseDateList {
+            releaseDate =  releaseDates[indexPath.row]
+        }
+        if let releaseTimes = self.releaseTimeList {
+            releaseTime =  releaseTimes[indexPath.row]
+        }
+        self.cellTapped(title, genre, releaseDate, releaseTime,image,self.expectedRanges?[indexPath.row] ?? [[]],self.stars?[indexPath.row] ?? [])
     }
     
   }

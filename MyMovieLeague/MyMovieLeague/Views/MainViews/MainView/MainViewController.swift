@@ -60,11 +60,13 @@ class MainViewController: UIViewController {
     }
 
     @IBAction func btnBoxOfficeAction(_ sender: UIButton) {
-        let moviesListVC = AccountSummeryViewController()
+        let moviesListVC = MoviesListViewController()
         self.navigationController?.pushViewController(moviesListVC, animated: true)
     }
     
     @IBAction func btnQuizAction(_ sender: UIButton) {
+        let moviesListVC = QuizGameCardViewController()
+        self.navigationController?.pushViewController(moviesListVC, animated: true)
     }
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent

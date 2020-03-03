@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="RecentHistoryViewCell" customModule="MyMovieLeague" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="406" height="358"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="406" height="358"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9b4-5a-CC7">
+                        <rect key="frame" x="0.0" y="0.0" width="406" height="358"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cOj-dn-le9">
+                                <rect key="frame" x="5" y="5" width="396" height="348"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Recent1" translatesAutoresizingMaskIntoConstraints="NO" id="Lz0-DR-mmr">
+                                        <rect key="frame" x="0.0" y="0.0" width="261" height="348"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1B-oG-4jX">
+                                        <rect key="frame" x="266" y="0.0" width="130" height="20.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="x1B-oG-4jX" firstAttribute="leading" secondItem="Lz0-DR-mmr" secondAttribute="trailing" constant="5" id="Ipy-m7-SWS"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="x1B-oG-4jX" secondAttribute="bottom" id="Mc4-xl-1l7"/>
+                                    <constraint firstItem="Lz0-DR-mmr" firstAttribute="top" secondItem="cOj-dn-le9" secondAttribute="top" id="Od0-wH-d8f"/>
+                                    <constraint firstAttribute="trailing" secondItem="x1B-oG-4jX" secondAttribute="trailing" id="QDV-hk-n14"/>
+                                    <constraint firstItem="Lz0-DR-mmr" firstAttribute="height" secondItem="cOj-dn-le9" secondAttribute="height" id="Rr8-ta-XPx"/>
+                                    <constraint firstItem="Lz0-DR-mmr" firstAttribute="width" secondItem="cOj-dn-le9" secondAttribute="height" multiplier="3:4" id="c5r-yC-0ki"/>
+                                    <constraint firstAttribute="bottom" secondItem="Lz0-DR-mmr" secondAttribute="bottom" id="isT-KU-F66"/>
+                                    <constraint firstItem="Lz0-DR-mmr" firstAttribute="leading" secondItem="cOj-dn-le9" secondAttribute="leading" id="tQc-2S-Ilm"/>
+                                    <constraint firstItem="x1B-oG-4jX" firstAttribute="top" secondItem="cOj-dn-le9" secondAttribute="top" id="tuh-sL-sJb"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="cOj-dn-le9" secondAttribute="bottom" constant="5" id="Lho-bQ-TPo"/>
+                            <constraint firstItem="cOj-dn-le9" firstAttribute="top" secondItem="9b4-5a-CC7" secondAttribute="top" constant="5" id="i3I-UI-ef4"/>
+                            <constraint firstAttribute="trailing" secondItem="cOj-dn-le9" secondAttribute="trailing" constant="5" id="uQ3-yV-PsC"/>
+                            <constraint firstItem="cOj-dn-le9" firstAttribute="leading" secondItem="9b4-5a-CC7" secondAttribute="leading" constant="5" id="yVa-Y4-5a4"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="9b4-5a-CC7" secondAttribute="bottom" id="6Ba-KV-nOW"/>
+                <constraint firstItem="9b4-5a-CC7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="6rE-uF-21b"/>
+                <constraint firstItem="9b4-5a-CC7" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="vBw-cB-cby"/>
+                <constraint firstAttribute="trailing" secondItem="9b4-5a-CC7" secondAttribute="trailing" id="vxn-Xd-U1N"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="406" height="358"/>
+            <connections>
+                <outlet property="containerView" destination="9b4-5a-CC7" id="bN0-zx-EX6"/>
+                <outlet property="imgView" destination="Lz0-DR-mmr" id="1cw-it-VLg"/>
+                <outlet property="lblTitle" destination="x1B-oG-4jX" id="ux5-QM-AYb"/>
+            </connections>
+            <point key="canvasLocation" x="178.2608695652174" y="76.339285714285708"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Recent1" width="360" height="480"/>
+    </resources>
+</document>

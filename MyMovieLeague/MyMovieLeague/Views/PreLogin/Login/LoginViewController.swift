@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import FacebookCore
+import FacebookLogin
+import GoogleSignIn
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate, GIDSignInDelegate {
 
     
     @IBOutlet weak var btnNext: UIButton!
@@ -62,17 +65,83 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         let verifyVC = VerifyMobileViewController()
         self.navigationController?.pushViewController(verifyVC, animated: true)
        }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func facebookLogin(_ sender: Any) {
+        
+        let manager = LoginManager()
+        manager.logOut()
+            //,.userGender,.userHometown,.userBirthday,.userLocation
+        manager.logIn(permissions: [.publicProfile,.email], viewController: self) { (result) in
+
+            switch result {
+            case .failed(let error):
+                print(error)
+            case .cancelled:
+                print("Cancelleddd")
+            case .success(let grantedData, let declineData, let token):
+                print(grantedData)
+                print(declineData)
+                print(token)
+                self.getFbUserData()
+                
+            }
+        }
+        
     }
-    */
+    
+    func getFbUserData() {
+        if let token = AccessToken.current {
+            //We need get addintion permissioned rewviewwd by facebookto get following details
+            //, user_hometown, user_location,user_gender,user_birthday
+            GraphRequest(graphPath: "me", parameters: ["fields" : "id, first_name, last_name, picture.type(large), email"]).start { (connection, result, error) in
+                guard let err =  error else {
+                    if let result = result {
+                        
+                        let kResult = result as! [String:AnyObject]
+                        print(result)
+                    }
+                    return
+                }
+                
+                print(err)
+            }
+        }
+    }
+    
+    @IBAction func googleLogin(_ sender: Any) {
+        GIDSignIn.sharedInstance().clientID = "905397799104-ouonochq6bbkpago7mhp3b7k5ioijtuu.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance().delegate = self
+        
+        GIDSignIn.sharedInstance()?.signOut()
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+        GIDSignIn.sharedInstance()?.signIn()
+        
+    }
     deinit {
         print("DEINIT LoginViewController")
     }
 
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        
+        if let err = error {
+            print(err)
+            return
+        }
+        
+        guard let auth = user.authentication else { return }
+        
+        guard let userId = user.userID else { return }                  // For client-side use only!
+        guard let idToken = user.authentication.idToken else { return } // Safe to send to the server
+        guard let fullName = user.profile.name else { return }
+        guard let givenName = user.profile.givenName else { return }
+        guard let familyName = user.profile.familyName else { return }
+        guard let email = user.profile.email else { return }
+        
+        print(user)
+        print("\(givenName) \(familyName) \(email)")
+        
+        if user.profile.hasImage {
+            print("\(user.profile.imageURL(withDimension: 400))")
+        }
+    }
 }

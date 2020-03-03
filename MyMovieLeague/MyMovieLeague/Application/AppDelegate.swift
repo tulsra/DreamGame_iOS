@@ -9,6 +9,8 @@
 import UIKit
 import Fabric
 import Crashlytics
+import FacebookCore
+import GoogleSignIn
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,10 +20,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
 //        application.statusBarStyle = .lightContent
         
-        
+        ApplicationDelegate.shared.application(
+            application,
+            didFinishLaunchingWithOptions: launchOptions
+        )
         Fabric.with([Crashlytics.self])
         return true
     }
+    
 
     // MARK: UISceneSession Lifecycle
 
@@ -37,6 +43,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
-
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        AppEvents.activateApp()
+    }
+    
+    func application(
+        _ app: UIApplication,
+        open url: URL,
+        options: [UIApplication.OpenURLOptionsKey : Any] = [:]
+    ) -> Bool {
+        return GIDSignIn.sharedInstance().handle(url) || ApplicationDelegate.shared.application(
+            app,
+            open: url,
+            options: options
+        )
+    }
+    
 }
 

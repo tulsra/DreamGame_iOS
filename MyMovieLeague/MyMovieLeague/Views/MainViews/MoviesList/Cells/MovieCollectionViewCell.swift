@@ -32,6 +32,6 @@ class MovieCollectionViewCell: UICollectionViewCell {
         self.btnPlay.layer.borderColor = themeColor.cgColor
         self.btnPlay.setTitleColor(themeColor, for: .normal)
         
-        self.lblTitle.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
+        self.lblTitle.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
     }
 }

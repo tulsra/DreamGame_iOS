@@ -15,4 +15,7 @@ target 'MyMovieLeague' do
   pod 'Fabric'
   pod 'Crashlytics'
   pod 'GaugeMeterView'
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
+  pod 'GoogleSignIn'
 end

@@ -13,7 +13,14 @@ class Contest: NSObject, Mappable, Codable {
     
     var id: Int?
     var title: String?
-    var gameCard: [GameCard]?
+    var movieTitle:String?
+    var movieGenre: String?
+    var releaseDate: String?
+    var releaseTime: String?
+    var movieImageURL:String?
+    var extepectedRanges: [String]?
+    var stars:[Star]?
+    var gameCard: GameCard?
     
     override init() {
         super.init()
@@ -27,6 +34,13 @@ class Contest: NSObject, Mappable, Codable {
         
         id <- map["id"]
         title <- map["title"]
+        movieTitle <- map["movieTitle"]
+        movieGenre <- map["movieGenre"]
+        releaseDate <- map["releaseDate"]
+        releaseTime <- map["releaseTime"]
+        movieImageURL <- map["movieImageURL"]
+        extepectedRanges <- map["extepectedRanges"]
+        stars <- map["stars"]
         gameCard <- map["gameCard"]
     }
 }

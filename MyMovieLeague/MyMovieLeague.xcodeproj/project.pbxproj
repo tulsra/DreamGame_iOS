@@ -86,10 +86,18 @@
 		006CF0EF23E88EF00042F57A /* SideMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006CF0ED23E88EF00042F57A /* SideMenuCell.xib */; };
 		006CF0F223E88FB20042F57A /* SideProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CF0F023E88FB20042F57A /* SideProfileView.swift */; };
 		006CF0F323E88FB20042F57A /* SideProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006CF0F123E88FB20042F57A /* SideProfileView.xib */; };
+		00794999240714A4004C2C31 /* GamePlayCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00794998240714A4004C2C31 /* GamePlayCard.swift */; };
+		0079499D2408F7EC004C2C31 /* RecentHistoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0079499B2408F7EC004C2C31 /* RecentHistoryViewCell.swift */; };
+		0079499E2408F7EC004C2C31 /* RecentHistoryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0079499C2408F7EC004C2C31 /* RecentHistoryViewCell.xib */; };
 		00A190FC23FE8B2900ED2FA7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A190FA23FE8B2900ED2FA7 /* ProfileViewController.swift */; };
 		00A190FD23FE8B2900ED2FA7 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00A190FB23FE8B2900ED2FA7 /* ProfileViewController.xib */; };
 		00A1910023FE918100ED2FA7 /* ProfileImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00A190FE23FE918100ED2FA7 /* ProfileImageView.xib */; };
 		00A1910123FE918100ED2FA7 /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A190FF23FE918100ED2FA7 /* ProfileImageView.swift */; };
+		00AADFD8240C3A8C00A3EBDE /* QuizGameCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AADFD6240C3A8C00A3EBDE /* QuizGameCardViewController.swift */; };
+		00AADFD9240C3A8C00A3EBDE /* QuizGameCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00AADFD7240C3A8C00A3EBDE /* QuizGameCardViewController.xib */; };
+		00AADFDB240C3B2200A3EBDE /* QuizGameCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AADFDA240C3B2200A3EBDE /* QuizGameCard.swift */; };
+		00AADFDF240D49E800A3EBDE /* QuizGameCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00AADFDD240D49E700A3EBDE /* QuizGameCardTableViewCell.xib */; };
+		00AADFE0240D49E800A3EBDE /* QuizGameCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AADFDE240D49E800A3EBDE /* QuizGameCardTableViewCell.swift */; };
 		00B4D94923EC8F13001BFFA9 /* GameCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B4D94723EC8F13001BFFA9 /* GameCardViewController.swift */; };
 		00B4D94A23EC8F13001BFFA9 /* GameCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00B4D94823EC8F13001BFFA9 /* GameCardViewController.xib */; };
 		00B4D94E23EC8F58001BFFA9 /* GameCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B4D94C23EC8F58001BFFA9 /* GameCardTableViewCell.swift */; };
@@ -217,10 +225,18 @@
 		006CF0ED23E88EF00042F57A /* SideMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SideMenuCell.xib; path = ../../../MainControllers/SideMenuCell.xib; sourceTree = "<group>"; };
 		006CF0F023E88FB20042F57A /* SideProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SideProfileView.swift; path = ../../../MainControllers/SideProfileView.swift; sourceTree = "<group>"; };
 		006CF0F123E88FB20042F57A /* SideProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SideProfileView.xib; path = ../../../MainControllers/SideProfileView.xib; sourceTree = "<group>"; };
+		00794998240714A4004C2C31 /* GamePlayCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlayCard.swift; sourceTree = "<group>"; };
+		0079499B2408F7EC004C2C31 /* RecentHistoryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentHistoryViewCell.swift; sourceTree = "<group>"; };
+		0079499C2408F7EC004C2C31 /* RecentHistoryViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecentHistoryViewCell.xib; sourceTree = "<group>"; };
 		00A190FA23FE8B2900ED2FA7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		00A190FB23FE8B2900ED2FA7 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		00A190FE23FE918100ED2FA7 /* ProfileImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileImageView.xib; sourceTree = "<group>"; };
 		00A190FF23FE918100ED2FA7 /* ProfileImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
+		00AADFD6240C3A8C00A3EBDE /* QuizGameCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizGameCardViewController.swift; sourceTree = "<group>"; };
+		00AADFD7240C3A8C00A3EBDE /* QuizGameCardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuizGameCardViewController.xib; sourceTree = "<group>"; };
+		00AADFDA240C3B2200A3EBDE /* QuizGameCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizGameCard.swift; sourceTree = "<group>"; };
+		00AADFDD240D49E700A3EBDE /* QuizGameCardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuizGameCardTableViewCell.xib; sourceTree = "<group>"; };
+		00AADFDE240D49E800A3EBDE /* QuizGameCardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizGameCardTableViewCell.swift; sourceTree = "<group>"; };
 		00B4D94723EC8F13001BFFA9 /* GameCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCardViewController.swift; sourceTree = "<group>"; };
 		00B4D94823EC8F13001BFFA9 /* GameCardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameCardViewController.xib; sourceTree = "<group>"; };
 		00B4D94C23EC8F58001BFFA9 /* GameCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCardTableViewCell.swift; sourceTree = "<group>"; };
@@ -367,6 +383,8 @@
 				00335E3D23E1839A0028C9D8 /* ParameterDetail.swift */,
 				00335E3F23E183A00028C9D8 /* User.swift */,
 				006C7D6923EDC6F200B2CBC1 /* GameCard.swift */,
+				00AADFDA240C3B2200A3EBDE /* QuizGameCard.swift */,
+				00794998240714A4004C2C31 /* GamePlayCard.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -508,6 +526,7 @@
 				8C9AF80723EDE73E008A939D /* SideMenu */,
 				00B4D95E23ED6753001BFFA9 /* Notification */,
 				00B4D95023ECBA83001BFFA9 /* PrizeBreakup */,
+				00AADFD5240C3A5500A3EBDE /* QuizGameCard */,
 				00B4D94623EC8EE7001BFFA9 /* GameCard */,
 				8C32FE3123E1C2D700879853 /* MainView */,
 				006ADD7C23D1EA0A00A929BA /* MoviesList */,
@@ -525,6 +544,15 @@
 			path = MoviesList;
 			sourceTree = "<group>";
 		};
+		0079499A2408F7B7004C2C31 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0079499B2408F7EC004C2C31 /* RecentHistoryViewCell.swift */,
+				0079499C2408F7EC004C2C31 /* RecentHistoryViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		00A190F923FE8AF100ED2FA7 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -532,6 +560,25 @@
 				00A190FB23FE8B2900ED2FA7 /* ProfileViewController.xib */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		00AADFD5240C3A5500A3EBDE /* QuizGameCard */ = {
+			isa = PBXGroup;
+			children = (
+				00AADFDC240D49C300A3EBDE /* Cell */,
+				00AADFD6240C3A8C00A3EBDE /* QuizGameCardViewController.swift */,
+				00AADFD7240C3A8C00A3EBDE /* QuizGameCardViewController.xib */,
+			);
+			path = QuizGameCard;
+			sourceTree = "<group>";
+		};
+		00AADFDC240D49C300A3EBDE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				00AADFDE240D49E800A3EBDE /* QuizGameCardTableViewCell.swift */,
+				00AADFDD240D49E700A3EBDE /* QuizGameCardTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		00B4D94623EC8EE7001BFFA9 /* GameCard */ = {
@@ -605,6 +652,7 @@
 		8C284EBE23FF02B1003952E3 /* PlayGameView */ = {
 			isa = PBXGroup;
 			children = (
+				0079499A2408F7B7004C2C31 /* Cell */,
 				8C284EBF23FF02CD003952E3 /* PlayGameViewController.swift */,
 				8C284EC023FF02CD003952E3 /* PlayGameViewController.xib */,
 			);
@@ -781,6 +829,7 @@
 				006ADD4823D1DF3900A929BA /* Resources */,
 				61FEE9A971C4B76734A51230 /* [CP] Embed Pods Frameworks */,
 				8C32FE3623E1CD0000879853 /* ShellScript */,
+				C4DD3CBC8D7AC6B874B37741 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -832,6 +881,7 @@
 				0029D19D23D8CC500087396A /* RobotoCondensed-Light.ttf in Resources */,
 				0029D19F23D8CC500087396A /* Roboto-Italic.ttf in Resources */,
 				0029D17223D8CC420087396A /* SansSerifFLF-Demibold.otf in Resources */,
+				00AADFD9240C3A8C00A3EBDE /* QuizGameCardViewController.xib in Resources */,
 				00B4D95923ECBACE001BFFA9 /* PrizeBreakupTableViewCell.xib in Resources */,
 				006ADD6923D1E0F100A929BA /* LoginViewController.xib in Resources */,
 				0029D17B23D8CC420087396A /* SansSerifBldFLFCond.otf in Resources */,
@@ -861,6 +911,7 @@
 				8CE50A3623E0EB6C00FC443C /* InputView.xib in Resources */,
 				004AB39723DDDF7900FA5A28 /* MovieCollectionViewCell.xib in Resources */,
 				0029D19323D8CC500087396A /* Roboto-BlackItalic.ttf in Resources */,
+				0079499E2408F7EC004C2C31 /* RecentHistoryViewCell.xib in Resources */,
 				006ADD5723D1DF5000A929BA /* Assets.xcassets in Resources */,
 				0029D1AC23D8CC600087396A /* Poppins-Regular.ttf in Resources */,
 				006ADD7523D1E79900A929BA /* ComeAndPlayViewController.xib in Resources */,
@@ -889,6 +940,7 @@
 				0029D17523D8CC420087396A /* SansSerifFLF.otf in Resources */,
 				8C97C32723FC4984000B7F16 /* AccountSummeryViewController.xib in Resources */,
 				00B4D96223ED6791001BFFA9 /* NotificationViewController.xib in Resources */,
+				00AADFDF240D49E800A3EBDE /* QuizGameCardTableViewCell.xib in Resources */,
 				0029D19423D8CC500087396A /* RobotoCondensed-BoldItalic.ttf in Resources */,
 				0029D17323D8CC420087396A /* SansSerifBldFLFCond-Italic.otf in Resources */,
 				006CF0EF23E88EF00042F57A /* SideMenuCell.xib in Resources */,
@@ -942,6 +994,23 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" 43ef369641ff409bd0da1b851b3b3a6a134a52cf 220196c98e62e240baaff72594a36065203f90868bdfefca5f31de787e0d1002\n";
 		};
+		C4DD3CBC8D7AC6B874B37741 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyMovieLeague/Pods-MyMovieLeague-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyMovieLeague/Pods-MyMovieLeague-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyMovieLeague/Pods-MyMovieLeague-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E4E9E130676A8DFD825CF153 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -973,11 +1042,13 @@
 			files = (
 				00B4D96623ED67B4001BFFA9 /* NotificationTableViewCell.swift in Sources */,
 				8C9AF81D23EDFA91008A939D /* ResultsViewController.swift in Sources */,
+				0079499D2408F7EC004C2C31 /* RecentHistoryViewCell.swift in Sources */,
 				00B4D94E23EC8F58001BFFA9 /* GameCardTableViewCell.swift in Sources */,
 				006ADD7423D1E79900A929BA /* ComeAndPlayViewController.swift in Sources */,
 				006ADD7023D1E66800A929BA /* SceneDelegate.swift in Sources */,
 				00335E4723E18BA80028C9D8 /* StringExtension.swift in Sources */,
 				0029D15E23D8B4210087396A /* LoginViewModel.swift in Sources */,
+				00AADFD8240C3A8C00A3EBDE /* QuizGameCardViewController.swift in Sources */,
 				8C97C32623FC4984000B7F16 /* AccountSummeryViewController.swift in Sources */,
 				00335E3423E1831B0028C9D8 /* ImagePicker.swift in Sources */,
 				0029D1C023D9176F0087396A /* VerifyMobileViewModel.swift in Sources */,
@@ -987,7 +1058,9 @@
 				8C9AF81723EDF1B8008A939D /* PointSystemViewController.swift in Sources */,
 				006CF0E523E88E2E0042F57A /* MainTabbarView.swift in Sources */,
 				006C7D6A23EDC6F200B2CBC1 /* GameCard.swift in Sources */,
+				00AADFDB240C3B2200A3EBDE /* QuizGameCard.swift in Sources */,
 				8CE50A2A23E0CFF800FC443C /* HelpViewController.swift in Sources */,
+				00794999240714A4004C2C31 /* GamePlayCard.swift in Sources */,
 				8C32FE3923E2680300879853 /* PinView.swift in Sources */,
 				00A1910123FE918100ED2FA7 /* ProfileImageView.swift in Sources */,
 				8CE50A3223E0EB4800FC443C /* CommentInputView.swift in Sources */,
@@ -996,6 +1069,7 @@
 				006ADD7923D1E99300A929BA /* VerifyMobileViewController.swift in Sources */,
 				00A190FC23FE8B2900ED2FA7 /* ProfileViewController.swift in Sources */,
 				006CF0EB23E88E3C0042F57A /* SideMenuMainController.swift in Sources */,
+				00AADFE0240D49E800A3EBDE /* QuizGameCardTableViewCell.swift in Sources */,
 				00B4D95C23ECBB1B001BFFA9 /* PrizeBreakupHeaaderTableViewCell.swift in Sources */,
 				8CE50A3523E0EB6C00FC443C /* InputView.swift in Sources */,
 				00335E4623E18BA80028C9D8 /* DateExtension.swift in Sources */,
