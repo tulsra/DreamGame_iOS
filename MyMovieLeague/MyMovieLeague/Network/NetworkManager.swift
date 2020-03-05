@@ -80,7 +80,8 @@ struct NetworkManager {
             request.httpBody = jsonData
         }
         
-        Alamofire.request(request).validate().responseJSON { response in
+        
+        AF.request(request).validate().responseJSON { response in
                             
                             switch response.result {
                             case .success:
@@ -171,7 +172,7 @@ struct NetworkManager {
             request.httpBody = jsonData as Data
         }
         
-        Alamofire.request(request).validate().responseData { response in
+        AF.request(request).validate().responseData { response in
             
             switch response.result {
             case .success:
@@ -271,7 +272,7 @@ struct NetworkManager {
             
         }
         
-        Alamofire.request(request).validate().responseData { response in
+        AF.request(request).validate().responseData { response in
             
             switch response.result {
             case .success:

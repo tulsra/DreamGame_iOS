@@ -41,6 +41,7 @@ class QuizGameCard: NSObject, Mappable, Codable {
     var usersLeft: Int?
     var numberOfQuestions: String?
     var title: String?
+    var questions:[Question]?
     
     override init() {
         super.init()
@@ -57,5 +58,52 @@ class QuizGameCard: NSObject, Mappable, Codable {
         usersLeft <- map["usersLeft"]
         numberOfQuestions <- map["numberOfQuestions"]
         title <- map["title"]
+        questions <- map["questions"]
+    }
+}
+
+class Question: NSObject, Mappable, Codable {
+    
+    var id: Int?
+    var question: String?
+    var choices: [Choice]?
+    var correctAnswer:Int?
+    var timerTime:Int?
+    var resourceURL: String?
+
+    override init() {
+        super.init()
+    }
+    
+    convenience required init?(map: Map) {
+        self.init()
+    }
+    
+    func mapping(map: Map) {
+        id <- map["id"]
+        question <- map["question"]
+        choices <- map["choices"]
+        correctAnswer <- map["correctAnswer"]
+        timerTime <- map["timerTime"]
+        resourceURL <- map["resourceURL"]
+    }
+}
+
+class Choice: NSObject, Mappable, Codable {
+    
+    var id: Int?
+    var choice: String?
+    
+    override init() {
+        super.init()
+    }
+    
+    convenience required init?(map: Map) {
+        self.init()
+    }
+    
+    func mapping(map: Map) {
+        id <- map["id"]
+        choice <- map["choice"]
     }
 }

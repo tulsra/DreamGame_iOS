@@ -8,7 +8,7 @@ target 'MyMovieLeague' do
   # Pods for MyMovieLeague
 
   pod 'ObjectMapper'
-  pod 'Alamofire'
+  pod 'Alamofire', '~> 5.0'
   pod 'RealmSwift'
   pod 'UITextView+Placeholder'
   pod 'IQKeyboardManager'
@@ -18,4 +18,6 @@ target 'MyMovieLeague' do
   pod 'FacebookCore'
   pod 'FacebookLogin'
   pod 'GoogleSignIn'
+  pod 'GradientProgressBar'
+  pod 'SimpleImageViewer'
 end
