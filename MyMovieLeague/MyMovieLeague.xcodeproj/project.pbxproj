@@ -553,7 +553,7 @@
 		006ADD7B23D1EA0100A929BA /* MainViews */ = {
 			isa = PBXGroup;
 			children = (
-				4D6E538A2411703700ACC996 /* AudiVideoPlayer */,
+				4D6E538A2411703700ACC996 /* AudioVideoPlayer */,
 				4D83680D240F7A0100E225C5 /* QuizPlayView */,
 				00AADFD5240C3A5500A3EBDE /* QuizGameCard */,
 				8C284EBE23FF02B1003952E3 /* PlayGameView */,
@@ -695,13 +695,13 @@
 			path = Media;
 			sourceTree = "<group>";
 		};
-		4D6E538A2411703700ACC996 /* AudiVideoPlayer */ = {
+		4D6E538A2411703700ACC996 /* AudioVideoPlayer */ = {
 			isa = PBXGroup;
 			children = (
 				4D6E538B2411705F00ACC996 /* PlayerViewController.swift */,
 				4D6E538C2411705F00ACC996 /* PlayerViewController.xib */,
 			);
-			path = AudiVideoPlayer;
+			path = AudioVideoPlayer;
 			sourceTree = "<group>";
 		};
 		4D83680D240F7A0100E225C5 /* QuizPlayView */ = {

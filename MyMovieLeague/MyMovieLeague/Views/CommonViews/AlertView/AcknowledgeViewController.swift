@@ -12,6 +12,7 @@ enum AcknowledgeType {
     case ForgotPassword
     case Inquiry
     case Feedback
+    case Quiz
 }
 class AcknowledgeViewController: UIViewController {
 
@@ -68,6 +69,12 @@ class AcknowledgeViewController: UIViewController {
     
     func setupUI() {
         switch type {
+            case .Quiz:
+            titleLbl.text = "Quiz\nCompleted"
+            alertTitleLbl.text = "You have successfully completed quiz."
+            alertDetailLbl.text = "Please go to Results ti check the winners of this quiz."
+            clickHereHeightConstraint.constant = 0
+            doneBtn.setTitle("DONE", for: .normal)
         case .Feedback:
             titleLbl.text = "Feedback"
             alertTitleLbl.text = "Form submitted successfully"

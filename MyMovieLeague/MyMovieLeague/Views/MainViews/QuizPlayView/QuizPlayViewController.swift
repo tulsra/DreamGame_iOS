@@ -30,7 +30,7 @@ class QuizPlayViewController: UIViewController {
     var  timer = Timer()
     var question: Question?
     var currentIndex: Int = 0
-    var selectedChoice = 10
+    var selectedChoice = 100
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -108,6 +108,25 @@ class QuizPlayViewController: UIViewController {
     }
     
     @IBAction func nextBtnAction(_ sender: Any) {
+        
+        if selectedChoice < 100 {
+            if let kQuestion = self.question, kQuestion.correctAnswer == (selectedChoice + 1) {
+                
+                AppController.shared.window?.makeToast("Correct answer", duration: 2.0, position: .center,  completion: nil)
+            }
+            else {
+                AppController.shared.window?.makeToast("Wrong answer", duration: 2.0, position: .center,  completion: nil)
+            }
+        }
+        else {
+            AppController.shared.window?.makeToast("No choice selected", duration: 2.0, position: .center,  completion: nil)
+        }
+        
+        self.timer.invalidate()
+        
+        self.currentIndex +=  1
+        self.setupQuestion()
+        
     }
     @IBAction func previewAction(_ sender: Any) {
         let configuration = ImageViewerConfiguration { config in
@@ -119,13 +138,16 @@ class QuizPlayViewController: UIViewController {
     func setupQuestion() {
         
         if let gameCard = gameCard, let questions = gameCard.questions, questions.count > 0, self.currentIndex < questions.count  {
-            if let title = gameCard.title, title == "audio" || title == "video" {
+            self.lblQuestionCountLbl.text = "Question \(self.currentIndex+1)"
+            self.lblTotalQuestionsCount.text = "/\(questions.count)"
+            if let title = gameCard.title, title == "audio" || title == "video" || title == "image" {
               
                 let kquestion = questions[self.currentIndex]
                 self.question = kquestion
                 self.questionsProgressBar.setProgress(Float(0.0/Double(self.question?.timerTime ?? 0)), animated: false)
                 self.lblTimer.text = "\(Int(0.0))/\(self.question?.timerTime ?? 0)"
                 let player = PlayerViewController()
+                player.modalPresentationStyle = .fullScreen
                 player.resourceName = self.question?.resourceURL ?? ""
                 player.viewTitle = title
                 player.completion  = {
@@ -138,9 +160,23 @@ class QuizPlayViewController: UIViewController {
                 
             }
             
+             if let title = gameCard.title, title == "multiple" {
+                let kquestion = questions[self.currentIndex]
+                self.question = kquestion
+                self.questionsProgressBar.setProgress(Float(0.0/Double(self.question?.timerTime ?? 0)), animated: false)
+                self.lblTimer.text = "\(Int(0.0))/\(self.question?.timerTime ?? 0)"
+                self.startQuestion()
+
+                self.setQuestionText()
+            }
+            
         }
         else {
-            print("Completed")
+            let alertVC     =   AcknowledgeViewController()
+            alertVC.type    =   .Quiz
+            alertVC.gobackHome = {
+            }
+            self.navigationController?.pushViewController(alertVC, animated: true)
         }
     }
     
@@ -163,7 +199,7 @@ class QuizPlayViewController: UIViewController {
     }
     
     func setQuestionText() {
-        self.selectedChoice = 10
+        self.selectedChoice = 100
         self.choiceViews.forEach {
             $0.unselectAction()
         }

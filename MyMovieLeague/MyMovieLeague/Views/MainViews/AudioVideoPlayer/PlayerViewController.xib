@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="RobotoCondensed-Regular.ttf">
+            <string>RobotoCondensed-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayerViewController" customModule="MyMovieLeague" customModuleProvider="target">
+            <connections>
+                <outlet property="audioClipIcon" destination="z9e-Sa-KFT" id="50g-Iv-jbJ"/>
+                <outlet property="lblTimer" destination="fWn-Ce-d10" id="FRO-so-S13"/>
+                <outlet property="lblTitleHeading" destination="rXN-v8-qMi" id="0Dq-Uw-3TR"/>
+                <outlet property="playView" destination="DNt-ut-FIR" id="dVx-pL-7ey"/>
+                <outlet property="progressBar" destination="ipq-uP-qSX" id="Djf-eV-9QC"/>
+                <outlet property="view" destination="j58-t0-CZs" id="RUH-sE-qlm"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="j58-t0-CZs">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie-college" translatesAutoresizingMaskIntoConstraints="NO" id="03u-iE-tLa">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.98000001907348633" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg4" translatesAutoresizingMaskIntoConstraints="NO" id="kdo-5Q-tc9">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fWn-Ce-d10">
+                    <rect key="frame" x="361" y="400" width="33" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Kk4-Hw-oWA"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please wait while audio is playing..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rXN-v8-qMi">
+                    <rect key="frame" x="20" y="64" width="374" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="XX8-l1-IFT"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ipq-uP-qSX" customClass="GradientProgressBar" customModule="GradientProgressBar">
+                    <rect key="frame" x="20" y="394" width="374" height="4"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="4" id="xha-Jp-hnh"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DNt-ut-FIR">
+                    <rect key="frame" x="0.0" y="134" width="414" height="240"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="audio-clip-icon" translatesAutoresizingMaskIntoConstraints="NO" id="z9e-Sa-KFT">
+                            <rect key="frame" x="20" y="20" width="374" height="200"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="z9e-Sa-KFT" firstAttribute="top" secondItem="DNt-ut-FIR" secondAttribute="top" constant="20" symbolic="YES" id="Cex-Ti-qbl"/>
+                        <constraint firstAttribute="height" constant="240" id="I1k-wX-XG8"/>
+                        <constraint firstItem="z9e-Sa-KFT" firstAttribute="leading" secondItem="DNt-ut-FIR" secondAttribute="leading" constant="20" symbolic="YES" id="PJ2-Og-UAk"/>
+                        <constraint firstAttribute="trailing" secondItem="z9e-Sa-KFT" secondAttribute="trailing" constant="20" symbolic="YES" id="aPm-7H-9y4"/>
+                        <constraint firstAttribute="bottom" secondItem="z9e-Sa-KFT" secondAttribute="bottom" constant="20" symbolic="YES" id="l5o-3m-0RO"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="kdo-5Q-tc9" firstAttribute="width" secondItem="03u-iE-tLa" secondAttribute="width" id="2aH-hF-JtZ"/>
+                <constraint firstItem="YLy-f1-f5Q" firstAttribute="trailing" secondItem="ipq-uP-qSX" secondAttribute="trailing" constant="20" id="3Xk-k6-Let"/>
+                <constraint firstItem="kdo-5Q-tc9" firstAttribute="centerY" secondItem="03u-iE-tLa" secondAttribute="centerY" id="92X-FL-Ezx"/>
+                <constraint firstAttribute="bottom" secondItem="03u-iE-tLa" secondAttribute="bottom" id="I7Y-Oz-Dld"/>
+                <constraint firstItem="rXN-v8-qMi" firstAttribute="top" secondItem="YLy-f1-f5Q" secondAttribute="top" constant="20" id="JEF-2w-RzO"/>
+                <constraint firstItem="kdo-5Q-tc9" firstAttribute="height" secondItem="03u-iE-tLa" secondAttribute="height" id="Nsv-KB-vMn"/>
+                <constraint firstItem="YLy-f1-f5Q" firstAttribute="trailing" secondItem="03u-iE-tLa" secondAttribute="trailing" id="OJc-dK-gcK"/>
+                <constraint firstItem="YLy-f1-f5Q" firstAttribute="trailing" secondItem="fWn-Ce-d10" secondAttribute="trailing" constant="20" id="WKj-mM-5FA"/>
+                <constraint firstItem="03u-iE-tLa" firstAttribute="top" secondItem="j58-t0-CZs" secondAttribute="top" id="Zxa-ln-Al7"/>
+                <constraint firstItem="DNt-ut-FIR" firstAttribute="top" secondItem="rXN-v8-qMi" secondAttribute="bottom" constant="40" id="bYW-mz-hpe"/>
+                <constraint firstItem="ipq-uP-qSX" firstAttribute="top" secondItem="DNt-ut-FIR" secondAttribute="bottom" constant="20" id="dkH-jq-NgR"/>
+                <constraint firstItem="03u-iE-tLa" firstAttribute="leading" secondItem="j58-t0-CZs" secondAttribute="leading" id="gK4-yJ-jZz"/>
+                <constraint firstItem="fWn-Ce-d10" firstAttribute="top" secondItem="ipq-uP-qSX" secondAttribute="bottom" constant="2" id="kEe-0I-uMS"/>
+                <constraint firstItem="rXN-v8-qMi" firstAttribute="leading" secondItem="YLy-f1-f5Q" secondAttribute="leading" constant="20" id="lGf-4W-imp"/>
+                <constraint firstItem="kdo-5Q-tc9" firstAttribute="centerX" secondItem="03u-iE-tLa" secondAttribute="centerX" id="me5-K4-pZ0"/>
+                <constraint firstItem="YLy-f1-f5Q" firstAttribute="trailing" secondItem="DNt-ut-FIR" secondAttribute="trailing" id="o2k-Ak-vFh"/>
+                <constraint firstItem="YLy-f1-f5Q" firstAttribute="trailing" secondItem="rXN-v8-qMi" secondAttribute="trailing" constant="20" id="s8X-rx-iqc"/>
+                <constraint firstItem="ipq-uP-qSX" firstAttribute="leading" secondItem="YLy-f1-f5Q" secondAttribute="leading" constant="20" id="yDN-rn-sEl"/>
+                <constraint firstItem="DNt-ut-FIR" firstAttribute="leading" secondItem="YLy-f1-f5Q" secondAttribute="leading" id="zRV-tT-0Yy"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="YLy-f1-f5Q"/>
+            <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="audio-clip-icon" width="225" height="225"/>
+        <image name="bg4" width="2880" height="5120"/>
+        <image name="movie-college" width="800" height="480"/>
+    </resources>
+</document>
