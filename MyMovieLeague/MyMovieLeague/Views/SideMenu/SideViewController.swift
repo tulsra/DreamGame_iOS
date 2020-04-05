@@ -24,19 +24,18 @@ class SideViewController: UIViewController {
         // Do any additional setup after loading the view.
       
 //        profileView.user = AppController.shared.user
-//        profileView.editTapped = {
-//            let profileVC = ProfileViewController()
-//            let nav = UINavigationController(rootViewController: profileVC)
-//            self.present(nav, animated: true, completion: nil)
-//            self.sideMenuViewController?.hideMenuViewController()
-//
-//        }
+        profileView.editTapped = {
+            let profileVC = AccountSummeryViewController()
+            let nav = UINavigationController(rootViewController: profileVC)
+            self.present(nav, animated: true, completion: nil)
+            self.sideMenuViewController?.hideMenuViewController()
+
+        }
         
         menuCells.forEach {$0.btnClickAction = { tag in
             self.sideMenuViewController?.hideMenuViewController()
             self.menuTapped(tag)
             }}
-        
                 
 //        self.profileView.user = AppController.shared.user
     }
@@ -65,15 +64,7 @@ class SideViewController: UIViewController {
 //        }
     }
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }

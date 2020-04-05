@@ -8,6 +8,7 @@
 
 import UIKit
 import GaugeMeterView
+import PlugNPlay
 
 class PlayGameViewController: UIViewController {
 
@@ -66,6 +67,28 @@ class PlayGameViewController: UIViewController {
     @objc func backBtnAction() {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    @IBAction func joinBtnAction(_ sender: Any) {
+    
+        let txnParm = PUMTxnParam()
+        txnParm.phone = "9746234115"
+        txnParm.email = "tulsra@gmail.com"
+        txnParm.amount = "50"
+        txnParm.environment = .test
+        txnParm.firstname = "Thulasi Ram"
+        txnParm.key = "merchantKey"
+        txnParm.merchantid = "ppPcYYVb"
+        txnParm.txnID = "txnID123"
+        txnParm.surl = "https://www.payumoney.com/mobileapp/payumoney/success.php"
+        txnParm.furl = "https://www.payumoney.com/mobileapp/payumoney/failure.php"
+        txnParm.productInfo = UIDevice.current.model
+        txnParm.hashValue = ""
+        
+        PlugNPlay.presentPaymentViewController(withTxnParams: txnParm, on: UIViewController()) { (reponse, error, extraParm) in
+            
+        }
+    }
+    
     func setupUI() {
         self.castCollView.register(UINib(nibName: "MovieCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MovieCollectionViewCell")
         let width = 125

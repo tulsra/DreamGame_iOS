@@ -20,6 +20,8 @@ class QuizGameCardTableViewCell: UITableViewCell {
     @IBOutlet weak var lblLeftSpots: UILabel!
     @IBOutlet weak var lblTotalSpots: UILabel!
     @IBOutlet weak var lblPrizeDesc: UILabel!
+    @IBOutlet weak var lblMinPlayers: UILabel!
+    @IBOutlet weak var lblDuration: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

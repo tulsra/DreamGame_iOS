@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -164,36 +164,63 @@
                                             <constraint firstAttribute="trailing" secondItem="vUN-OW-eae" secondAttribute="trailing" constant="10" id="q8b-oC-UmS"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GDH-MH-74d">
+                                        <rect key="frame" x="0.0" y="120" width="280" height="20"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="213 Players Left" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kw3-s6-MWB">
+                                                <rect key="frame" x="10" y="-6" width="90.5" height="20"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2000 Players" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkn-RP-CdA">
+                                                <rect key="frame" x="192.5" y="-6" width="77.5" height="20"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="rkn-RP-CdA" secondAttribute="bottom" constant="6" id="Iib-Jo-JMX"/>
+                                            <constraint firstAttribute="bottom" secondItem="kw3-s6-MWB" secondAttribute="bottom" constant="6" id="Ip8-NC-mp2"/>
+                                            <constraint firstAttribute="height" constant="20" id="Mtd-3U-QOJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="rkn-RP-CdA" secondAttribute="trailing" constant="10" id="fXy-iy-9ms"/>
+                                            <constraint firstItem="kw3-s6-MWB" firstAttribute="leading" secondItem="GDH-MH-74d" secondAttribute="leading" constant="10" id="fjx-3T-tdZ"/>
+                                            <constraint firstItem="rkn-RP-CdA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kw3-s6-MWB" secondAttribute="trailing" id="tHf-sT-8Du"/>
+                                        </constraints>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GiZ-PU-u52">
-                                        <rect key="frame" x="0.0" y="120" width="280" height="4"/>
+                                        <rect key="frame" x="0.0" y="140" width="280" height="4"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="4" id="680-lX-GKw"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jxz-n9-QTW">
-                                        <rect key="frame" x="0.0" y="124" width="280" height="50"/>
+                                        <rect key="frame" x="0.0" y="144" width="280" height="30"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rht-ly-nle">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="30"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3a8-CA-m49">
-                                                        <rect key="frame" x="0.0" y="0.0" width="10" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="10" height="30"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="10" id="zKi-Pv-taf"/>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3C-uO-9Ng">
-                                                        <rect key="frame" x="10" y="0.0" width="260" height="50"/>
-                                                        <string key="text">- For every Fastest correct answer, win ₹200/- per question 
+                                                        <rect key="frame" x="10" y="0.0" width="260" height="30"/>
+                                                        <string key="text">- For every Fastest correct answer, win ₹200/- per question
+- If minimum number of players, for every Fastest correct answer, win ₹100/- per question
 - For incorrect answer, ₹20/- shall be refunded</string>
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T8o-BZ-jn0">
-                                                        <rect key="frame" x="270" y="0.0" width="10" height="50"/>
+                                                        <rect key="frame" x="270" y="0.0" width="10" height="30"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="10" id="NFa-Ac-1D7"/>
@@ -241,8 +268,10 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="bgView" destination="fNN-Zw-iol" id="uDx-h1-EyB"/>
+                <outlet property="lblDuration" destination="rkn-RP-CdA" id="iUg-Pp-wle"/>
                 <outlet property="lblEntryFee" destination="c7m-g5-3fg" id="Fmr-dN-01W"/>
                 <outlet property="lblLeftSpots" destination="jEK-EU-b5r" id="D1x-PJ-2Na"/>
+                <outlet property="lblMinPlayers" destination="kw3-s6-MWB" id="yha-8H-hNv"/>
                 <outlet property="lblPrizeDesc" destination="a3C-uO-9Ng" id="7qN-tb-QFv"/>
                 <outlet property="lblTotalPrize" destination="jQc-cW-lFM" id="JhF-Ib-5eI"/>
                 <outlet property="lblTotalSpots" destination="JHR-kb-IXb" id="pfY-6c-GNE"/>

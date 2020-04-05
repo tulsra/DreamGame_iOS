@@ -48,7 +48,12 @@ class HelpViewController: UIViewController {
     }
     
     @objc func backBtnAction() {
-        self.navigationController?.popViewController(animated: true)
+        if getAuthToken() == "" {
+            self.navigationController?.popViewController(animated: true)
+        }
+        else {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     @IBAction func btnSubmitAction(_ sender: UIButton) {

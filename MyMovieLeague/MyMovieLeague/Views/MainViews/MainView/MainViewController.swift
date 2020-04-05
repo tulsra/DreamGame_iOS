@@ -22,22 +22,30 @@ class MainViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = false
-
-//        self.title = "GAMES"
-//        
-//        let menubutton = UIButton(type: .custom)
-//        menubutton.frame = CGRect(x: 0, y: 0, width: 18, height: 22)
-//        menubutton.setImage(UIImage(named: "menu"), for: .normal)
-//        menubutton.addTarget(self, action: #selector(menuBtnAction), for: .touchUpInside)
-//        
-//        let barButton1 = UIBarButtonItem(customView: menubutton)
-//        let currWidth1 = barButton1.customView?.widthAnchor.constraint(equalToConstant: 18)
-//        currWidth1?.isActive = true
-//        let currHeight1 = barButton1.customView?.heightAnchor.constraint(equalToConstant: 22)
-//        currHeight1?.isActive = true
-//        navigationItem.leftBarButtonItem = barButton1
         
-    
+        if getAuthToken() == "" {
+            
+            self.title = "GAMES"
+            
+            let menubutton = UIButton(type: .custom)
+            menubutton.frame = CGRect(x: 0, y: 0, width: 18, height: 22)
+            menubutton.setImage(UIImage(named: "back-arrow-white"), for: .normal)
+            menubutton.addTarget(self, action: #selector(backBtnAction), for: .touchUpInside)
+            
+            let barButton1 = UIBarButtonItem(customView: menubutton)
+            let currWidth1 = barButton1.customView?.widthAnchor.constraint(equalToConstant: 18)
+            currWidth1?.isActive = true
+            let currHeight1 = barButton1.customView?.heightAnchor.constraint(equalToConstant: 22)
+            currHeight1?.isActive = true
+            navigationItem.leftBarButtonItem = barButton1
+            
+            let image: UIImage = UIImage(named: "app-logo-small")!
+            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 36, height: 36))
+            imageView.contentMode = .scaleAspectFit
+            imageView.image = image
+            self.navigationItem.titleView = imageView
+            
+        }
         
     }
     
@@ -55,8 +63,8 @@ class MainViewController: UIViewController {
         self.viewBoxOfficeBG.layer.borderColor = themeColor.withAlphaComponent(0.25).cgColor
     }
     
-    @objc func menuBtnAction() {
-        
+    @objc func backBtnAction() {
+        AppController.shared.loadComeAndPlay()
     }
 
     @IBAction func btnBoxOfficeAction(_ sender: UIButton) {

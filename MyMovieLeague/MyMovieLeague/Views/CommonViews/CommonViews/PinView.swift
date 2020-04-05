@@ -15,7 +15,7 @@ class PinView: UIView, UITextFieldDelegate {
     
     @IBInspectable var pinText: String = ""{
         didSet{
-            
+            print(pinText)
         }
     }
 
@@ -60,54 +60,37 @@ class PinView: UIView, UITextFieldDelegate {
 
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let updatedText = NSMutableString(string: textField.text ?? "").replacingCharacters(in: range, with: string)
-        getUpdatedText(updatedText)
         textField.text = updatedText
-        
-        if updatedText.count == 1 {
-            if self.pinViews?.count ?? 0 > (textField.tag + 1)   {
-                if let nextView = self.pinViews?[ textField.tag + 1] {
-                    nextView.becomeFirstResponder()
-                }
-            }
-            else {
-                return false
+                
+        if updatedText.count == 0 {
+            if let next = self.pinViews?.filter{$0.tag == textField.tag-1}.first {
+                next.becomeFirstResponder()
             }
         }
         else {
-            if textField.tag > 0 {
-                if let prevView = self.pinViews?[ textField.tag - 1] {
-                    prevView.becomeFirstResponder()
-                }
+            if let next = self.pinViews?.filter{$0.tag == textField.tag+1}.first {
+                next.becomeFirstResponder()
             }
+            else {
+                self.endEditing(true)
+            }
+        }
+                
+        return false
+    }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        
+        self.pinText = self.pinViews?.filter{$0.tag < textField.tag}.map {"\($0.text!)"}.joined(separator: "") ?? ""
+        for txtFld in self.pinViews?.filter{$0.tag >= textField.tag} ?? []{
+            txtFld.text = ""
         }
         
         return true
     }
-    
-     @IBAction func btnAction(_ sender: UIButton) {
-        var isNotFound = true
-        for i in 0...5 {
-            if let textField = self.pinViews?[i], textField.text?.count == 0 {
-                textField.becomeFirstResponder()
-                isNotFound = false
-                break
-            }
-        }
+    func textFieldDidEndEditing(_ textField: UITextField) {
         
-        if isNotFound == true {
-            self.pinViews?[5].becomeFirstResponder()
-        }
-    }
-    
-    func fetchObject<T> (tag: Int, type: T.Type) -> T? {
-
-        for kView in self.pinViews! {
-            let kViews = kView.subviews.filter { $0 is T }
-            if kViews.count == 1 {
-                return (kViews[0] as! T)
-            }
-        }
-        return nil
+         self.pinText = self.pinViews?.filter{$0.tag <= textField.tag}.map {"\($0.text!)"}.joined(separator: "") ?? ""
     }
    
 }

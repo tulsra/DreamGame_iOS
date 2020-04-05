@@ -81,7 +81,7 @@ class QuizGameCardViewController: UIViewController {
         }
         
 //        func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//            return 180
+//            return 200
 //        }
         func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
             return UITableView.automaticDimension
@@ -91,18 +91,18 @@ class QuizGameCardViewController: UIViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdendifier, for: indexPath) as! QuizGameCardTableViewCell
             cell.selectionStyle = .none
             if let game = self.contests[indexPath.section].gameCard {
-                cell.lblTotalPrize.text = game.numberOfQuestions
+                cell.lblTotalPrize.text = "\(game.numberOfQuestions ?? 0)"
                 cell.lblEntryFee.text = game.ticketPrice?.indianString?.currencyStamped ?? ""
-            
+                
+            cell.lblMinPlayers.text = "Minimum: \(game.minPlayers?.indianString ?? "") Players"
+            cell.lblDuration.text = "Duration: \(game.duration ?? "")"
           
             cell.lblLeftSpots.text = "\(game.usersLeft?.indianString ?? "") Players Left"
             cell.lblTotalSpots.text = "\(game.noOfUsers?.indianString ?? "") Players"
+                cell.lblPrizeDesc.text = cell.lblPrizeDesc.text?.replacingOccurrences(of: "200", with: "\(game.prizePerQuestion?.indianString ?? "")").replacingOccurrences(of: "100", with: "\(game.minPrizePerQuestion?.indianString ?? "")")
             
             }
             
-            if indexPath.section > 0 {
-                cell.lblPrizeDesc.text = cell.lblPrizeDesc.text?.replacingOccurrences(of: "200", with: "350")
-            }
             if indexPath.section == 0 {
             cell.timeLeftLabel.text = "22H 13M Left"
             }
@@ -180,7 +180,11 @@ class QuizGameCardViewController: UIViewController {
                                                            "noOfUsers": 1000,
                                                            "ticketPrice": 50,
                                                            "usersLeft": 243,
-                                                           "numberOfQuestions": "50",
+                                                           "numberOfQuestions": 50,
+                                                           "minPlayers": 500,
+                                                           "duration": "8-10 mins",
+                                                           "prizePerQuestion":200,
+                                                           "minPrizePerQuestion":100,
                                                            "questions": [["id":1,
                                                                           "question":"Who is the director of Tanhaji?",
                                                                           "correctAnswer":4,
@@ -247,9 +251,13 @@ class QuizGameCardViewController: UIViewController {
                                               "gameCard": ["id": 1,
                                                            "title": "image",
                                                            "noOfUsers": 1000,
-                                                           "ticketPrice": 50,
+                                                           "ticketPrice": 60,
                                                            "usersLeft": 243,
-                                                           "numberOfQuestions": "50",
+                                                           "numberOfQuestions": 30,
+                                                           "minPlayers": 500,
+                                                           "duration": "10-15 mins",
+                                                           "prizePerQuestion":300,
+                                                           "minPrizePerQuestion":150,
                                                            "questions": [["id":1,
                                                                           "question":"This image is from which movie?",
                                                                           "correctAnswer":1,
@@ -282,9 +290,13 @@ class QuizGameCardViewController: UIViewController {
                                               "gameCard": ["id": 1,
                                                            "title": "audio",
                                                            "noOfUsers": 1000,
-                                                           "ticketPrice": 50,
+                                                           "ticketPrice": 70,
                                                            "usersLeft": 243,
-                                                           "numberOfQuestions": "50",
+                                                           "numberOfQuestions": 30,
+                                                           "minPlayers": 500,
+                                                           "duration": "10-15 mins",
+                                                           "prizePerQuestion":400,
+                                                           "minPrizePerQuestion":200,
                                                            "questions": [["id":1,
                                                                           "question":"This song, \"Ghungroo\" from the movie \"War\" featured which two actors?",
                                                                           "correctAnswer":4,
@@ -356,9 +368,13 @@ class QuizGameCardViewController: UIViewController {
                                               "gameCard": ["id": 1,
                                                                                          "title": "video",
                                                                                          "noOfUsers": 1000,
-                                                                                         "ticketPrice": 50,
+                                                                                         "ticketPrice": 80,
                                                                                          "usersLeft": 243,
-                                                                                         "numberOfQuestions": "50",
+                                                                                         "numberOfQuestions": 30,
+                                                                                         "minPlayers": 500,
+                                                                                         "duration": "30-45 mins",
+                                                                                         "prizePerQuestion":800,
+                                                                                         "minPrizePerQuestion":400,
                                                                                          "questions": [["id":1,
                                                                                                         "question":"In the movie \"Panipat\", whom does Sanjay Dutt  refer to steal the Peacock Throne & Kohinoor?",
                                                                                                         "correctAnswer":1,

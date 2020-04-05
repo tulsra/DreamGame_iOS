@@ -79,23 +79,32 @@ extension GameCardViewController:UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        return 170
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdendifier, for: indexPath) as! GameCardTableViewCell
         cell.selectionStyle = .none
         if let game = self.contests[indexPath.section].gameCard {
-        cell.lblTotalPrize.text = game.prizePool?.currencyStamped ?? ""
-        cell.lblEntryFee.text = game.ticketPrice?.indianString?.currencyStamped ?? ""
-        
-        cell.lblFirstPrize.text = game.firstPrize?.indianString?.currencyStamped ?? ""
-        cell.lblSecondPrize.text = game.secondPrize?.indianString?.currencyStamped ?? ""
-        cell.lblThirdPrize.text = game.thirdPrize?.indianString?.currencyStamped ?? ""
-        
-        cell.lblLeftSpots.text = "\(game.usersLeft?.indianString ?? "") Players Left"
-        cell.lblTotalSpots.text = "\(game.noOfUsers?.indianString ?? "") Players"
-        
+            cell.lblTotalPrize.text = game.prizePool?.currencyStamped ?? ""
+            cell.lblEntryFee.text = game.ticketPrice?.indianString?.currencyStamped ?? ""
+            
+            cell.lblFirstPrize.text = game.firstPrize?.indianString?.currencyStamped ?? ""
+            cell.lblSecondPrize.text = game.secondPrize?.indianString?.currencyStamped ?? ""
+            cell.lblThirdPrize.text = game.thirdPrize?.indianString?.currencyStamped ?? ""
+            
+            cell.lblLeftSpots.text = "\(game.usersLeft?.indianString ?? "") Players Left"
+            cell.lblTotalSpots.text = "\(game.noOfUsers?.indianString ?? "") Players"
+            cell.lblMinPlayers.text = "Minimum: \(game.minPlayers?.indianString ?? "") Players"
+            cell.tag = indexPath.section
+            cell.completionHandler = { tag in
+                let contest = self.contests[tag]
+                let gamePlayCard = self.getGamePlayDummyCard(contest: contest, index: tag)
+                let moviesListVC = PlayGameViewController()
+                moviesListVC.gamePlayCard = gamePlayCard
+                self.navigationController?.pushViewController(moviesListVC, animated: true)
+            }
+            
         }
         if indexPath.section == 0 {
         cell.timeLeftLabel.text = "03D 22H 13M Left"
@@ -140,16 +149,18 @@ extension GameCardViewController:UITableViewDelegate,UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: false)
         
         let contest = self.contests[indexPath.section]
-        let gamePlayCard = getGamePlayDummyCard(contest: contest, index: indexPath.section)
+//        let gamePlayCard = getGamePlayDummyCard(contest: contest, index: indexPath.section)
+//
+//        let moviesListVC = PlayGameViewController()
+//        moviesListVC.gamePlayCard = gamePlayCard
+//        self.navigationController?.pushViewController(moviesListVC, animated: true)
         
-        let moviesListVC = PlayGameViewController()
-        moviesListVC.gamePlayCard = gamePlayCard
-        self.navigationController?.pushViewController(moviesListVC, animated: true)
-        /*
         let moviesListVC = PrizeBreakupViewController()
         moviesListVC.gameCard = self.contests[indexPath.section].gameCard
+        moviesListVC.contest = contest
+        moviesListVC.index = indexPath.section
         self.navigationController?.pushViewController(moviesListVC, animated: true)
- */
+ 
     }
     
 }

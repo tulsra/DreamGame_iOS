@@ -79,13 +79,6 @@
 		006ADD8023D1EA2600A929BA /* MoviesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006ADD7E23D1EA2600A929BA /* MoviesListViewController.xib */; };
 		006C7D6A23EDC6F200B2CBC1 /* GameCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006C7D6923EDC6F200B2CBC1 /* GameCard.swift */; };
 		006CF0E523E88E2E0042F57A /* MainTabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CF0E423E88E2E0042F57A /* MainTabbarView.swift */; };
-		006CF0E823E88E360042F57A /* SideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006CF0E623E88E360042F57A /* SideViewController.xib */; };
-		006CF0E923E88E360042F57A /* SideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CF0E723E88E360042F57A /* SideViewController.swift */; };
-		006CF0EB23E88E3C0042F57A /* SideMenuMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CF0EA23E88E3C0042F57A /* SideMenuMainController.swift */; };
-		006CF0EE23E88EF00042F57A /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CF0EC23E88EF00042F57A /* SideMenuCell.swift */; };
-		006CF0EF23E88EF00042F57A /* SideMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006CF0ED23E88EF00042F57A /* SideMenuCell.xib */; };
-		006CF0F223E88FB20042F57A /* SideProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CF0F023E88FB20042F57A /* SideProfileView.swift */; };
-		006CF0F323E88FB20042F57A /* SideProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006CF0F123E88FB20042F57A /* SideProfileView.xib */; };
 		00794999240714A4004C2C31 /* GamePlayCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00794998240714A4004C2C31 /* GamePlayCard.swift */; };
 		0079499D2408F7EC004C2C31 /* RecentHistoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0079499B2408F7EC004C2C31 /* RecentHistoryViewCell.swift */; };
 		0079499E2408F7EC004C2C31 /* RecentHistoryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0079499C2408F7EC004C2C31 /* RecentHistoryViewCell.xib */; };
@@ -112,6 +105,16 @@
 		00B4D96223ED6791001BFFA9 /* NotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00B4D96023ED6791001BFFA9 /* NotificationViewController.xib */; };
 		00B4D96623ED67B4001BFFA9 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B4D96423ED67B4001BFFA9 /* NotificationTableViewCell.swift */; };
 		00B4D96723ED67B4001BFFA9 /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00B4D96523ED67B4001BFFA9 /* NotificationTableViewCell.xib */; };
+		4D54E7F82439BC8E007D1BCD /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54E7F72439BC8E007D1BCD /* APIResponse.swift */; };
+		4D54E7FA2439BCEC007D1BCD /* NetworkReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54E7F92439BCEC007D1BCD /* NetworkReponse.swift */; };
+		4D54E7FC2439F624007D1BCD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54E7FB2439F624007D1BCD /* ViewController.swift */; };
+		4D582F37241B8CB400897EBB /* SideProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D582F30241B8CB300897EBB /* SideProfileView.swift */; };
+		4D582F38241B8CB400897EBB /* SideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D582F31241B8CB300897EBB /* SideViewController.swift */; };
+		4D582F39241B8CB400897EBB /* SideMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D582F32241B8CB300897EBB /* SideMenuCell.xib */; };
+		4D582F3A241B8CB400897EBB /* SideProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D582F33241B8CB400897EBB /* SideProfileView.xib */; };
+		4D582F3B241B8CB400897EBB /* SideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D582F34241B8CB400897EBB /* SideViewController.xib */; };
+		4D582F3C241B8CB400897EBB /* SideMenuMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D582F35241B8CB400897EBB /* SideMenuMainController.swift */; };
+		4D582F3D241B8CB400897EBB /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D582F36241B8CB400897EBB /* SideMenuCell.swift */; };
 		4D6E538524116FE400ACC996 /* audio4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4D6E538024116FE400ACC996 /* audio4.mp3 */; };
 		4D6E538624116FE400ACC996 /* audio2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4D6E538124116FE400ACC996 /* audio2.mp3 */; };
 		4D6E538724116FE400ACC996 /* audio1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4D6E538224116FE400ACC996 /* audio1.mp3 */; };
@@ -235,13 +238,6 @@
 		006ADD7E23D1EA2600A929BA /* MoviesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesListViewController.xib; sourceTree = "<group>"; };
 		006C7D6923EDC6F200B2CBC1 /* GameCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCard.swift; sourceTree = "<group>"; };
 		006CF0E423E88E2E0042F57A /* MainTabbarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabbarView.swift; path = MainControllers/MainTabbarView.swift; sourceTree = "<group>"; };
-		006CF0E623E88E360042F57A /* SideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SideViewController.xib; path = ../../MainControllers/SideViewController.xib; sourceTree = "<group>"; };
-		006CF0E723E88E360042F57A /* SideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SideViewController.swift; path = ../../MainControllers/SideViewController.swift; sourceTree = "<group>"; };
-		006CF0EA23E88E3C0042F57A /* SideMenuMainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SideMenuMainController.swift; path = ../../MainControllers/SideMenuMainController.swift; sourceTree = "<group>"; };
-		006CF0EC23E88EF00042F57A /* SideMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SideMenuCell.swift; path = ../../../MainControllers/SideMenuCell.swift; sourceTree = "<group>"; };
-		006CF0ED23E88EF00042F57A /* SideMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SideMenuCell.xib; path = ../../../MainControllers/SideMenuCell.xib; sourceTree = "<group>"; };
-		006CF0F023E88FB20042F57A /* SideProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SideProfileView.swift; path = ../../../MainControllers/SideProfileView.swift; sourceTree = "<group>"; };
-		006CF0F123E88FB20042F57A /* SideProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SideProfileView.xib; path = ../../../MainControllers/SideProfileView.xib; sourceTree = "<group>"; };
 		00794998240714A4004C2C31 /* GamePlayCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlayCard.swift; sourceTree = "<group>"; };
 		0079499B2408F7EC004C2C31 /* RecentHistoryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentHistoryViewCell.swift; sourceTree = "<group>"; };
 		0079499C2408F7EC004C2C31 /* RecentHistoryViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecentHistoryViewCell.xib; sourceTree = "<group>"; };
@@ -269,6 +265,16 @@
 		00B4D96423ED67B4001BFFA9 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 		00B4D96523ED67B4001BFFA9 /* NotificationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationTableViewCell.xib; sourceTree = "<group>"; };
 		47762608A05FB9F61C80A2D7 /* Pods-MyMovieLeague.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMovieLeague.release.xcconfig"; path = "Target Support Files/Pods-MyMovieLeague/Pods-MyMovieLeague.release.xcconfig"; sourceTree = "<group>"; };
+		4D54E7F72439BC8E007D1BCD /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		4D54E7F92439BCEC007D1BCD /* NetworkReponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReponse.swift; sourceTree = "<group>"; };
+		4D54E7FB2439F624007D1BCD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4D582F30241B8CB300897EBB /* SideProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideProfileView.swift; sourceTree = "<group>"; };
+		4D582F31241B8CB300897EBB /* SideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideViewController.swift; sourceTree = "<group>"; };
+		4D582F32241B8CB300897EBB /* SideMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SideMenuCell.xib; sourceTree = "<group>"; };
+		4D582F33241B8CB400897EBB /* SideProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SideProfileView.xib; sourceTree = "<group>"; };
+		4D582F34241B8CB400897EBB /* SideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SideViewController.xib; sourceTree = "<group>"; };
+		4D582F35241B8CB400897EBB /* SideMenuMainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuMainController.swift; sourceTree = "<group>"; };
+		4D582F36241B8CB400897EBB /* SideMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
 		4D6E538024116FE400ACC996 /* audio4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio4.mp3; sourceTree = "<group>"; };
 		4D6E538124116FE400ACC996 /* audio2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio2.mp3; sourceTree = "<group>"; };
 		4D6E538224116FE400ACC996 /* audio1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio1.mp3; sourceTree = "<group>"; };
@@ -420,6 +426,7 @@
 				006C7D6923EDC6F200B2CBC1 /* GameCard.swift */,
 				00AADFDA240C3B2200A3EBDE /* QuizGameCard.swift */,
 				00794998240714A4004C2C31 /* GamePlayCard.swift */,
+				4D54E7F72439BC8E007D1BCD /* APIResponse.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -428,6 +435,7 @@
 			isa = PBXGroup;
 			children = (
 				00335E3B23E1836F0028C9D8 /* NetworkManager.swift */,
+				4D54E7F92439BCEC007D1BCD /* NetworkReponse.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -494,6 +502,7 @@
 				006ADD4D23D1DF3900A929BA /* AppDelegate.swift */,
 				006ADD6223D1E05300A929BA /* AppController.swift */,
 				006ADD6F23D1E66800A929BA /* SceneDelegate.swift */,
+				4D54E7FB2439F624007D1BCD /* ViewController.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -501,6 +510,7 @@
 		006ADD6423D1E0D500A929BA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4D582F3E241B8CC000897EBB /* SideMenu */,
 				006CF0E423E88E2E0042F57A /* MainTabbarView.swift */,
 				8CE50A3723E0F62D00FC443C /* CommonViews */,
 				8CE50A2423E0CFB800FC443C /* PreLogin */,
@@ -562,7 +572,6 @@
 				8C9AF81A23EDFA83008A939D /* Account */,
 				8C9AF81923EDFA7C008A939D /* Results */,
 				8C9AF80923EDE803008A939D /* SideMenuViews */,
-				8C9AF80723EDE73E008A939D /* SideMenu */,
 				00B4D95E23ED6753001BFFA9 /* Notification */,
 				00B4D95023ECBA83001BFFA9 /* PrizeBreakup */,
 				00B4D94623EC8EE7001BFFA9 /* GameCard */,
@@ -678,6 +687,28 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		4D582F3E241B8CC000897EBB /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				4D582F3F241B8CCE00897EBB /* Cells */,
+				4D582F35241B8CB400897EBB /* SideMenuMainController.swift */,
+				4D582F31241B8CB300897EBB /* SideViewController.swift */,
+				4D582F34241B8CB400897EBB /* SideViewController.xib */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		4D582F3F241B8CCE00897EBB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4D582F36241B8CB400897EBB /* SideMenuCell.swift */,
+				4D582F32241B8CB300897EBB /* SideMenuCell.xib */,
+				4D582F30241B8CB300897EBB /* SideProfileView.swift */,
+				4D582F33241B8CB400897EBB /* SideProfileView.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		4D6E537F24116FC800ACC996 /* Media */ = {
 			isa = PBXGroup;
 			children = (
@@ -748,28 +779,6 @@
 				8C97C32523FC4984000B7F16 /* AccountSummeryViewController.xib */,
 			);
 			path = AccountSummery;
-			sourceTree = "<group>";
-		};
-		8C9AF80723EDE73E008A939D /* SideMenu */ = {
-			isa = PBXGroup;
-			children = (
-				8C9AF80823EDE766008A939D /* Cells */,
-				006CF0EA23E88E3C0042F57A /* SideMenuMainController.swift */,
-				006CF0E723E88E360042F57A /* SideViewController.swift */,
-				006CF0E623E88E360042F57A /* SideViewController.xib */,
-			);
-			path = SideMenu;
-			sourceTree = "<group>";
-		};
-		8C9AF80823EDE766008A939D /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				006CF0F023E88FB20042F57A /* SideProfileView.swift */,
-				006CF0F123E88FB20042F57A /* SideProfileView.xib */,
-				006CF0EC23E88EF00042F57A /* SideMenuCell.swift */,
-				006CF0ED23E88EF00042F57A /* SideMenuCell.xib */,
-			);
-			path = Cells;
 			sourceTree = "<group>";
 		};
 		8C9AF80923EDE803008A939D /* SideMenuViews */ = {
@@ -954,7 +963,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0029D19D23D8CC500087396A /* RobotoCondensed-Light.ttf in Resources */,
+				4D582F39241B8CB400897EBB /* SideMenuCell.xib in Resources */,
 				0029D19F23D8CC500087396A /* Roboto-Italic.ttf in Resources */,
+				4D582F3B241B8CB400897EBB /* SideViewController.xib in Resources */,
 				0029D17223D8CC420087396A /* SansSerifFLF-Demibold.otf in Resources */,
 				00AADFD9240C3A8C00A3EBDE /* QuizGameCardViewController.xib in Resources */,
 				00B4D95923ECBACE001BFFA9 /* PrizeBreakupTableViewCell.xib in Resources */,
@@ -979,8 +990,6 @@
 				4D836811240F7A3400E225C5 /* QuizPlayViewController.xib in Resources */,
 				0029D19623D8CC500087396A /* Roboto-Regular.ttf in Resources */,
 				8C97C32A23FC4C88000B7F16 /* ProfileHeaderView.xib in Resources */,
-				006CF0E823E88E360042F57A /* SideViewController.xib in Resources */,
-				006CF0F323E88FB20042F57A /* SideProfileView.xib in Resources */,
 				4D6E5396241194ED00ACC996 /* video4.mp4 in Resources */,
 				4D836817240FD00200E225C5 /* ChoiceView.xib in Resources */,
 				8C9AF81E23EDFA91008A939D /* ResultsViewController.xib in Resources */,
@@ -1029,7 +1038,6 @@
 				0029D19423D8CC500087396A /* RobotoCondensed-BoldItalic.ttf in Resources */,
 				4D6E538724116FE400ACC996 /* audio1.mp3 in Resources */,
 				0029D17323D8CC420087396A /* SansSerifBldFLFCond-Italic.otf in Resources */,
-				006CF0EF23E88EF00042F57A /* SideMenuCell.xib in Resources */,
 				8C9AF81323EDF18E008A939D /* point-system.pdf in Resources */,
 				0029D19723D8CC500087396A /* Roboto-ThinItalic.ttf in Resources */,
 				006ADD7A23D1E99300A929BA /* VerifyMobileViewController.xib in Resources */,
@@ -1037,6 +1045,7 @@
 				0029D1AB23D8CC600087396A /* Poppins-Bold.ttf in Resources */,
 				0029D19223D8CC500087396A /* Roboto-Black.ttf in Resources */,
 				4D6E5398241194ED00ACC996 /* video5.mp4 in Resources */,
+				4D582F3A241B8CB400897EBB /* SideProfileView.xib in Resources */,
 				00B4D95423ECBAAD001BFFA9 /* PrizeBreakupViewController.xib in Resources */,
 				0029D19B23D8CC500087396A /* RobotoCondensed-LightItalic.ttf in Resources */,
 				00B4D94A23EC8F13001BFFA9 /* GameCardViewController.xib in Resources */,
@@ -1134,8 +1143,10 @@
 				0079499D2408F7EC004C2C31 /* RecentHistoryViewCell.swift in Sources */,
 				00B4D94E23EC8F58001BFFA9 /* GameCardTableViewCell.swift in Sources */,
 				006ADD7423D1E79900A929BA /* ComeAndPlayViewController.swift in Sources */,
+				4D54E7F82439BC8E007D1BCD /* APIResponse.swift in Sources */,
 				006ADD7023D1E66800A929BA /* SceneDelegate.swift in Sources */,
 				00335E4723E18BA80028C9D8 /* StringExtension.swift in Sources */,
+				4D582F3D241B8CB400897EBB /* SideMenuCell.swift in Sources */,
 				0029D15E23D8B4210087396A /* LoginViewModel.swift in Sources */,
 				00AADFD8240C3A8C00A3EBDE /* QuizGameCardViewController.swift in Sources */,
 				8C97C32623FC4984000B7F16 /* AccountSummeryViewController.swift in Sources */,
@@ -1150,6 +1161,7 @@
 				00AADFDB240C3B2200A3EBDE /* QuizGameCard.swift in Sources */,
 				8CE50A2A23E0CFF800FC443C /* HelpViewController.swift in Sources */,
 				00794999240714A4004C2C31 /* GamePlayCard.swift in Sources */,
+				4D54E7FA2439BCEC007D1BCD /* NetworkReponse.swift in Sources */,
 				8C32FE3923E2680300879853 /* PinView.swift in Sources */,
 				00A1910123FE918100ED2FA7 /* ProfileImageView.swift in Sources */,
 				8CE50A3223E0EB4800FC443C /* CommentInputView.swift in Sources */,
@@ -1157,7 +1169,6 @@
 				0029D15A23D8B3F30087396A /* SplashViewModel.swift in Sources */,
 				006ADD7923D1E99300A929BA /* VerifyMobileViewController.swift in Sources */,
 				00A190FC23FE8B2900ED2FA7 /* ProfileViewController.swift in Sources */,
-				006CF0EB23E88E3C0042F57A /* SideMenuMainController.swift in Sources */,
 				4D6E538D2411705F00ACC996 /* PlayerViewController.swift in Sources */,
 				00AADFE0240D49E800A3EBDE /* QuizGameCardTableViewCell.swift in Sources */,
 				00B4D95C23ECBB1B001BFFA9 /* PrizeBreakupHeaaderTableViewCell.swift in Sources */,
@@ -1165,15 +1176,16 @@
 				00335E4623E18BA80028C9D8 /* DateExtension.swift in Sources */,
 				4D836810240F7A3400E225C5 /* QuizPlayViewController.swift in Sources */,
 				00B4D95323ECBAAD001BFFA9 /* PrizeBreakupViewController.swift in Sources */,
+				4D582F37241B8CB400897EBB /* SideProfileView.swift in Sources */,
+				4D54E7FC2439F624007D1BCD /* ViewController.swift in Sources */,
 				8C32FE3423E1C2F400879853 /* MainViewController.swift in Sources */,
-				006CF0F223E88FB20042F57A /* SideProfileView.swift in Sources */,
 				00335E3E23E1839A0028C9D8 /* ParameterDetail.swift in Sources */,
 				006ADD6823D1E0F100A929BA /* LoginViewController.swift in Sources */,
 				00335E4523E18BA80028C9D8 /* EncodableExtension.swift in Sources */,
 				8C9AF82123EDFAA0008A939D /* AccountViewController.swift in Sources */,
 				006ADD6323D1E05300A929BA /* AppController.swift in Sources */,
-				006CF0E923E88E360042F57A /* SideViewController.swift in Sources */,
 				006ADD6D23D1E11A00A929BA /* SplashViewController.swift in Sources */,
+				4D582F3C241B8CB400897EBB /* SideMenuMainController.swift in Sources */,
 				4D836816240FD00200E225C5 /* ChoiceView.swift in Sources */,
 				8C284EC123FF02CD003952E3 /* PlayGameViewController.swift in Sources */,
 				00B4D95823ECBACE001BFFA9 /* PrizeBreakupTableViewCell.swift in Sources */,
@@ -1181,6 +1193,7 @@
 				00335E3823E183260028C9D8 /* CommonFunctions.swift in Sources */,
 				00335E3523E1831B0028C9D8 /* Reachability.swift in Sources */,
 				8C9AF80D23EDE82D008A939D /* TermsAndConditionsViewController.swift in Sources */,
+				4D582F38241B8CB400897EBB /* SideViewController.swift in Sources */,
 				00B4D94923EC8F13001BFFA9 /* GameCardViewController.swift in Sources */,
 				00B4D96123ED6791001BFFA9 /* NotificationViewController.swift in Sources */,
 				8CE50A3C23E0F64600FC443C /* AcknowledgeViewController.swift in Sources */,
@@ -1188,7 +1201,6 @@
 				00335E3623E1831B0028C9D8 /* Toast.swift in Sources */,
 				8C97C32B23FC4C88000B7F16 /* ProfileHeaderView.swift in Sources */,
 				006ADD7F23D1EA2600A929BA /* MoviesListViewController.swift in Sources */,
-				006CF0EE23E88EF00042F57A /* SideMenuCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1332,7 +1344,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.DreamGame.MyMovieLeague;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1352,7 +1364,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.DreamGame.MyMovieLeague;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

@@ -58,13 +58,28 @@ class LoginViewController: UIViewController, UITextFieldDelegate, GIDSignInDeleg
     }
     @IBAction func btnNextAction(_ sender: UIButton) {
         if txtFieldPhoneNumber.text?.count == 10 {
+            self.view.endEditing(true)
+            self.loadActivity()
             NetworkManager().post(method: .verifyPhoneNumber, urlParam: ["api-version":"v1.0"], bodyParm: ["phoneNumber":txtFieldPhoneNumber.text ?? ""]) { (response, error) in
+                DispatchQueue.main.async {
+                    self.hideActivity()
+                    if let error = error {
+                        self.view.makeToast(error, duration: 2.0, position: .center)
+                    }
+                    else {
+                        let verifyVC = VerifyMobileViewController()
+                        verifyVC.phoneNumber = self.txtFieldPhoneNumber.text ?? ""
+                        self.navigationController?.pushViewController(verifyVC, animated: true)
+                    }
+                }
                 
             }
         }
-        let verifyVC = VerifyMobileViewController()
-        self.navigationController?.pushViewController(verifyVC, animated: true)
-       }
+        else {
+            self.view.makeToast("Please enter valid phone number", duration: 2.0, position: .center)
+        }
+        
+    }
 
     @IBAction func facebookLogin(_ sender: Any) {
         

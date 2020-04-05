@@ -20,4 +20,5 @@ target 'MyMovieLeague' do
   pod 'GoogleSignIn'
   pod 'GradientProgressBar'
   pod 'SimpleImageViewer'
+  pod 'PayUmoney_PnP'
 end

@@ -14,12 +14,17 @@ class SplashViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(delayedAction), userInfo: nil, repeats: false)
+        _ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(delayedAction), userInfo: nil, repeats: false)
         
     }
     
     @objc func delayedAction() {
+        if getAuthToken() != "" {
+            AppController.shared.loadMainView()
+        }
+        else {
         AppController.shared.loadComeAndPlay()
+        }
     }
     
     deinit {

@@ -110,23 +110,29 @@ class QuizPlayViewController: UIViewController {
     @IBAction func nextBtnAction(_ sender: Any) {
         
         if selectedChoice < 100 {
+            var style = ToastStyle()
             if let kQuestion = self.question, kQuestion.correctAnswer == (selectedChoice + 1) {
-                
-                AppController.shared.window?.makeToast("Correct answer", duration: 2.0, position: .center,  completion: nil)
+                style.backgroundColor = UIColor(red: 73.0/255.0, green: 163.0/255.0, blue: 90.0/255.0, alpha: 1.0)
+                AppController.shared.window?.makeToast("Correct answer", duration: 2.0, position: .top, style: style,  completion: nil)
             }
             else {
-                AppController.shared.window?.makeToast("Wrong answer", duration: 2.0, position: .center,  completion: nil)
+                style.backgroundColor = UIColor.red
+                AppController.shared.window?.makeToast("Wrong answer", duration: 2.0, position: .top, style: style,  completion: nil)
             }
         }
         else {
-            AppController.shared.window?.makeToast("No choice selected", duration: 2.0, position: .center,  completion: nil)
+            AppController.shared.window?.makeToast("No choice selected", duration: 2.0, position: .top,  completion: nil)
         }
         
-        self.timer.invalidate()
+        _ = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(delayedAction), userInfo: nil, repeats: false)
         
+        
+    }
+    
+    @objc func delayedAction() {
+        self.timer.invalidate()
         self.currentIndex +=  1
         self.setupQuestion()
-        
     }
     @IBAction func previewAction(_ sender: Any) {
         let configuration = ImageViewerConfiguration { config in

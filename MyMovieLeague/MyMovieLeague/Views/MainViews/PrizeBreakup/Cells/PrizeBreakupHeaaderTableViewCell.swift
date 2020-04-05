@@ -10,6 +10,7 @@ import UIKit
 
 class PrizeBreakupHeaaderTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblTotalPrize: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()

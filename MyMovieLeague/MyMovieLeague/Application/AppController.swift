@@ -39,33 +39,53 @@ class AppController {
     
     func loadMainView() {
         window?.rootViewController  =   nil
+        
+        if getAuthToken() != "" {
         let VC1 =   MainTabbarViewController()
-               let VC2 =   SideViewController()
-               let nav = UINavigationController(rootViewController: VC1)
-               mainView   =   SSASideMenu(contentViewController: nav, leftMenuViewController: VC2)
-               window?.rootViewController  =    mainView
-               
-               VC2.menuTapped = { index in
-                   print(index)
-                   if index == 7 {
-                       self.logout()
-                   }
-                   else if index == 4 {
-
-                       let pointSystem = PointSystemViewController()
-                       let nav1 = UINavigationController(rootViewController: pointSystem)
-                       VC1.present(nav1, animated: true, completion: nil)
-                   }
-                   else if index == 5 {
-
-                       let termsAndConditions = TermsAndConditionsViewController()
-                       let nav1 = UINavigationController(rootViewController: termsAndConditions)
-                       VC1.present(nav1, animated: true, completion: nil)
-                   }
-                   else {
-                       //VC1.selectedIndex = index
-                   }
-               }
+        let VC2 =   SideViewController()
+        let nav = UINavigationController(rootViewController: VC1)
+        mainView   =   SSASideMenu(contentViewController: nav, leftMenuViewController: VC2)
+        window?.rootViewController  =    mainView
+        
+        VC2.menuTapped = { index in
+            print(index)
+            if index == 0 {
+                let profile = ProfileViewController()
+                let nav1 = UINavigationController(rootViewController: profile)
+                VC1.present(nav1, animated: true, completion: nil)
+            }
+            else if index == 4 {
+                
+                let pointSystem = PointSystemViewController()
+                let nav1 = UINavigationController(rootViewController: pointSystem)
+                VC1.present(nav1, animated: true, completion: nil)
+            }
+            else if index == 5 {
+                
+                let termsAndConditions = TermsAndConditionsViewController()
+                let nav1 = UINavigationController(rootViewController: termsAndConditions)
+                VC1.present(nav1, animated: true, completion: nil)
+            }
+            else if index == 6 {
+                
+                let help = HelpViewController()
+                let nav1 = UINavigationController(rootViewController: help)
+                VC1.present(nav1, animated: true, completion: nil)
+            }
+            else if index == 7 {
+                self.logout()
+            }
+            else {
+                //VC1.selectedIndex = index
+            }
+        }
+        }
+        else {
+            let home     =   MainViewController()
+            let nav = UINavigationController(rootViewController: home)
+            window?.rootViewController  =    nav
+        }
+        
         setNavigationBarAppearance()
     }
     
@@ -184,11 +204,17 @@ func saveAuthToken(token:String) {
     UserDefaults.standard.set(token, forKey: "AuthTokenForUser")
     UserDefaults.standard.synchronize()
 }
-func getAuthToken() -> String? {
+func getAuthToken() -> String {
     if let value = UserDefaults.standard.object(forKey: "AuthTokenForUser") {
-        return value as? String
+
+        if let respObj = Token(JSONString: (value as? String ?? "")) {
+            return value as? String ?? ""
+        }
+        else {
+            return ""
+        }
     }
-    return nil
+    return ""
 }
 func clearAuthToken() {
     UserDefaults.standard.removeObject(forKey: "AuthTokenForUser")

@@ -56,7 +56,9 @@ class GameCard: NSObject, Mappable, Codable {
     var secondPrize:Int?
     var thirdPrize:Int?
     var title: String?
+    var minPlayers: Int?
     var prizeBreakup: [PrizeBreakup]?
+    var minPrizeBreakup: [PrizeBreakup]?
     
     override init() {
         super.init()
@@ -73,10 +75,12 @@ class GameCard: NSObject, Mappable, Codable {
         usersLeft <- map["usersLeft"]
         prizePool <- map["prizePool"]
         title <- map["title"]
-        prizeBreakup <- map["prizeBreakup"]
         firstPrize <- map["firstPrize"]
         secondPrize <- map["secondPrize"]
         thirdPrize <- map["thirdPrize"]
+        minPlayers <- map["minPlayers"]
+        prizeBreakup <- map["prizeBreakup"]
+        minPrizeBreakup <- map["minPrizeBreakup"]
     }
 }
 class PrizeBreakup: NSObject, Mappable, Codable {

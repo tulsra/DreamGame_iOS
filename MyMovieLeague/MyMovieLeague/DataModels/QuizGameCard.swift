@@ -39,8 +39,12 @@ class QuizGameCard: NSObject, Mappable, Codable {
     var noOfUsers: Int?
     var ticketPrice: Int?
     var usersLeft: Int?
-    var numberOfQuestions: String?
+    var numberOfQuestions: Int?
     var title: String?
+    var minPlayers: Int?
+    var duration: String?
+    var prizePerQuestion:Int?
+    var minPrizePerQuestion:Int?
     var questions:[Question]?
     
     override init() {
@@ -58,6 +62,10 @@ class QuizGameCard: NSObject, Mappable, Codable {
         usersLeft <- map["usersLeft"]
         numberOfQuestions <- map["numberOfQuestions"]
         title <- map["title"]
+        minPlayers <- map["minPlayers"]
+        duration <- map["duration"]
+        prizePerQuestion <- map["prizePerQuestion"]
+        minPrizePerQuestion <- map["minPrizePerQuestion"]
         questions <- map["questions"]
     }
 }

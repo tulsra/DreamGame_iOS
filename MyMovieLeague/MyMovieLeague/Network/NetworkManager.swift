@@ -42,10 +42,10 @@ enum Result<String>{
 }
 
 
-struct NetworkManager {
+class NetworkManager {
     
     let environment : NetworkEnvironment = .sandbox
-    
+    var method:Method = .appLatestVersion
     fileprivate func handleNetworkResponse(_ response: HTTPURLResponse) -> String{
         switch response.statusCode {
         case 200...299: return "success"
@@ -60,6 +60,7 @@ struct NetworkManager {
     
     func get(method: Method, urlParam: Parameters, bodyParm: Parameters? ,completion: @escaping (_ resopnse: Any?,_ error: String?)->()){
         
+        self.method = method
         if !Common.hasConnectivity() {
             completion(nil,networkUnavailable)
             return
@@ -70,9 +71,9 @@ struct NetworkManager {
         var request = URLRequest(url: try! urlString!.asURL())
         request.httpMethod = HTTPMethod.get.rawValue
         
-        if let auth = getAuthToken() {
-            print(auth)
-            request.addValue(auth, forHTTPHeaderField: "Authorization")
+        if getAuthToken() != "" {
+            print(getAuthToken())
+            request.addValue(getAuthToken(), forHTTPHeaderField: "Authorization")
         }
         
         if let bodyParameters = bodyParm {
@@ -82,68 +83,53 @@ struct NetworkManager {
         
         
         AF.request(request).validate().responseJSON { response in
-                            
-                            switch response.result {
-                            case .success:
-                                guard let responseData = response.data else {
-                                    completion(nil, NetworkResponse.noData.rawValue)
-                                    return
-                                }
-                                
-                                let jsonString = String(data: responseData, encoding: String.Encoding.utf8) ?? ""
-                                print(jsonString)
-                                
-                                switch method {
-                         
-//                                case .getUser:
-//                                    if let user = User(JSONString: jsonString), let id = user.id, id>0 {
-//                                        completion(user,nil)
-//                                    }
-//                                    else {
-//                                        completion(nil,"Request failed")
-//                                    }
-//                                case .getStates:
-//                                    if let states = Mapper<State>().mapArray(JSONString: jsonString) {
-//                                        completion(states,nil)
-//                                    }
-//                                    else {
-//                                        completion(nil, "Request failed")
-//                                    }
-                         
-                                    
-                                default:
-                                    print("========================")
-                                    
-                                }
-                            case .failure(let error):
-                                
-                                print(error)
-                                if let resp = response.response {
-                                    let errorMessage = self.handleNetworkResponse(resp)
-                                    if errorMessage == NetworkResponse.authenticationError.rawValue {
-                                        AppController.shared.forceLogoutAction()
-                                        return
-                                    }
-                                    completion(nil, errorMessage)
-                                }
-                                else {
-                                    completion(nil, "We are building... Please wait for some time.")
-                                }
-                                
-                            }
-                            
+            
+            switch response.result {
+            case .success:
+                guard let responseData = response.data else {
+                    completion(nil, NetworkResponse.noData.rawValue)
+                    return
+                }
+                
+                let jsonString = String(data: responseData, encoding: String.Encoding.utf8) ?? ""
+                print(jsonString)
+                
+                if let respObj = self.obj(JSONString: jsonString) {
+                    completion(respObj, nil)
+                }
+                else {
+                    completion(nil, jsonString)
+                }
+            case .failure(let error):
+                
+                print(error)
+                if let resp = response.response {
+                    let errorMessage = self.handleNetworkResponse(resp)
+                    if errorMessage == NetworkResponse.authenticationError.rawValue {
+                        AppController.shared.forceLogoutAction()
+                        return
+                    }
+                    completion(nil, errorMessage)
+                }
+                else {
+                    completion(nil, "We are building... Please wait for some time.")
+                }
+                
+            }
+            
         }
     }
     
-    func post(method: Method, urlParam: Parameters, bodyParm: Parameters?,isURLEncode:Bool = true ,completion: @escaping (_ resopnse: Any?,_ error: String?)->()){
+    func post(method: Method, urlParam: Parameters?, bodyParm: Parameters?,isURLEncode:Bool = true ,completion: @escaping (_ resopnse: Any?,_ error: String?)->()){
+        self.method = method
         if !Common.hasConnectivity() {
             completion(nil,networkUnavailable)
             return
         }
         var url = String(format:"\(environment.rawValue)\(method.rawValue)")
         
-        if isURLEncode {
-            url = String(format:"\(environment.rawValue)\(method.rawValue)?\(urlParam.urlEncodeString)")
+        if isURLEncode, let parm = urlParam {
+            url = String(format:"\(environment.rawValue)\(method.rawValue)?\(parm.urlEncodeString)")
         }
         let urlString = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         
@@ -151,25 +137,37 @@ struct NetworkManager {
         var request = URLRequest(url: try! urlString!.asURL())
         request.httpMethod = HTTPMethod.post.rawValue
         
-        if let auth = getAuthToken(), method != .movie  {
-            request.addValue(auth, forHTTPHeaderField: "Authorization")
+        if getAuthToken() != "", method != .movie  {
+            request.addValue(getAuthToken(), forHTTPHeaderField: "Authorization")
+        }
+        
+        var headers = HTTPHeaders.init()
+        headers["Content-Type"]   = "application/json"
+        if method == .verifyToken {
+            headers["Content-Type"]   = "application/x-www-form-urlencoded"
         }
         
         if let bodyParameters = bodyParm {
-     
-            var headers = HTTPHeaders.init()
-            headers["Content-Type"]   = "application/json"
-            
-            var  jsonData = NSData()
-            
-            do {
-                jsonData = try JSONSerialization.data(withJSONObject: bodyParameters, options: .prettyPrinted) as NSData
-            } catch {
-                print(error.localizedDescription)
+                 
+            if method == .verifyToken {
+                
+                let str = bodyParameters.urlEncodeString
+                let data = Data(str.utf8)
+                request.httpBody  = data
+                
             }
-            
-            request.allHTTPHeaderFields = headers
-            request.httpBody = jsonData as Data
+            else {
+                var  jsonData = NSData()
+                
+                do {
+                    jsonData = try JSONSerialization.data(withJSONObject: bodyParameters, options: .prettyPrinted) as NSData
+                } catch {
+                    print(error.localizedDescription)
+                }
+                
+                request.allHTTPHeaderFields = headers
+                request.httpBody = jsonData as Data
+            }
         }
         
         AF.request(request).validate().responseData { response in
@@ -183,33 +181,18 @@ struct NetworkManager {
                 
                 let jsonString = String(data: responseData, encoding: String.Encoding.utf8) ?? ""
                 print(jsonString)
-                
-                switch method {
-                
-//                case .saveUser:
-//                    if let user = User(JSONString: jsonString),user.id ?? 0 > 0 {
-//                       completion(user,nil)
-//                    }
-//                    else {
-//                        completion(nil,"User already exists.")
-//                    }
-              
-                    
-         
-//                case .saveFeedback:
-//                    print(response.response?.statusCode)
-//                    if response.response?.statusCode == 200 {
-//                        completion("success", nil)
-//                    }
-//                    else {
-//                        completion(nil, "Feedback not submitted due to unknown error. Pleasetry later")
-//                    }
-                    
-
-                default:
-                    print("========================")
-                    
+                if method == .verifyToken {
+                    completion(jsonString, nil)
+                    return
                 }
+                
+                if let respObj = self.obj(JSONString: jsonString) {
+                    completion(respObj, nil)
+                }
+                else {
+                    completion(nil, jsonString)
+                }
+                    
             case .failure(let error):
                 print(error)
                 switch method {
@@ -217,7 +200,10 @@ struct NetworkManager {
                     if let kResp = response.response {
                         let errorMessage = self.handleNetworkResponse(kResp)
                         if errorMessage == NetworkResponse.authenticationError.rawValue {
-                            AppController.shared.forceLogoutAction()
+                            if method != .verifyPhoneNumber || method != .verifyToken {
+                                AppController.shared.forceLogoutAction()
+                            }
+                            completion(nil, errorMessage)
                             return
                         }
                         completion(nil, errorMessage)
@@ -228,13 +214,13 @@ struct NetworkManager {
                     
                 }
             }
-            
         }
         
     }
    
     
     func put(method: Method, parameters: Parameters,isURLEncode:Bool = true ,completion: @escaping (_ resopnse: Any?,_ error: String?)->()){
+        self.method = method
         if !Common.hasConnectivity() {
             completion(nil,networkUnavailable)
             return
@@ -250,8 +236,8 @@ struct NetworkManager {
         var request = URLRequest(url: try! urlString!.asURL())
         request.httpMethod = HTTPMethod.put.rawValue
         
-        if let auth = getAuthToken()  {
-            request.addValue(auth, forHTTPHeaderField: "Authorization")
+        if getAuthToken() != ""  {
+            request.addValue(getAuthToken(), forHTTPHeaderField: "Authorization")
         }
         
         if !isURLEncode {
@@ -284,18 +270,11 @@ struct NetworkManager {
                 let jsonString = String(data: responseData, encoding: String.Encoding.utf8) ?? ""
                 print(jsonString)
                 
-                switch method {
-//                case .updateUser:
-//                    if let user = User(JSONString: jsonString),user.id ?? 0 > 0  {
-//                        completion(user,nil)
-//                    }
-//                    else {
-//                        completion(nil,"Error while updating user.")
-//                    }
-        
-                default:
-                    print("========================")
-                    
+                if let respObj = self.obj(JSONString: jsonString) {
+                    completion(respObj, nil)
+                }
+                else {
+                    completion(nil, jsonString)
                 }
             case .failure(let error):
                 print(error)

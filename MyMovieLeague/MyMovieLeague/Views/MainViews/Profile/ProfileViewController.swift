@@ -42,6 +42,6 @@ class ProfileViewController: UIViewController {
         
     }
     @objc func backBtnAction() {
-        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
 }

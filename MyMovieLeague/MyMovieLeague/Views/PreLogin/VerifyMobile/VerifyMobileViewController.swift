@@ -7,13 +7,15 @@
 //
 
 import UIKit
+import Alamofire
 
 class VerifyMobileViewController: UIViewController {
 
     
+    @IBOutlet weak var pinView: PinView!
     @IBOutlet weak var imgViewOTPmobile: UIView!
     @IBOutlet weak var btnVerify: UIButton!
-    
+    var phoneNumber: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -56,8 +58,32 @@ class VerifyMobileViewController: UIViewController {
     }
     
     @IBAction func btnVerifyAction(_ sender: UIButton) {
-        
-        AppController.shared.loadMainView()
+        print(self.pinView.pinText)
+        if self.pinView.pinText.count == 6 {
+            self.loadActivity()
+            let bodyPArm = ["phone_number":self.phoneNumber,
+                            "grant_type":"phone_number_token",
+                            "verification_token":pinView.pinText,
+                            "client_id":"pn_auth",
+                            "client_secret":"secret"]
+            
+            NetworkManager().post(method: .verifyToken, urlParam: nil, bodyParm: bodyPArm) { (response, error) in
+                DispatchQueue.main.async {
+                    self.hideActivity()
+                    if let error = error {
+                        self.view.makeToast(error, duration: 2.0, position: .center)
+                    }
+                    else {
+                        saveAuthToken(token: (response as? String) ?? "")
+                        AppController.shared.loadMainView()
+                    }
+                }
+            }
+            
+        }
+        else {
+            self.view.makeToast("Please enter valid OTP", duration: 2.0, position: .center)
+        }
     }
     
     deinit {

@@ -11,6 +11,7 @@ import UIKit
 class GameCardTableViewCell: UITableViewCell {
 
     
+    @IBOutlet weak var lblMinPlayers: UILabel!
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var timeLeftLabel: UILabel!
@@ -22,6 +23,9 @@ class GameCardTableViewCell: UITableViewCell {
     @IBOutlet weak var lblFirstPrize: UILabel!
     @IBOutlet weak var lblSecondPrize: UILabel!
     @IBOutlet weak var lblThirdPrize: UILabel!
+    var completionHandler:(Int)->() = { tag in
+        
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -44,6 +48,9 @@ class GameCardTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    @IBAction func playBtnAction(_ sender: UIButton) {
+        self.completionHandler(sender.tag)
     }
     
 }

@@ -22,10 +22,10 @@ class ComeAndPlayViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let timer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true) { (timer) in
-            self.imgViewMovieSlider.image = UIImage(named: self.movieNames.randomElement() ?? "")
-        }
-        timer.fire()
+//        let timer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true) { (timer) in
+//            self.imgViewMovieSlider.image = UIImage(named: self.movieNames.randomElement() ?? "")
+//        }
+//        timer.fire()
         setupUI()
     }
     

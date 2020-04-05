@@ -60,4 +60,3 @@ class User: NSObject, Mappable, Codable {
     }
 }
 
-

@@ -16,6 +16,8 @@ class PrizeBreakupViewController: UIViewController {
     let cellReuseIdendifier2 = "PrizeBreakupTableViewCell"
     
     var gameCard:GameCard?
+    var contest:Contest?
+    var index:Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,7 +77,7 @@ class PrizeBreakupViewController: UIViewController {
 extension PrizeBreakupViewController:UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (self.gameCard?.prizeBreakup?.count ?? 0) + 2
+        return (self.gameCard?.prizeBreakup?.count ?? 0) + (self.gameCard?.minPrizeBreakup?.count ?? 0) + 3
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -85,6 +87,9 @@ extension PrizeBreakupViewController:UITableViewDelegate,UITableViewDataSource {
         }
         if indexPath.row == 1 {
             return 64
+        }
+        if let count =  self.gameCard?.prizeBreakup?.count, indexPath.row == count + 2 {
+             return 64
         }
         return 36
     }
@@ -103,6 +108,14 @@ extension PrizeBreakupViewController:UITableViewDelegate,UITableViewDataSource {
                 
                 cell.lblLeftSpots.text = "\(game.usersLeft?.indianString ?? "") Players Left"
                 cell.lblTotalSpots.text = "\(game.noOfUsers?.indianString ?? "") Players"
+                cell.completionHandler = { tag in
+                    if let contest = self.contest, let index = self.index {
+                    let gamePlayCard = self.getGamePlayDummyCard(contest: self.contest!, index: self.index!)
+                    let moviesListVC = PlayGameViewController()
+                    moviesListVC.gamePlayCard = gamePlayCard
+                    self.navigationController?.pushViewController(moviesListVC, animated: true)
+                    }
+                }
             }
             cell.timeLeftLabel.text = "41D 22H 13M Left"
                         
@@ -110,11 +123,13 @@ extension PrizeBreakupViewController:UITableViewDelegate,UITableViewDataSource {
         } else  if indexPath.row == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdendifier1, for: indexPath) as! PrizeBreakupHeaaderTableViewCell
             if let game = self.gameCard {
+                cell.lblTitle.text = "WINNING BREAKUP"
                 cell.lblTotalPrize.text = game.prizePool?.currencyStamped ?? ""
             }
             return cell
         }
-        else {
+        else if let count =  self.gameCard?.prizeBreakup?.count, indexPath.row > 1, indexPath.row < count + 2 {
+        
             let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdendifier2, for: indexPath) as! PrizeBreakupTableViewCell
             if let prizeBreakupArr = self.gameCard?.prizeBreakup {
                 cell.lblRank.text = prizeBreakupArr[indexPath.row-2].getRankString()
@@ -122,6 +137,49 @@ extension PrizeBreakupViewController:UITableViewDelegate,UITableViewDataSource {
             }
             return cell
         }
+        else  if let count =  self.gameCard?.prizeBreakup?.count, indexPath.row == count + 2 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdendifier1, for: indexPath) as! PrizeBreakupHeaaderTableViewCell
+            if let game = self.gameCard {
+                cell.lblTitle.text = "MINIMUM WINNING BREAKUP"
+                cell.lblTotalPrize.text = "" //game.prizePool?.currencyStamped ?? ""
+            }
+            return cell
+        }
+        else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdendifier2, for: indexPath) as! PrizeBreakupTableViewCell
+            if let prizeBreakupArr = self.gameCard?.prizeBreakup, let minBreakupArr = self.gameCard?.minPrizeBreakup {
+                let count = prizeBreakupArr.count + 3
+                cell.lblRank.text = minBreakupArr[indexPath.row - count].getRankString()
+                cell.lblAmount.text = "\(minBreakupArr[indexPath.row - count].amount ?? 0)".currencyStamped //(prizeBreakupArr[indexPath.row-2].amount ?? 0).indianString?.currencyStamped
+            }
+            return cell
+        }
+    }
+    
+}
+
+extension PrizeBreakupViewController {
+    
+    func getGamePlayDummyCard(contest:Contest, index:Int)-> GamePlayCard? {
+        
+        let contest1 = Contest(JSON: contest.toJSON())
+        contest1?.stars?.first?.recentHistoy?.forEach {
+            $0.collection = [ $0.collection?[index] ?? ""]
+        }
+        
+        return GamePlayCard(JSON: ["id":1,
+                                   "movieTitle":contest1?.movieTitle!,
+                                   "movieGenre": contest1?.movieGenre!,
+                                   "releaseDate": contest1?.releaseDate!,
+                                   "releaseTime": contest1?.releaseTime!,
+                                   "movieImageURL":contest1?.movieImageURL!,
+                                   "contestTitle":contest1?.title!,
+                                   "ticketPrice":contest1?.gameCard?.ticketPrice ?? 0,
+                                   "predictometerValue":25.56,
+                                   "numberOfEntries":2,
+                                   "extepectedRanges":contest1?.extepectedRanges ?? [],
+                                   "stars":contest1?.stars?.toJSON() ?? []])
+        
     }
     
 }

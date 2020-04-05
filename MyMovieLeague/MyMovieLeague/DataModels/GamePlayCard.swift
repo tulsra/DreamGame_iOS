@@ -7,7 +7,6 @@
 //
 
 import Foundation
-
 import ObjectMapper
 
 class GamePlayCard: NSObject, Mappable, Codable {
