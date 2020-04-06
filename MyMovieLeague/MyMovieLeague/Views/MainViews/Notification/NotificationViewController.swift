@@ -116,9 +116,9 @@ extension NotificationViewController:UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: false)
-        let moviesListVC = PrizeBreakupViewController()
-        self.navigationController?.pushViewController(moviesListVC, animated: true)
+//        tableView.deselectRow(at: indexPath, animated: false)
+//        let moviesListVC = PrizeBreakupViewController()
+//        self.navigationController?.pushViewController(moviesListVC, animated: true)
     }
     
 }

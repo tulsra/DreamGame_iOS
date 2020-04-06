@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import MessageUI
 
 let themeColor = UIColor(red: 254.0/255.0, green: 0, blue: 66.0/255.0, alpha: 1.0)
 class AppController {
@@ -47,33 +48,74 @@ class AppController {
         mainView   =   SSASideMenu(contentViewController: nav, leftMenuViewController: VC2)
         window?.rootViewController  =    mainView
         
-        VC2.menuTapped = { index in
-            print(index)
-            if index == 0 {
-                let profile = ProfileViewController()
-                let nav1 = UINavigationController(rootViewController: profile)
-                VC1.present(nav1, animated: true, completion: nil)
-            }
-            else if index == 4 {
-                
-                let pointSystem = PointSystemViewController()
-                let nav1 = UINavigationController(rootViewController: pointSystem)
-                VC1.present(nav1, animated: true, completion: nil)
-            }
-            else if index == 5 {
-                
-                let termsAndConditions = TermsAndConditionsViewController()
-                let nav1 = UINavigationController(rootViewController: termsAndConditions)
-                VC1.present(nav1, animated: true, completion: nil)
-            }
-            else if index == 6 {
-                
-                let help = HelpViewController()
-                let nav1 = UINavigationController(rootViewController: help)
-                VC1.present(nav1, animated: true, completion: nil)
-            }
-            else if index == 7 {
-                self.logout()
+            VC2.menuTapped = { index in
+                print(index)
+                if index == 0 {
+                    let profile = ProfileViewController()
+                    let nav1 = UINavigationController(rootViewController: profile)
+                    VC1.present(nav1, animated: true, completion: nil)
+                }
+                else if index == 1 {
+                    
+                    let pointSystem = PointSystemViewController()
+                    let nav1 = UINavigationController(rootViewController: pointSystem)
+                    VC1.present(nav1, animated: true, completion: nil)
+                }
+                else if index == 2 {
+                    if MFMailComposeViewController.canSendMail() {
+                        let mail = MFMailComposeViewController()
+                        mail.mailComposeDelegate = VC1
+                        mail.setSubject("Profile Id - Name")
+                        let mailBody = ""
+                        mail.setToRecipients(["feedback@mymovieleague.in"])
+                        mail.setMessageBody(mailBody, isHTML: true)
+                        VC1.present(mail, animated: true)
+                        
+                    }
+                    else {
+                        let alert = UIAlertController(title: "Mail Error", message: "Please set default Email on your phone to continue", preferredStyle: .alert)
+                        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+                        alert.addAction(okAction)
+                        VC1.present(alert, animated: true, completion: nil)
+                    }
+                }
+                else if index == 4 {
+                    
+                    let pointSystem = PrivacyPolicyViewController()
+                    let nav1 = UINavigationController(rootViewController: pointSystem)
+                    VC1.present(nav1, animated: true, completion: nil)
+                }
+                else if index == 5 {
+                    
+                    let termsAndConditions = TermsAndConditionsViewController()
+                    let nav1 = UINavigationController(rootViewController: termsAndConditions)
+                    VC1.present(nav1, animated: true, completion: nil)
+                }
+                else if index == 6 {
+                    if MFMailComposeViewController.canSendMail() {
+                        let mail = MFMailComposeViewController()
+                        mail.mailComposeDelegate = VC1
+                        mail.setSubject("Profile Id - Name")
+                        let mailBody = ""
+                        mail.setToRecipients(["help@mymovieleague.in"])
+                        mail.setMessageBody(mailBody, isHTML: true)
+                        VC1.present(mail, animated: true)
+                        
+                    }
+                    else {
+                        let alert = UIAlertController(title: "Mail Error", message: "Please set default Email on your phone to continue", preferredStyle: .alert)
+                        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+                        alert.addAction(okAction)
+                        VC1.present(alert, animated: true, completion: nil)
+                    }
+                    /*
+                    let help = HelpViewController()
+                    let nav1 = UINavigationController(rootViewController: help)
+                    VC1.present(nav1, animated: true, completion: nil)
+ */
+                }
+                else if index == 7 {
+                    self.logout()
             }
             else {
                 //VC1.selectedIndex = index

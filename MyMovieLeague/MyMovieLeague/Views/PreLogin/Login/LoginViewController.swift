@@ -59,7 +59,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, GIDSignInDeleg
     @IBAction func btnNextAction(_ sender: UIButton) {
         if txtFieldPhoneNumber.text?.count == 10 {
             self.view.endEditing(true)
-            self.loadActivity()
+            self.showActivity()
             NetworkManager().post(method: .verifyPhoneNumber, urlParam: ["api-version":"v1.0"], bodyParm: ["phoneNumber":txtFieldPhoneNumber.text ?? ""]) { (response, error) in
                 DispatchQueue.main.async {
                     self.hideActivity()
@@ -158,5 +158,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate, GIDSignInDeleg
         if user.profile.hasImage {
             print("\(user.profile.imageURL(withDimension: 400))")
         }
+    }
+}
+
+
+extension LoginViewController {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        let updatedText = NSMutableString(string: textField.text ?? "").replacingCharacters(in: range, with: string)
+        if updatedText.count <= 10 {
+            textField.text = updatedText
+        }
+        return false
     }
 }

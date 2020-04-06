@@ -8,6 +8,7 @@
 
 import UIKit
 //import SDWebImage
+import MessageUI
 
 
 class SideViewController: UIViewController {
@@ -71,3 +72,9 @@ class SideViewController: UIViewController {
     
 }
 
+extension SideViewController : MFMailComposeViewControllerDelegate{
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
+    }
+}

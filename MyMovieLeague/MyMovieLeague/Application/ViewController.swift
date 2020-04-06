@@ -11,7 +11,7 @@ import UIKit
 
 extension UIViewController {
     
-    func loadActivity() {
+    func showActivity() {
         self.view.isUserInteractionEnabled = false
         self.view.makeToastActivity(ToastPosition.center)
     }

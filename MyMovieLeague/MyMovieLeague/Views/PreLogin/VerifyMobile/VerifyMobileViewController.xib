@@ -19,6 +19,7 @@
             <connections>
                 <outlet property="btnVerify" destination="Kgq-DI-h5R" id="JX1-8e-zvY"/>
                 <outlet property="imgViewOTPmobile" destination="nvr-Gp-gkJ" id="vKQ-OI-9Qa"/>
+                <outlet property="lblSentTo" destination="w71-3c-64E" id="0lA-zm-aUw"/>
                 <outlet property="pinView" destination="Vt2-Nb-4Vx" id="NuS-vk-Fhs"/>
                 <outlet property="view" destination="N6T-tQ-Fgd" id="ok3-oE-Y6H"/>
             </connections>

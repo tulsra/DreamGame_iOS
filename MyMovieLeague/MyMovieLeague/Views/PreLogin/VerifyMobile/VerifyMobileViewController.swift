@@ -12,6 +12,7 @@ import Alamofire
 class VerifyMobileViewController: UIViewController {
 
     
+    @IBOutlet weak var lblSentTo: UILabel!
     @IBOutlet weak var pinView: PinView!
     @IBOutlet weak var imgViewOTPmobile: UIView!
     @IBOutlet weak var btnVerify: UIButton!
@@ -45,6 +46,7 @@ class VerifyMobileViewController: UIViewController {
         self.btnVerify.layer.masksToBounds = true
         self.imgViewOTPmobile.layer.cornerRadius = self.imgViewOTPmobile.frame.size.width/2.0
         self.imgViewOTPmobile.layer.masksToBounds = true
+        self.lblSentTo.text = "OTP sent to \(self.phoneNumber)"
     }
     
     @objc func dismissKeyboard() {
@@ -60,7 +62,7 @@ class VerifyMobileViewController: UIViewController {
     @IBAction func btnVerifyAction(_ sender: UIButton) {
         print(self.pinView.pinText)
         if self.pinView.pinText.count == 6 {
-            self.loadActivity()
+            self.showActivity()
             let bodyPArm = ["phone_number":self.phoneNumber,
                             "grant_type":"phone_number_token",
                             "verification_token":pinView.pinText,

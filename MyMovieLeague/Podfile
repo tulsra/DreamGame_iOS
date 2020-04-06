@@ -21,4 +21,5 @@ target 'MyMovieLeague' do
   pod 'GradientProgressBar'
   pod 'SimpleImageViewer'
   pod 'PayUmoney_PnP'
+  pod 'SDWebImage'
 end

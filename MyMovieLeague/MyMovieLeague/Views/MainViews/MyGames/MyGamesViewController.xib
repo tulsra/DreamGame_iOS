@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="RobotoCondensed-Regular.ttf">
+            <string>RobotoCondensed-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyGamesViewController" customModule="MyMovieLeague" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="IrI-s3-8e0" id="gdI-9N-4Hu"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="IrI-s3-8e0">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie-college" translatesAutoresizingMaskIntoConstraints="NO" id="FYh-xC-Ukg">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.98000001907348633" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg4" translatesAutoresizingMaskIntoConstraints="NO" id="UX6-73-4XS">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4Y-1G-Mma">
+                    <rect key="frame" x="20" y="44" width="374" height="818"/>
+                    <string key="text">You haven't joined any games yet.
+Please check and join your favourite game.</string>
+                    <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="tva-hL-xJj" firstAttribute="trailing" secondItem="FYh-xC-Ukg" secondAttribute="trailing" id="0F1-FY-Njg"/>
+                <constraint firstItem="UX6-73-4XS" firstAttribute="centerY" secondItem="FYh-xC-Ukg" secondAttribute="centerY" id="BDX-xV-K90"/>
+                <constraint firstItem="UX6-73-4XS" firstAttribute="centerX" secondItem="FYh-xC-Ukg" secondAttribute="centerX" id="Cb7-pK-4xF"/>
+                <constraint firstItem="tva-hL-xJj" firstAttribute="trailing" secondItem="k4Y-1G-Mma" secondAttribute="trailing" constant="20" id="LTM-QQ-eyl"/>
+                <constraint firstItem="k4Y-1G-Mma" firstAttribute="top" secondItem="tva-hL-xJj" secondAttribute="top" id="O8u-RZ-URZ"/>
+                <constraint firstItem="k4Y-1G-Mma" firstAttribute="leading" secondItem="tva-hL-xJj" secondAttribute="leading" constant="20" id="W9h-EX-eQF"/>
+                <constraint firstItem="FYh-xC-Ukg" firstAttribute="leading" secondItem="IrI-s3-8e0" secondAttribute="leading" id="daN-E7-X4i"/>
+                <constraint firstItem="FYh-xC-Ukg" firstAttribute="top" secondItem="IrI-s3-8e0" secondAttribute="top" id="kTx-dQ-BRQ"/>
+                <constraint firstItem="UX6-73-4XS" firstAttribute="height" secondItem="FYh-xC-Ukg" secondAttribute="height" id="nvL-34-6c2"/>
+                <constraint firstAttribute="bottom" secondItem="FYh-xC-Ukg" secondAttribute="bottom" id="qaz-GS-QkL"/>
+                <constraint firstItem="UX6-73-4XS" firstAttribute="width" secondItem="FYh-xC-Ukg" secondAttribute="width" id="u1A-Dx-LJL"/>
+                <constraint firstItem="tva-hL-xJj" firstAttribute="bottom" secondItem="k4Y-1G-Mma" secondAttribute="bottom" id="wjq-2v-9d3"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="tva-hL-xJj"/>
+            <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg4" width="2880" height="5120"/>
+        <image name="movie-college" width="800" height="480"/>
+    </resources>
+</document>

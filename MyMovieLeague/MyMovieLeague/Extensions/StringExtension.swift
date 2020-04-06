@@ -11,19 +11,20 @@ import UIKit
 
 extension String {
     
+    var indianString: String? {
+           get {
+               let numberFormatter = NumberFormatter()
+               numberFormatter.locale = Locale(identifier: "en_IN")
+               numberFormatter.numberStyle = .decimal
+            return numberFormatter.string(from: NSNumber(value:Int(self) ?? 0)) ?? ""
+           }
+       }
+    
     var currencyStamped: String? {
         get {
             return "₹"+self
         }
     }
-    var date: Date? {
-        get {
-            let dateFormatterPrint = DateFormatter()
-            dateFormatterPrint.dateFormat = "yyyy-MM-dd HH:mm:ss"
-            return dateFormatterPrint.date(from: self)
-        }
-    }
-    
     var gmailString:String {
         if self.components(separatedBy: " ").count >= 2 {
             let stringNeed = (self.components(separatedBy: " ").map({ $0.first }).compactMap({$0}).reduce("", { String($0) + String($1) }) as NSString).substring(to: 2)
@@ -121,6 +122,16 @@ extension String {
         }
         return pureNumber
     }
+    var crores: String {
+        get {
+            return String(format: "%.2f", ceil((Double(self)!/10000000.0)*100)/100)
+        }
+    }
+    var croresInt: String {
+           get {
+               return "\(Int(Double(self)!/10000000.0))"
+           }
+       }
 }
 
 
@@ -156,3 +167,15 @@ extension Int {
     }
 }
 
+extension Double {
+    var crores: String {
+        get {
+            return String(format: "%.2f", ceil((self/10000000.0)*100)/100)
+        }
+    }
+    var croresInt: String {
+        get {
+            return "\(Int(self/10000000.0))"
+        }
+    }
+}

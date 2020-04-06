@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import ObjectMapper
 
 extension NetworkManager {
     
@@ -18,6 +19,22 @@ extension NetworkManager {
             }
         case .verifyToken:
             if let obj = Token(JSONString: JSONString) {
+                return obj
+            }
+        case .movie:
+            if let obj = Movies(JSONString: JSONString) {
+                return obj
+            }
+        case .contest( _):
+            if let obj = Mapper<Contest>().mapArray(JSONString: JSONString) {
+                return obj
+            }
+        case .movieContestDetails(_,_):
+            if let obj = ContestDetails(JSONString: JSONString)  {
+                return obj
+            }
+        case .getrecentboxoffice(_,_):
+            if let obj = Mapper<RecentBoxOffice>().mapArray(JSONString: JSONString)  {
                 return obj
             }
         default:

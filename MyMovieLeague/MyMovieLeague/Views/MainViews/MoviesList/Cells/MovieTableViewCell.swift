@@ -7,19 +7,12 @@
 //
 
 import UIKit
-
 class MovieTableViewCell: UITableViewCell {
 
       @IBOutlet weak var collView: UICollectionView!
-    var moviesList:[String]?
-    var titlesList:[String]?
-    var genreList:[String]?
-    var releaseDateList:[String]?
-    var releaseTimeList:[String]?
-    var expectedRanges:[[[String]]]?
-    var stars:[[Star]]?
+    var moviesList:[Movie]?
     var isCurrent = true
-    var cellTapped:(String, String, String, String,String,[[String]],[Star])->Void = { (title,genre,releaseDate, releaseTime,image,expected,stars) in
+    var cellTapped:(Movie)->Void = { (movie) in
            
        }
     override func awakeFromNib() {
@@ -56,7 +49,7 @@ class MovieTableViewCell: UITableViewCell {
 extension MovieTableViewCell:UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
       
       func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-          return 4
+        return moviesList?.count ?? 0
       }
       func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
           let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieCollectionViewCell", for: indexPath as IndexPath) as! MovieCollectionViewCell
@@ -67,13 +60,11 @@ extension MovieTableViewCell:UICollectionViewDataSource,UICollectionViewDelegate
             cell.imgBottomSpaceConstraint.constant = 4
             cell.btnPlayHeightConstraint.constant = 40
         }
-        if let images = self.moviesList {
-            cell.imgView.image = UIImage(named: images[indexPath.row])
-        }
-        if let title = self.titlesList {
-            cell.lblTitle.text = title[indexPath.row]
-        }
         
+        if let movie = self.moviesList?[indexPath.row] {
+            cell.configure(movie: movie)
+        }
+            
          return cell
       }
       
@@ -104,27 +95,9 @@ extension MovieTableViewCell:UICollectionViewDataSource,UICollectionViewDelegate
       }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        var image = ""
-        var title = ""
-        var genre = ""
-        var releaseDate = ""
-        var releaseTime = ""
-        if let images = self.moviesList {
-            image = images[indexPath.row]
+        if let movie = moviesList?[indexPath.row] {
+            self.cellTapped(movie)
         }
-        if let titles = self.titlesList {
-            title =  titles[indexPath.row]
-        }
-        if let genres = self.genreList {
-            genre =  genres[indexPath.row]
-        }
-        if let releaseDates = self.releaseDateList {
-            releaseDate =  releaseDates[indexPath.row]
-        }
-        if let releaseTimes = self.releaseTimeList {
-            releaseTime =  releaseTimes[indexPath.row]
-        }
-        self.cellTapped(title, genre, releaseDate, releaseTime,image,self.expectedRanges?[indexPath.row] ?? [[]],self.stars?[indexPath.row] ?? [])
     }
     
   }

@@ -59,47 +59,4 @@ class Token: NSObject, Mappable, Codable {
     }
 }
 
-class Movies: NSObject, Mappable, Codable {
-    
-    var currentMovies: [Movie]?
-    var upComingMovies: [Movie]?
-    
-    override init() {
-        super.init()
-    }
-    
-    convenience required init?(map: Map) {
-        self.init()
-    }
-    
-    func mapping(map: Map) {
-        
-        currentMovies <- map["currentMovies"]
-        upComingMovies <- map["upComingMovies"]
-    }
-}
-class Movie: NSObject, Mappable, Codable {
-    
-    var movieId: Int?
-    var name: String?
-    var movieUrl: String?
-    var releaseDate: String?
-    var releaseSeason: String?
-    
-    override init() {
-        super.init()
-    }
-    
-    convenience required init?(map: Map) {
-        self.init()
-    }
-    
-    func mapping(map: Map) {
-        
-        movieId <- map["movieId"]
-        name <- map["name"]
-        movieUrl <- map["movieUrl"]
-        releaseDate <- map["releaseDate"]
-        releaseSeason <- map["releaseSeason"]
-    }
-}
+

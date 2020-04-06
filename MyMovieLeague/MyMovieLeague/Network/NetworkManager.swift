@@ -17,17 +17,47 @@ enum NetworkResponse:String {
     case failed = "Network request failed."
     case noData = "Response returned with no data to decode."
     case unableToDecode = "We could not decode the response."
+
 }
 
-public enum Method: String {
-    case appLatestVersion = "/api/Public/GetAppLatestVersion"
-    case splashSettings = "/api/Public/GetSplashSettings"
-    case verifyPhoneNumber = "/api/verify_phone_number"
-    case verifyToken = "/connect/token"
-
-    case getProfile = "/api/Profile"
-    case saveProfile = "/api/Profile/SaveProfile"
-    case movie = "/api/Movie"
+public enum Method {
+    case appLatestVersion
+    case splashSettings
+    case verifyPhoneNumber
+    case verifyToken
+    
+    case getProfile
+    case saveProfile
+    case movie
+    case contest(movieId:Int)
+    case movieContestDetails(movieId:Int, contestId: Int)
+    case getrecentboxoffice(contestId: Int, castId:Int)
+    
+    var rawValue: String {
+        switch self {
+        case .appLatestVersion:
+            return "/api/Public/GetAppLatestVersion"
+        case .splashSettings:
+            return "/api/Public/GetSplashSettings"
+        case .verifyPhoneNumber:
+            return "/api/verify_phone_number"
+        case .verifyToken:
+            return "/connect/token"
+        case .getProfile:
+            return "/api/Profile"
+        case .saveProfile:
+            return "/api/Profile/SaveProfile"
+        case .movie:
+            return "/api/Movie"
+        case let .contest(movieId):
+            return "/api/Movie/contest/\(movieId)"
+        case let .movieContestDetails(movieId, contestId):
+            return "/api/Movie/movieContestDetails/\(movieId)/\(contestId)"
+        case let .getrecentboxoffice(contestId, castId):
+            return "/api/Movie/getrecentboxoffice/\(contestId)/\(castId)"
+            
+        }
+    }
     
 }
 
@@ -106,7 +136,8 @@ class NetworkManager {
                 if let resp = response.response {
                     let errorMessage = self.handleNetworkResponse(resp)
                     if errorMessage == NetworkResponse.authenticationError.rawValue {
-                        AppController.shared.forceLogoutAction()
+//                        AppController.shared.forceLogoutAction()
+                        completion(nil, errorMessage)
                         return
                     }
                     completion(nil, errorMessage)
@@ -137,19 +168,19 @@ class NetworkManager {
         var request = URLRequest(url: try! urlString!.asURL())
         request.httpMethod = HTTPMethod.post.rawValue
         
-        if getAuthToken() != "", method != .movie  {
+        if getAuthToken() != "", method.rawValue != Method.movie.rawValue  {
             request.addValue(getAuthToken(), forHTTPHeaderField: "Authorization")
         }
         
         var headers = HTTPHeaders.init()
         headers["Content-Type"]   = "application/json"
-        if method == .verifyToken {
+        if method.rawValue == Method.verifyToken.rawValue {
             headers["Content-Type"]   = "application/x-www-form-urlencoded"
         }
         
         if let bodyParameters = bodyParm {
                  
-            if method == .verifyToken {
+            if method.rawValue == Method.verifyToken.rawValue {
                 
                 let str = bodyParameters.urlEncodeString
                 let data = Data(str.utf8)
@@ -181,7 +212,7 @@ class NetworkManager {
                 
                 let jsonString = String(data: responseData, encoding: String.Encoding.utf8) ?? ""
                 print(jsonString)
-                if method == .verifyToken {
+                if method.rawValue == Method.verifyToken.rawValue {
                     completion(jsonString, nil)
                     return
                 }
@@ -200,9 +231,9 @@ class NetworkManager {
                     if let kResp = response.response {
                         let errorMessage = self.handleNetworkResponse(kResp)
                         if errorMessage == NetworkResponse.authenticationError.rawValue {
-                            if method != .verifyPhoneNumber || method != .verifyToken {
-                                AppController.shared.forceLogoutAction()
-                            }
+//                            if method.rawValue == Method.verifyPhoneNumber.rawValue {
+//                                AppController.shared.forceLogoutAction()
+//                            }
                             completion(nil, errorMessage)
                             return
                         }
@@ -283,7 +314,8 @@ class NetworkManager {
                     if let kResp = response.response {
                         let errorMessage = self.handleNetworkResponse(kResp)
                         if errorMessage == NetworkResponse.authenticationError.rawValue {
-                            AppController.shared.forceLogoutAction()
+//                            AppController.shared.forceLogoutAction()
+                            completion(nil, errorMessage)
                             return
                         }
                         completion(nil, errorMessage)

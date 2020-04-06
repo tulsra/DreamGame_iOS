@@ -77,9 +77,7 @@
 		006ADD7A23D1E99300A929BA /* VerifyMobileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006ADD7823D1E99300A929BA /* VerifyMobileViewController.xib */; };
 		006ADD7F23D1EA2600A929BA /* MoviesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006ADD7D23D1EA2600A929BA /* MoviesListViewController.swift */; };
 		006ADD8023D1EA2600A929BA /* MoviesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006ADD7E23D1EA2600A929BA /* MoviesListViewController.xib */; };
-		006C7D6A23EDC6F200B2CBC1 /* GameCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006C7D6923EDC6F200B2CBC1 /* GameCard.swift */; };
 		006CF0E523E88E2E0042F57A /* MainTabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CF0E423E88E2E0042F57A /* MainTabbarView.swift */; };
-		00794999240714A4004C2C31 /* GamePlayCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00794998240714A4004C2C31 /* GamePlayCard.swift */; };
 		0079499D2408F7EC004C2C31 /* RecentHistoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0079499B2408F7EC004C2C31 /* RecentHistoryViewCell.swift */; };
 		0079499E2408F7EC004C2C31 /* RecentHistoryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0079499C2408F7EC004C2C31 /* RecentHistoryViewCell.xib */; };
 		00A190FC23FE8B2900ED2FA7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A190FA23FE8B2900ED2FA7 /* ProfileViewController.swift */; };
@@ -108,6 +106,17 @@
 		4D54E7F82439BC8E007D1BCD /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54E7F72439BC8E007D1BCD /* APIResponse.swift */; };
 		4D54E7FA2439BCEC007D1BCD /* NetworkReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54E7F92439BCEC007D1BCD /* NetworkReponse.swift */; };
 		4D54E7FC2439F624007D1BCD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54E7FB2439F624007D1BCD /* ViewController.swift */; };
+		4D54E7FE2439F9AF007D1BCD /* MoviesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54E7FD2439F9AF007D1BCD /* MoviesListViewModel.swift */; };
+		4D54E800243A04DD007D1BCD /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54E7FF243A04DD007D1BCD /* Movies.swift */; };
+		4D54E802243A0508007D1BCD /* Contests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54E801243A0508007D1BCD /* Contests.swift */; };
+		4D54E804243A0979007D1BCD /* GameCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54E803243A0979007D1BCD /* GameCardViewModel.swift */; };
+		4D54E806243A40AA007D1BCD /* PrizeBreakupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54E805243A40AA007D1BCD /* PrizeBreakupViewModel.swift */; };
+		4D54E80A243A540F007D1BCD /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54E808243A540F007D1BCD /* PrivacyPolicyViewController.swift */; };
+		4D54E80B243A540F007D1BCD /* PrivacyPolicyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D54E809243A540F007D1BCD /* PrivacyPolicyViewController.xib */; };
+		4D54E80D243A5FA8007D1BCD /* PlayGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54E80C243A5FA8007D1BCD /* PlayGameViewModel.swift */; };
+		4D54E810243AEAAB007D1BCD /* ContestDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54E80F243AEAAB007D1BCD /* ContestDetail.swift */; };
+		4D54E814243B0F0E007D1BCD /* MyGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54E812243B0F0E007D1BCD /* MyGamesViewController.swift */; };
+		4D54E815243B0F0E007D1BCD /* MyGamesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D54E813243B0F0E007D1BCD /* MyGamesViewController.xib */; };
 		4D582F37241B8CB400897EBB /* SideProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D582F30241B8CB300897EBB /* SideProfileView.swift */; };
 		4D582F38241B8CB400897EBB /* SideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D582F31241B8CB300897EBB /* SideViewController.swift */; };
 		4D582F39241B8CB400897EBB /* SideMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D582F32241B8CB300897EBB /* SideMenuCell.xib */; };
@@ -144,8 +153,6 @@
 		8C97C32B23FC4C88000B7F16 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C97C32923FC4C88000B7F16 /* ProfileHeaderView.swift */; };
 		8C9AF80D23EDE82D008A939D /* TermsAndConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9AF80B23EDE82D008A939D /* TermsAndConditionsViewController.swift */; };
 		8C9AF80E23EDE82D008A939D /* TermsAndConditionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C9AF80C23EDE82D008A939D /* TermsAndConditionsViewController.xib */; };
-		8C9AF81123EDE8BC008A939D /* Terms-and-Conditions-Template.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8C9AF81023EDE8BC008A939D /* Terms-and-Conditions-Template.pdf */; };
-		8C9AF81323EDF18E008A939D /* point-system.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8C9AF81223EDF18E008A939D /* point-system.pdf */; };
 		8C9AF81723EDF1B8008A939D /* PointSystemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9AF81523EDF1B8008A939D /* PointSystemViewController.swift */; };
 		8C9AF81823EDF1B8008A939D /* PointSystemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C9AF81623EDF1B8008A939D /* PointSystemViewController.xib */; };
 		8C9AF81D23EDFA91008A939D /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9AF81B23EDFA91008A939D /* ResultsViewController.swift */; };
@@ -236,9 +243,7 @@
 		006ADD7823D1E99300A929BA /* VerifyMobileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerifyMobileViewController.xib; sourceTree = "<group>"; };
 		006ADD7D23D1EA2600A929BA /* MoviesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListViewController.swift; sourceTree = "<group>"; };
 		006ADD7E23D1EA2600A929BA /* MoviesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesListViewController.xib; sourceTree = "<group>"; };
-		006C7D6923EDC6F200B2CBC1 /* GameCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCard.swift; sourceTree = "<group>"; };
 		006CF0E423E88E2E0042F57A /* MainTabbarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabbarView.swift; path = MainControllers/MainTabbarView.swift; sourceTree = "<group>"; };
-		00794998240714A4004C2C31 /* GamePlayCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlayCard.swift; sourceTree = "<group>"; };
 		0079499B2408F7EC004C2C31 /* RecentHistoryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentHistoryViewCell.swift; sourceTree = "<group>"; };
 		0079499C2408F7EC004C2C31 /* RecentHistoryViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecentHistoryViewCell.xib; sourceTree = "<group>"; };
 		00A190FA23FE8B2900ED2FA7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -268,6 +273,17 @@
 		4D54E7F72439BC8E007D1BCD /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
 		4D54E7F92439BCEC007D1BCD /* NetworkReponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReponse.swift; sourceTree = "<group>"; };
 		4D54E7FB2439F624007D1BCD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4D54E7FD2439F9AF007D1BCD /* MoviesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListViewModel.swift; sourceTree = "<group>"; };
+		4D54E7FF243A04DD007D1BCD /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
+		4D54E801243A0508007D1BCD /* Contests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contests.swift; sourceTree = "<group>"; };
+		4D54E803243A0979007D1BCD /* GameCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCardViewModel.swift; sourceTree = "<group>"; };
+		4D54E805243A40AA007D1BCD /* PrizeBreakupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrizeBreakupViewModel.swift; sourceTree = "<group>"; };
+		4D54E808243A540F007D1BCD /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
+		4D54E809243A540F007D1BCD /* PrivacyPolicyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrivacyPolicyViewController.xib; sourceTree = "<group>"; };
+		4D54E80C243A5FA8007D1BCD /* PlayGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayGameViewModel.swift; sourceTree = "<group>"; };
+		4D54E80F243AEAAB007D1BCD /* ContestDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestDetail.swift; sourceTree = "<group>"; };
+		4D54E812243B0F0E007D1BCD /* MyGamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGamesViewController.swift; sourceTree = "<group>"; };
+		4D54E813243B0F0E007D1BCD /* MyGamesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyGamesViewController.xib; sourceTree = "<group>"; };
 		4D582F30241B8CB300897EBB /* SideProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideProfileView.swift; sourceTree = "<group>"; };
 		4D582F31241B8CB300897EBB /* SideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideViewController.swift; sourceTree = "<group>"; };
 		4D582F32241B8CB300897EBB /* SideMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SideMenuCell.xib; sourceTree = "<group>"; };
@@ -305,8 +321,6 @@
 		8C97C32923FC4C88000B7F16 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		8C9AF80B23EDE82D008A939D /* TermsAndConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsViewController.swift; sourceTree = "<group>"; };
 		8C9AF80C23EDE82D008A939D /* TermsAndConditionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermsAndConditionsViewController.xib; sourceTree = "<group>"; };
-		8C9AF81023EDE8BC008A939D /* Terms-and-Conditions-Template.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Terms-and-Conditions-Template.pdf"; sourceTree = "<group>"; };
-		8C9AF81223EDF18E008A939D /* point-system.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "point-system.pdf"; sourceTree = "<group>"; };
 		8C9AF81523EDF1B8008A939D /* PointSystemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointSystemViewController.swift; sourceTree = "<group>"; };
 		8C9AF81623EDF1B8008A939D /* PointSystemViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PointSystemViewController.xib; sourceTree = "<group>"; };
 		8C9AF81B23EDFA91008A939D /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
@@ -423,9 +437,10 @@
 			children = (
 				00335E3D23E1839A0028C9D8 /* ParameterDetail.swift */,
 				00335E3F23E183A00028C9D8 /* User.swift */,
-				006C7D6923EDC6F200B2CBC1 /* GameCard.swift */,
+				4D54E7FF243A04DD007D1BCD /* Movies.swift */,
+				4D54E801243A0508007D1BCD /* Contests.swift */,
+				4D54E80F243AEAAB007D1BCD /* ContestDetail.swift */,
 				00AADFDA240C3B2200A3EBDE /* QuizGameCard.swift */,
-				00794998240714A4004C2C31 /* GamePlayCard.swift */,
 				4D54E7F72439BC8E007D1BCD /* APIResponse.swift */,
 			);
 			path = DataModels;
@@ -571,6 +586,7 @@
 				8C97C32323FC495F000B7F16 /* AccountSummery */,
 				8C9AF81A23EDFA83008A939D /* Account */,
 				8C9AF81923EDFA7C008A939D /* Results */,
+				4D54E811243B0EF3007D1BCD /* MyGames */,
 				8C9AF80923EDE803008A939D /* SideMenuViews */,
 				00B4D95E23ED6753001BFFA9 /* Notification */,
 				00B4D95023ECBA83001BFFA9 /* PrizeBreakup */,
@@ -587,6 +603,7 @@
 				004AB39323DDDF4E00FA5A28 /* Cells */,
 				006ADD7D23D1EA2600A929BA /* MoviesListViewController.swift */,
 				006ADD7E23D1EA2600A929BA /* MoviesListViewController.xib */,
+				4D54E7FD2439F9AF007D1BCD /* MoviesListViewModel.swift */,
 			);
 			path = MoviesList;
 			sourceTree = "<group>";
@@ -634,6 +651,7 @@
 				00B4D94B23EC8F2F001BFFA9 /* Cells */,
 				00B4D94723EC8F13001BFFA9 /* GameCardViewController.swift */,
 				00B4D94823EC8F13001BFFA9 /* GameCardViewController.xib */,
+				4D54E803243A0979007D1BCD /* GameCardViewModel.swift */,
 			);
 			path = GameCard;
 			sourceTree = "<group>";
@@ -653,6 +671,7 @@
 				00B4D95523ECBAB5001BFFA9 /* Cells */,
 				00B4D95123ECBAAD001BFFA9 /* PrizeBreakupViewController.swift */,
 				00B4D95223ECBAAD001BFFA9 /* PrizeBreakupViewController.xib */,
+				4D54E805243A40AA007D1BCD /* PrizeBreakupViewModel.swift */,
 			);
 			path = PrizeBreakup;
 			sourceTree = "<group>";
@@ -685,6 +704,24 @@
 				00B4D96523ED67B4001BFFA9 /* NotificationTableViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		4D54E807243A53F9007D1BCD /* PrivacyPolicy */ = {
+			isa = PBXGroup;
+			children = (
+				4D54E808243A540F007D1BCD /* PrivacyPolicyViewController.swift */,
+				4D54E809243A540F007D1BCD /* PrivacyPolicyViewController.xib */,
+			);
+			path = PrivacyPolicy;
+			sourceTree = "<group>";
+		};
+		4D54E811243B0EF3007D1BCD /* MyGames */ = {
+			isa = PBXGroup;
+			children = (
+				4D54E812243B0F0E007D1BCD /* MyGamesViewController.swift */,
+				4D54E813243B0F0E007D1BCD /* MyGamesViewController.xib */,
+			);
+			path = MyGames;
 			sourceTree = "<group>";
 		};
 		4D582F3E241B8CC000897EBB /* SideMenu */ = {
@@ -759,6 +796,7 @@
 				0079499A2408F7B7004C2C31 /* Cell */,
 				8C284EBF23FF02CD003952E3 /* PlayGameViewController.swift */,
 				8C284EC023FF02CD003952E3 /* PlayGameViewController.xib */,
+				4D54E80C243A5FA8007D1BCD /* PlayGameViewModel.swift */,
 			);
 			path = PlayGameView;
 			sourceTree = "<group>";
@@ -784,6 +822,7 @@
 		8C9AF80923EDE803008A939D /* SideMenuViews */ = {
 			isa = PBXGroup;
 			children = (
+				4D54E807243A53F9007D1BCD /* PrivacyPolicy */,
 				8C9AF81423EDF19E008A939D /* PointSystem */,
 				8C9AF80A23EDE811008A939D /* TermsAndConditions */,
 			);
@@ -802,8 +841,6 @@
 		8C9AF80F23EDE8B5008A939D /* PDF */ = {
 			isa = PBXGroup;
 			children = (
-				8C9AF81223EDF18E008A939D /* point-system.pdf */,
-				8C9AF81023EDE8BC008A939D /* Terms-and-Conditions-Template.pdf */,
 			);
 			path = PDF;
 			sourceTree = "<group>";
@@ -1014,6 +1051,7 @@
 				006ADD6E23D1E11A00A929BA /* SplashViewController.xib in Resources */,
 				4D6E5397241194ED00ACC996 /* video1.mp4 in Resources */,
 				0029D17123D8CC420087396A /* SansSerifBookFLF-Italic.otf in Resources */,
+				4D54E815243B0F0E007D1BCD /* MyGamesViewController.xib in Resources */,
 				0029D17E23D8CC420087396A /* SansSerifExbFLF-Italic.otf in Resources */,
 				0029D1A023D8CC500087396A /* Roboto-LightItalic.ttf in Resources */,
 				4D6E5395241194ED00ACC996 /* video3.mp4 in Resources */,
@@ -1023,7 +1061,6 @@
 				8C32FE3A23E2680300879853 /* PinView.xib in Resources */,
 				0029D1A223D8CC500087396A /* RobotoCondensed-Bold.ttf in Resources */,
 				0029D19123D8CC500087396A /* Roboto-Light.ttf in Resources */,
-				8C9AF81123EDE8BC008A939D /* Terms-and-Conditions-Template.pdf in Resources */,
 				0029D19823D8CC500087396A /* Roboto-MediumItalic.ttf in Resources */,
 				0029D17823D8CC420087396A /* SansSerifFLF-DemiItalic.otf in Resources */,
 				0029D17D23D8CC420087396A /* SansSerifBldFLF.otf in Resources */,
@@ -1035,10 +1072,10 @@
 				8C97C32723FC4984000B7F16 /* AccountSummeryViewController.xib in Resources */,
 				00B4D96223ED6791001BFFA9 /* NotificationViewController.xib in Resources */,
 				00AADFDF240D49E800A3EBDE /* QuizGameCardTableViewCell.xib in Resources */,
+				4D54E80B243A540F007D1BCD /* PrivacyPolicyViewController.xib in Resources */,
 				0029D19423D8CC500087396A /* RobotoCondensed-BoldItalic.ttf in Resources */,
 				4D6E538724116FE400ACC996 /* audio1.mp3 in Resources */,
 				0029D17323D8CC420087396A /* SansSerifBldFLFCond-Italic.otf in Resources */,
-				8C9AF81323EDF18E008A939D /* point-system.pdf in Resources */,
 				0029D19723D8CC500087396A /* Roboto-ThinItalic.ttf in Resources */,
 				006ADD7A23D1E99300A929BA /* VerifyMobileViewController.xib in Resources */,
 				4D6E538E2411705F00ACC996 /* PlayerViewController.xib in Resources */,
@@ -1147,29 +1184,33 @@
 				006ADD7023D1E66800A929BA /* SceneDelegate.swift in Sources */,
 				00335E4723E18BA80028C9D8 /* StringExtension.swift in Sources */,
 				4D582F3D241B8CB400897EBB /* SideMenuCell.swift in Sources */,
+				4D54E804243A0979007D1BCD /* GameCardViewModel.swift in Sources */,
 				0029D15E23D8B4210087396A /* LoginViewModel.swift in Sources */,
+				4D54E800243A04DD007D1BCD /* Movies.swift in Sources */,
 				00AADFD8240C3A8C00A3EBDE /* QuizGameCardViewController.swift in Sources */,
 				8C97C32623FC4984000B7F16 /* AccountSummeryViewController.swift in Sources */,
 				00335E3423E1831B0028C9D8 /* ImagePicker.swift in Sources */,
 				0029D1C023D9176F0087396A /* VerifyMobileViewModel.swift in Sources */,
 				00335E4023E183A00028C9D8 /* User.swift in Sources */,
+				4D54E7FE2439F9AF007D1BCD /* MoviesListViewModel.swift in Sources */,
+				4D54E806243A40AA007D1BCD /* PrizeBreakupViewModel.swift in Sources */,
 				0029D15C23D8B40B0087396A /* ComeAndPlayViewModel.swift in Sources */,
 				006ADD4E23D1DF3900A929BA /* AppDelegate.swift in Sources */,
 				8C9AF81723EDF1B8008A939D /* PointSystemViewController.swift in Sources */,
 				006CF0E523E88E2E0042F57A /* MainTabbarView.swift in Sources */,
-				006C7D6A23EDC6F200B2CBC1 /* GameCard.swift in Sources */,
 				00AADFDB240C3B2200A3EBDE /* QuizGameCard.swift in Sources */,
 				8CE50A2A23E0CFF800FC443C /* HelpViewController.swift in Sources */,
-				00794999240714A4004C2C31 /* GamePlayCard.swift in Sources */,
 				4D54E7FA2439BCEC007D1BCD /* NetworkReponse.swift in Sources */,
 				8C32FE3923E2680300879853 /* PinView.swift in Sources */,
 				00A1910123FE918100ED2FA7 /* ProfileImageView.swift in Sources */,
 				8CE50A3223E0EB4800FC443C /* CommentInputView.swift in Sources */,
 				004AB39A23DDED8200FA5A28 /* MovieTableViewCell.swift in Sources */,
+				4D54E80D243A5FA8007D1BCD /* PlayGameViewModel.swift in Sources */,
 				0029D15A23D8B3F30087396A /* SplashViewModel.swift in Sources */,
 				006ADD7923D1E99300A929BA /* VerifyMobileViewController.swift in Sources */,
 				00A190FC23FE8B2900ED2FA7 /* ProfileViewController.swift in Sources */,
 				4D6E538D2411705F00ACC996 /* PlayerViewController.swift in Sources */,
+				4D54E810243AEAAB007D1BCD /* ContestDetail.swift in Sources */,
 				00AADFE0240D49E800A3EBDE /* QuizGameCardTableViewCell.swift in Sources */,
 				00B4D95C23ECBB1B001BFFA9 /* PrizeBreakupHeaaderTableViewCell.swift in Sources */,
 				8CE50A3523E0EB6C00FC443C /* InputView.swift in Sources */,
@@ -1178,6 +1219,7 @@
 				00B4D95323ECBAAD001BFFA9 /* PrizeBreakupViewController.swift in Sources */,
 				4D582F37241B8CB400897EBB /* SideProfileView.swift in Sources */,
 				4D54E7FC2439F624007D1BCD /* ViewController.swift in Sources */,
+				4D54E814243B0F0E007D1BCD /* MyGamesViewController.swift in Sources */,
 				8C32FE3423E1C2F400879853 /* MainViewController.swift in Sources */,
 				00335E3E23E1839A0028C9D8 /* ParameterDetail.swift in Sources */,
 				006ADD6823D1E0F100A929BA /* LoginViewController.swift in Sources */,
@@ -1188,6 +1230,7 @@
 				4D582F3C241B8CB400897EBB /* SideMenuMainController.swift in Sources */,
 				4D836816240FD00200E225C5 /* ChoiceView.swift in Sources */,
 				8C284EC123FF02CD003952E3 /* PlayGameViewController.swift in Sources */,
+				4D54E802243A0508007D1BCD /* Contests.swift in Sources */,
 				00B4D95823ECBACE001BFFA9 /* PrizeBreakupTableViewCell.swift in Sources */,
 				004AB39623DDDF7900FA5A28 /* MovieCollectionViewCell.swift in Sources */,
 				00335E3823E183260028C9D8 /* CommonFunctions.swift in Sources */,
@@ -1199,6 +1242,7 @@
 				8CE50A3C23E0F64600FC443C /* AcknowledgeViewController.swift in Sources */,
 				00335E3C23E1836F0028C9D8 /* NetworkManager.swift in Sources */,
 				00335E3623E1831B0028C9D8 /* Toast.swift in Sources */,
+				4D54E80A243A540F007D1BCD /* PrivacyPolicyViewController.swift in Sources */,
 				8C97C32B23FC4C88000B7F16 /* ProfileHeaderView.swift in Sources */,
 				006ADD7F23D1EA2600A929BA /* MoviesListViewController.swift in Sources */,
 			);
@@ -1344,7 +1388,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.DreamGame.MyMovieLeague;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1364,7 +1408,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.DreamGame.MyMovieLeague;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

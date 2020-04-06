@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import MessageUI
 
 class MainTabbarViewController: UITabBarController {
     
@@ -22,7 +23,7 @@ class MainTabbarViewController: UITabBarController {
         let homeBarItem = UITabBarItem(title: "Home".uppercased(), image: UIImage(named: "home"), selectedImage: UIImage(named: "home"))
         home.tabBarItem = homeBarItem
         
-        let gamesVC = GameCardViewController()
+        let gamesVC = MyGamesViewController()
         let locationsBarItem = UITabBarItem(title: "My Games".uppercased(), image: UIImage(named: "games"), selectedImage: UIImage(named: "games"))
         gamesVC.tabBarItem = locationsBarItem
     
@@ -92,4 +93,10 @@ extension UINavigationController {
    open override var preferredStatusBarStyle: UIStatusBarStyle {
       return topViewController?.preferredStatusBarStyle ?? .default
    }
+}
+extension MainTabbarViewController : MFMailComposeViewControllerDelegate{
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
+    }
 }

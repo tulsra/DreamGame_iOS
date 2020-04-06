@@ -8,6 +8,7 @@
 
 import UIKit
 import PDFKit
+import WebKit
 
 class PointSystemViewController: UIViewController {
     
@@ -15,11 +16,11 @@ class PointSystemViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        let pdfView = PDFView()
-        
+        //let pdfView = PDFView()
+        let pdfView = WKWebView()
         pdfView.translatesAutoresizingMaskIntoConstraints = false
         pdfView.contentMode = .scaleAspectFit
-        pdfView.autoScales = true
+        //pdfView.autoScales = true
         view.addSubview(pdfView)
         
         pdfView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
@@ -27,12 +28,16 @@ class PointSystemViewController: UIViewController {
         pdfView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
         pdfView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         
-        
+        /*
         guard let path = Bundle.main.url(forResource: "point-system", withExtension: "pdf") else { return }
         
         if let document = PDFDocument(url: path) {
             pdfView.document = document
         }
+ */
+        let url = URL(string: "https://mymovieleague.in/howtoplay.html")
+        pdfView.load(URLRequest(url: url!))
+        
     }
     
     
@@ -40,7 +45,7 @@ class PointSystemViewController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = false
         
-        self.title = "POINT SYSTEM"
+        self.title = "HOW TO PLAY"
         
         let menubutton = UIButton(type: .custom)
         menubutton.frame = CGRect(x: 0, y: 0, width: 18, height: 18)
@@ -54,11 +59,6 @@ class PointSystemViewController: UIViewController {
         currHeight1?.isActive = true
         navigationItem.rightBarButtonItem = barButton1
         
-//        let image: UIImage = UIImage(named: "app-logo")!
-//        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 36, height: 36))
-//        imageView.contentMode = .scaleAspectFit
-//        imageView.image = image
-//        self.navigationItem.titleView = imageView
     }
     
     @objc func closeBtnAction() {

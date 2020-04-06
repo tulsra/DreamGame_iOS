@@ -10,15 +10,18 @@ import UIKit
 
 class GameCardViewController: UIViewController {
 
-
+    
     @IBOutlet weak var tblView: UITableView!
-     let cellReuseIdendifier = "GameCardTableViewCell"
+    let cellReuseIdendifier = "GameCardTableViewCell"
+    let viewModel = GameCardViewModel()
+    var movie:Movie?
     var contests:[Contest] = [Contest]()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         setupUI()
+        getList()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -85,27 +88,28 @@ extension GameCardViewController:UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdendifier, for: indexPath) as! GameCardTableViewCell
         cell.selectionStyle = .none
-        if let game = self.contests[indexPath.section].gameCard {
-            cell.lblTotalPrize.text = game.prizePool?.currencyStamped ?? ""
-            cell.lblEntryFee.text = game.ticketPrice?.indianString?.currencyStamped ?? ""
-            
-            cell.lblFirstPrize.text = game.firstPrize?.indianString?.currencyStamped ?? ""
-            cell.lblSecondPrize.text = game.secondPrize?.indianString?.currencyStamped ?? ""
-            cell.lblThirdPrize.text = game.thirdPrize?.indianString?.currencyStamped ?? ""
-            
-            cell.lblLeftSpots.text = "\(game.usersLeft?.indianString ?? "") Players Left"
-            cell.lblTotalSpots.text = "\(game.noOfUsers?.indianString ?? "") Players"
-            cell.lblMinPlayers.text = "Minimum: \(game.minPlayers?.indianString ?? "") Players"
-            cell.tag = indexPath.section
-            cell.completionHandler = { tag in
-                let contest = self.contests[tag]
-                let gamePlayCard = self.getGamePlayDummyCard(contest: contest, index: tag)
+         let contest = self.contests[indexPath.section]
+        cell.lblTotalPrize.text = contest.poolPrize?.indianString?.currencyStamped ?? ""
+            cell.lblEntryFee.text = contest.contestJoiningPrice?.currencyStamped ?? ""
+
+            cell.lblFirstPrize.text = contest.firstPrizeAmount?.indianString?.currencyStamped ?? ""
+            cell.lblSecondPrize.text = contest.secondPrizeAmount?.indianString?.currencyStamped ?? ""
+            cell.lblThirdPrize.text = contest.thirdPrizeAmount?.indianString?.currencyStamped ?? ""
+
+            cell.lblLeftSpots.text = "\(contest.remainingPoolSize?.indianString ?? "") Players Left"
+            cell.lblTotalSpots.text = "\(contest.contestPoolSize?.indianString ?? "") Players"
+        cell.lblMinPlayers.text = "Minimum: 20,000 Players"//"Minimum: \(contest.minPlayers?.indianString ?? "") Players"
+        cell.tag = indexPath.section
+        cell.completionHandler = { tag in
+            if let movie = self.movie {
                 let moviesListVC = PlayGameViewController()
-                moviesListVC.gamePlayCard = gamePlayCard
+                moviesListVC.contest = self.contests[tag]
+                moviesListVC.movie = movie
                 self.navigationController?.pushViewController(moviesListVC, animated: true)
             }
-            
         }
+
+        
         if indexPath.section == 0 {
         cell.timeLeftLabel.text = "03D 22H 13M Left"
         }
@@ -139,7 +143,7 @@ extension GameCardViewController:UITableViewDelegate,UITableViewDataSource {
         titleLabel.textColor = .white
         titleLabel.font = UIFont(name: "RobotoCondensed-Regular", size: 18)
         
-        titleLabel.text = self.contests[section].title?.uppercased()
+        titleLabel.text = self.contests[section].contestName?.uppercased()
         
         view.addSubview(titleLabel)
         return view
@@ -147,47 +151,17 @@ extension GameCardViewController:UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-        
-        let contest = self.contests[indexPath.section]
-//        let gamePlayCard = getGamePlayDummyCard(contest: contest, index: indexPath.section)
-//
-//        let moviesListVC = PlayGameViewController()
-//        moviesListVC.gamePlayCard = gamePlayCard
-//        self.navigationController?.pushViewController(moviesListVC, animated: true)
-        
+                
         let moviesListVC = PrizeBreakupViewController()
-        moviesListVC.gameCard = self.contests[indexPath.section].gameCard
-        moviesListVC.contest = contest
-        moviesListVC.index = indexPath.section
+        moviesListVC.contest = self.contests[indexPath.section]
+        moviesListVC.movie = self.movie
         self.navigationController?.pushViewController(moviesListVC, animated: true)
  
     }
-    
 }
 
 
 extension GameCardViewController {
-    
-    func getGamePlayDummyCard(contest:Contest, index:Int)-> GamePlayCard? {
-        
-        let contest1 = Contest(JSON: contest.toJSON())
-        contest1?.stars?.first?.recentHistoy?.forEach {
-            $0.collection = [ $0.collection?[index] ?? ""]
-        }
-        
-        return GamePlayCard(JSON: ["id":1,
-                                   "movieTitle":contest1?.movieTitle!,
-                                   "movieGenre": contest1?.movieGenre!,
-                                   "releaseDate": contest1?.releaseDate!,
-                                   "releaseTime": contest1?.releaseTime!,
-                                   "movieImageURL":contest1?.movieImageURL!,
-                                   "contestTitle":contest1?.title!,
-                                   "ticketPrice":contest1?.gameCard?.ticketPrice ?? 0,
-                                   "predictometerValue":25.56,
-                                   "numberOfEntries":2,
-                                   "extepectedRanges":contest1?.extepectedRanges ?? [],
-                                   "stars":contest1?.stars?.toJSON() ?? []])
-        
-    }
+
     
 }

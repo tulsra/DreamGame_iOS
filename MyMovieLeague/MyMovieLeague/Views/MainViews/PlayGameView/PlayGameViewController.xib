@@ -29,8 +29,14 @@
                 <outlet property="lblExpectedRange3" destination="yJp-Fg-KCH" id="dHT-Os-YED"/>
                 <outlet property="lblMovieDetails" destination="RyY-gq-JBQ" id="ao9-IX-UgS"/>
                 <outlet property="lblMovieTitle" destination="rjw-QO-uqm" id="qwv-OJ-qLB"/>
+                <outlet property="lblNoCastDetails" destination="yqo-on-SU4" id="olg-4L-02m"/>
+                <outlet property="lblNoRecentHistory" destination="al9-cK-G7s" id="s55-BQ-Aeu"/>
                 <outlet property="lblStarREcentHistory" destination="Rxv-uT-qml" id="Yxz-Bc-Kox"/>
                 <outlet property="recentCollView" destination="IUh-qX-WOb" id="KYg-Rh-GH5"/>
+                <outlet property="recentHistoryBottomView" destination="WmV-Xw-8lO" id="qkG-Cd-0NH"/>
+                <outlet property="recentHistoryBottomViewHeight" destination="GGf-r6-JUO" id="qaw-Li-jof"/>
+                <outlet property="recentHistoryContainer" destination="3e0-EM-tO4" id="J9T-fj-dAV"/>
+                <outlet property="recentHistoryContainerHeight" destination="uXs-Vq-bP3" id="GhJ-tX-4e0"/>
                 <outlet property="view" destination="8HL-Bb-sTm" id="r1o-wr-H6y"/>
                 <outletCollection property="cardViews" destination="mW8-fL-LYF" collectionClass="NSMutableArray" id="27h-tV-c49"/>
                 <outletCollection property="cardViews" destination="xWq-B0-5Xo" collectionClass="NSMutableArray" id="cYX-bK-fLJ"/>
@@ -95,7 +101,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xWq-B0-5Xo">
                                             <rect key="frame" x="20" y="0.0" width="374" height="160"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Recent1" translatesAutoresizingMaskIntoConstraints="NO" id="tth-vz-uea">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tth-vz-uea">
                                                     <rect key="frame" x="257" y="5" width="112" height="150"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="112" id="ocg-pa-PyD"/>
@@ -165,14 +171,24 @@
                                                         <outlet property="delegate" destination="-1" id="n9J-Ys-kN4"/>
                                                     </connections>
                                                 </collectionView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="NO CAST &amp; CREW DETAILS FOUND" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yqo-on-SU4">
+                                                    <rect key="frame" x="5" y="30" width="361" height="125"/>
+                                                    <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
+                                                <constraint firstItem="yqo-on-SU4" firstAttribute="centerY" secondItem="yMh-aa-Xo6" secondAttribute="centerY" id="0ra-Hu-0s4"/>
+                                                <constraint firstItem="yqo-on-SU4" firstAttribute="height" secondItem="yMh-aa-Xo6" secondAttribute="height" id="8IQ-k3-R07"/>
                                                 <constraint firstAttribute="trailing" secondItem="yMh-aa-Xo6" secondAttribute="trailing" constant="5" id="AXV-6M-9ly"/>
                                                 <constraint firstItem="yMh-aa-Xo6" firstAttribute="leading" secondItem="ycs-2Q-J6v" secondAttribute="leading" constant="5" id="FCf-Zr-fPL"/>
+                                                <constraint firstItem="yqo-on-SU4" firstAttribute="centerX" secondItem="yMh-aa-Xo6" secondAttribute="centerX" id="JOo-ck-bCk"/>
                                                 <constraint firstAttribute="height" constant="160" id="JxT-Iz-Y1y"/>
                                                 <constraint firstItem="JJp-Lz-UpG" firstAttribute="top" secondItem="ycs-2Q-J6v" secondAttribute="top" id="RPc-7c-fCP"/>
                                                 <constraint firstItem="yMh-aa-Xo6" firstAttribute="top" secondItem="JJp-Lz-UpG" secondAttribute="bottom" id="Vsa-8x-9lI"/>
+                                                <constraint firstItem="yqo-on-SU4" firstAttribute="width" secondItem="yMh-aa-Xo6" secondAttribute="width" multiplier="0.991758" id="Xt2-Hx-4P6"/>
                                                 <constraint firstItem="JJp-Lz-UpG" firstAttribute="leading" secondItem="ycs-2Q-J6v" secondAttribute="leading" constant="5" id="bsz-a3-TCL"/>
                                                 <constraint firstAttribute="trailing" secondItem="JJp-Lz-UpG" secondAttribute="trailing" constant="5" id="gKg-gz-pcL"/>
                                                 <constraint firstAttribute="bottom" secondItem="yMh-aa-Xo6" secondAttribute="bottom" constant="5" id="xtn-5s-Tw4"/>
@@ -231,15 +247,37 @@
                                                         <outlet property="delegate" destination="-1" id="Kx4-zw-JXm"/>
                                                     </connections>
                                                 </collectionView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="NO RECENT HISTORY FOUND" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="al9-cK-G7s">
+                                                    <rect key="frame" x="0.0" y="40" width="369" height="120"/>
+                                                    <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cI0-nN-6MG">
+                                                    <rect key="frame" x="339" y="0.0" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="ZcK-j3-3QM"/>
+                                                        <constraint firstAttribute="height" constant="40" id="aR5-RG-37z"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <action selector="recentHistoryCancelBtnAction:" destination="-1" eventType="touchUpInside" id="XUF-ot-G7Q"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="IUh-qX-WOb" firstAttribute="top" secondItem="Rxv-uT-qml" secondAttribute="bottom" id="1LA-FO-O18"/>
+                                                <constraint firstItem="al9-cK-G7s" firstAttribute="width" secondItem="IUh-qX-WOb" secondAttribute="width" multiplier="1.13736" id="3cQ-No-jZb"/>
+                                                <constraint firstItem="al9-cK-G7s" firstAttribute="centerY" secondItem="IUh-qX-WOb" secondAttribute="centerY" id="5Pm-aB-ZZn"/>
+                                                <constraint firstItem="al9-cK-G7s" firstAttribute="height" secondItem="IUh-qX-WOb" secondAttribute="height" multiplier="6.81667" id="6rN-e1-efe"/>
+                                                <constraint firstItem="cI0-nN-6MG" firstAttribute="centerY" secondItem="etf-Qy-HCv" secondAttribute="centerY" id="8pp-5P-6mw"/>
                                                 <constraint firstAttribute="trailing" secondItem="IUh-qX-WOb" secondAttribute="trailing" constant="5" id="CP7-gb-gWA"/>
                                                 <constraint firstItem="IUh-qX-WOb" firstAttribute="leading" secondItem="mW8-fL-LYF" secondAttribute="leading" constant="5" id="Lei-ad-S9t"/>
                                                 <constraint firstItem="etf-Qy-HCv" firstAttribute="top" secondItem="mW8-fL-LYF" secondAttribute="top" constant="10" id="Mlz-3J-b5m"/>
                                                 <constraint firstAttribute="trailing" secondItem="etf-Qy-HCv" secondAttribute="trailing" constant="5" id="ZDZ-Qt-mlD"/>
                                                 <constraint firstAttribute="bottom" secondItem="IUh-qX-WOb" secondAttribute="bottom" constant="5" id="bbe-lc-UWK"/>
+                                                <constraint firstItem="cI0-nN-6MG" firstAttribute="centerX" secondItem="etf-Qy-HCv" secondAttribute="centerX" id="egz-W8-W0R"/>
+                                                <constraint firstItem="al9-cK-G7s" firstAttribute="centerX" secondItem="IUh-qX-WOb" secondAttribute="centerX" id="fjW-Cx-d0K"/>
                                                 <constraint firstItem="Rxv-uT-qml" firstAttribute="top" secondItem="mW8-fL-LYF" secondAttribute="top" id="g1Z-6q-Nyn"/>
                                                 <constraint firstAttribute="trailing" secondItem="Rxv-uT-qml" secondAttribute="trailing" constant="60" id="lOL-dL-x5h"/>
                                                 <constraint firstItem="Rxv-uT-qml" firstAttribute="leading" secondItem="mW8-fL-LYF" secondAttribute="leading" constant="5" id="liF-Et-zau"/>
@@ -683,7 +721,6 @@
         </view>
     </objects>
     <resources>
-        <image name="Recent1" width="360" height="480"/>
         <image name="bg4" width="2880" height="5120"/>
         <image name="cancel" width="128" height="128"/>
         <image name="movie-college" width="800" height="480"/>

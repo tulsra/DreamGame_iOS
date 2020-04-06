@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,8 +29,8 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WE ARE BUILDING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ul8-yk-wMP">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No games finished yet.. " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ul8-yk-wMP">
+                    <rect key="frame" x="20" y="44" width="374" height="818"/>
                     <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="18"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -41,10 +41,10 @@
                 <constraint firstItem="Ul8-yk-wMP" firstAttribute="top" secondItem="YpF-aJ-fsk" secondAttribute="top" id="5IR-iJ-0St"/>
                 <constraint firstItem="DxV-5Q-klU" firstAttribute="top" secondItem="xg9-Tl-jVo" secondAttribute="top" id="5sL-To-Zdf"/>
                 <constraint firstAttribute="bottom" secondItem="DxV-5Q-klU" secondAttribute="bottom" id="AKU-5l-Rcq"/>
-                <constraint firstItem="Ul8-yk-wMP" firstAttribute="leading" secondItem="YpF-aJ-fsk" secondAttribute="leading" id="H3w-Ek-YBS"/>
+                <constraint firstItem="Ul8-yk-wMP" firstAttribute="leading" secondItem="YpF-aJ-fsk" secondAttribute="leading" constant="20" id="H3w-Ek-YBS"/>
                 <constraint firstItem="hR3-qL-nY7" firstAttribute="centerY" secondItem="DxV-5Q-klU" secondAttribute="centerY" id="Yv9-19-aQw"/>
                 <constraint firstItem="DxV-5Q-klU" firstAttribute="leading" secondItem="xg9-Tl-jVo" secondAttribute="leading" id="ZGz-6Y-0lJ"/>
-                <constraint firstItem="YpF-aJ-fsk" firstAttribute="trailing" secondItem="Ul8-yk-wMP" secondAttribute="trailing" id="bOA-d5-w9U"/>
+                <constraint firstItem="YpF-aJ-fsk" firstAttribute="trailing" secondItem="Ul8-yk-wMP" secondAttribute="trailing" constant="20" id="bOA-d5-w9U"/>
                 <constraint firstItem="YpF-aJ-fsk" firstAttribute="bottom" secondItem="Ul8-yk-wMP" secondAttribute="bottom" id="dkh-I6-c96"/>
                 <constraint firstItem="hR3-qL-nY7" firstAttribute="centerX" secondItem="DxV-5Q-klU" secondAttribute="centerX" id="e2R-2g-nU1"/>
                 <constraint firstItem="YpF-aJ-fsk" firstAttribute="trailing" secondItem="DxV-5Q-klU" secondAttribute="trailing" id="lf6-ML-3mh"/>

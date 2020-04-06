@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PrivacyPolicyViewController" customModule="MyMovieLeague" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="yPn-I0-wJF" id="ETi-i8-g9q"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="yPn-I0-wJF">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie-college" translatesAutoresizingMaskIntoConstraints="NO" id="yVD-9r-VVL">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.98000001907348633" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg4" translatesAutoresizingMaskIntoConstraints="NO" id="xg9-JM-SGK">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="yVD-9r-VVL" firstAttribute="leading" secondItem="yPn-I0-wJF" secondAttribute="leading" id="4cQ-Dv-32h"/>
+                <constraint firstItem="xg9-JM-SGK" firstAttribute="height" secondItem="yVD-9r-VVL" secondAttribute="height" id="NFf-hH-DI0"/>
+                <constraint firstItem="xg9-JM-SGK" firstAttribute="centerY" secondItem="yVD-9r-VVL" secondAttribute="centerY" id="RRE-ni-9FP"/>
+                <constraint firstAttribute="bottom" secondItem="yVD-9r-VVL" secondAttribute="bottom" id="YxB-2R-lZa"/>
+                <constraint firstItem="yVD-9r-VVL" firstAttribute="top" secondItem="yPn-I0-wJF" secondAttribute="top" id="bfv-3Q-efH"/>
+                <constraint firstItem="xg9-JM-SGK" firstAttribute="centerX" secondItem="yVD-9r-VVL" secondAttribute="centerX" id="gNX-ki-wM4"/>
+                <constraint firstItem="xg9-JM-SGK" firstAttribute="width" secondItem="yVD-9r-VVL" secondAttribute="width" id="mh5-lz-L80"/>
+                <constraint firstItem="Nac-KO-4CH" firstAttribute="trailing" secondItem="yVD-9r-VVL" secondAttribute="trailing" id="xqT-ou-fJU"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Nac-KO-4CH"/>
+            <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg4" width="2880" height="5120"/>
+        <image name="movie-college" width="800" height="480"/>
+    </resources>
+</document>

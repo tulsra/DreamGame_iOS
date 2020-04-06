@@ -10,49 +10,11 @@ import Foundation
 
 extension Date {
     
-    var messageHeaderDate: String {
-        get {
-            if Calendar.current.isDateInToday(self) {
-                return "Today".uppercased()
-            }
-            if Calendar.current.isDateInYesterday(self) {
-                return "Yesterday".uppercased()
-            }
-            let formatter = NumberFormatter()
-            formatter.numberStyle = .ordinal
-            
-            let dateFormatterPrint = DateFormatter()
-            dateFormatterPrint.dateFormat = "EEEE, MMM"
-            let firstString = dateFormatterPrint.string(from: self)
-            dateFormatterPrint.dateFormat = "dd"
-            let kTest =  dateFormatterPrint.string(from: self)
-            let kInt = Int(kTest)
-            let secondString = formatter.string(from: kInt! as NSNumber)
-            
-            dateFormatterPrint.dateFormat = "yyyy"
-            let thirdString = dateFormatterPrint.string(from: self)
-            
-            return firstString + " \(secondString!) \(thirdString)"
-        }
-    }
-    
-    var messageHeaderDateHumanType: String {
-        get {
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .full
-//        dateFormatter.timeStyle = .short
-        dateFormatter.doesRelativeDateFormatting = true
-        
-        let time = dateFormatter.string(from: self)
-        return time    // prints "Today, 5:10 PM"
-        }
-    }
     
     var displayDate: String {
         get {
             let dateFormatterPrint = DateFormatter()
-            dateFormatterPrint.dateFormat = "dd-MM-yyyy"
+            dateFormatterPrint.dateFormat = "dd MMM, yyyy"
             return dateFormatterPrint.string(from: self)
         }
     }
@@ -85,6 +47,61 @@ extension Int {
     var date: Date {
         get {
             return Date(timeIntervalSince1970: TimeInterval(self))
+        }
+    }
+}
+
+
+extension String {
+    
+    var date:Date {
+        get {
+            let formats:[String] = ["yyyy-MM-dd HH:mm:ss",
+                                    "yyyy-MM-dd'T'HH:mm:ss",
+                                    "yyyy-MM-dd'T'HH:mm:ssZ",
+                                    "yyyy-MM-dd'T'HH:mm:ss.SSS",
+                                    "yyyy-MM-dd'T'HH:mm",
+                                    "E, dd MMM YYYY",
+                                    "MMMM dd yyyy",
+                                    "yyyy-MM-dd",
+                                    "dd MMM yy",
+                                    "hh:mm a",
+                                    "yyyy-MM-dd hh:mm a",]
+            let formatter = DateFormatter()
+            var kDate:Date = Date()
+            for format in formats {
+                formatter.dateFormat = format
+                if let aDate = formatter.date(from: self) {
+                    kDate = aDate
+                    break
+                }
+            }
+            return kDate
+        }
+    }
+    var utcDate:Date {
+        get {
+            let formats:[String] = ["yyyy-MM-dd HH:mm:ss",
+                                    "yyyy-MM-dd'T'HH:mm:ss",
+                                    "yyyy-MM-dd'T'HH:mm:ssZ",
+                                    "yyyy-MM-dd'T'HH:mm:ss.SSS",
+                                    "yyyy-MM-dd'T'HH:mm",
+                                    "E, dd MMM YYYY",
+                                    "MMMM dd yyyy",
+                                    "yyyy-MM-dd",
+                                    "dd MMM yy",
+                                    "hh:mm a"]
+            let formatter = DateFormatter()
+            formatter.timeZone = TimeZone(identifier: "UTC")
+            var kDate:Date = Date()
+            for format in formats {
+                formatter.dateFormat = format
+                if let aDate = formatter.date(from: self) {
+                    kDate = aDate
+                    break
+                }
+            }
+            return kDate
         }
     }
 }

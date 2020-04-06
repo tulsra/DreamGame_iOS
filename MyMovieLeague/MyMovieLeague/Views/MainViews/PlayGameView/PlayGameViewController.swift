@@ -9,9 +9,17 @@
 import UIKit
 import GaugeMeterView
 import PlugNPlay
+import SDWebImage
 
 class PlayGameViewController: UIViewController {
 
+    @IBOutlet weak var lblNoCastDetails: UILabel!
+    @IBOutlet weak var lblNoRecentHistory: UILabel!
+    @IBOutlet weak var recentHistoryContainer: UIView!
+    @IBOutlet weak var recentHistoryContainerHeight: NSLayoutConstraint!
+    @IBOutlet weak var recentHistoryBottomView: UIView!
+    @IBOutlet weak var recentHistoryBottomViewHeight: NSLayoutConstraint!
+    
     @IBOutlet weak var lblMovieTitle: UILabel!
     @IBOutlet weak var lblStarREcentHistory: UILabel!
     @IBOutlet weak var lblExpectedRange2: UILabel!
@@ -28,16 +36,19 @@ class PlayGameViewController: UIViewController {
     @IBOutlet var playLabels: [UILabel]!
     @IBOutlet weak var castCollView: UICollectionView!
     @IBOutlet weak var recentCollView: UICollectionView!
-    
+    var movie:Movie?
+    var contest:Contest?
+    var contestDetails:ContestDetails?
+    var recentBoxoffice:[RecentBoxOffice]?
+    var cast:Cast?
     var cellTapped:()->Void = {
            
        }
-    
-    var gamePlayCard:GamePlayCard?
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
+        self.getList()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -67,7 +78,61 @@ class PlayGameViewController: UIViewController {
     @objc func backBtnAction() {
         self.navigationController?.popViewController(animated: true)
     }
-    
+    func loadData() {
+        
+        self.recentHistoryContainer.isHidden = false
+        self.recentHistoryContainerHeight.constant = 165
+        self.recentHistoryBottomView.isHidden = false
+        self.recentHistoryBottomViewHeight.constant = 10
+        
+        self.lblNoRecentHistory.isHidden = false
+        if self.recentBoxoffice?.count ?? 0 > 0 {
+            self.lblNoRecentHistory.isHidden = true
+        }
+        
+        self.lblNoCastDetails.isHidden = false
+        if self.contestDetails?.lstCast?.count ?? 0 > 0 {
+            self.lblNoCastDetails.isHidden = true
+        }
+        
+        if let contest = self.contest, let contestDetail = self.contestDetails, let movie = self.movie {
+            self.lblMovieTitle.text = ("GAME" + " - " + (contest.contestName ?? "")).uppercased()
+            self.btnJoin.setTitle("PLAY (₹\(contest.contestJoiningPrice ?? ""))", for: .normal)
+            
+            if let urlString = self.movie?.movieUrl?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)  {
+                if let url  = URL(string: urlString){
+                    self.imgViewMovie.sd_setImage(with: url, placeholderImage: nil , options:SDWebImageOptions.avoidAutoSetImage, completed: { (image, error, cacheType, url) in
+                        DispatchQueue.main.async {
+                            if let image = image, let pic = self.movie?.movieUrl?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed), pic == url!.absoluteString {
+                                self.imgViewMovie.image = image
+                            }
+                        }
+                    })
+                }
+            }
+            
+            self.lblExpectedRane1.text =   "\(contestDetails?.lstExpectedRange?[0].rangeFrom?.croresInt ?? "")-\(contestDetails?.lstExpectedRange?[0].rangeTo?.croresInt ?? "") CRS".uppercased()
+            self.lblExpectedRange2.text = "\(contestDetails?.lstExpectedRange?[1].rangeFrom?.croresInt ?? "")-\(contestDetails?.lstExpectedRange?[1].rangeTo?.croresInt ?? "") CRS".uppercased()
+            self.lblExpectedRange3.text = "\(contestDetails?.lstExpectedRange?[2].rangeFrom?.croresInt ?? "")-\(contestDetails?.lstExpectedRange?[2].rangeTo?.croresInt ?? "") CRS".uppercased()
+            
+            let combination = NSMutableAttributedString()
+            combination.append(self.getAttriburedText(title: "Title", description: contestDetail.movieDetail?.name ?? ""))
+            combination.append(self.getNewLine())
+            combination.append(self.getAttriburedText(title: "Genre", description: contestDetail.movieDetail?.name ?? ""))
+            combination.append(self.getNewLine())
+            combination.append(self.getAttriburedText(title: "Release Date", description: contestDetail.movieDetail?.releaseDate?.date.displayDate ?? ""))
+            combination.append(self.getNewLine())
+            combination.append(self.getAttriburedText(title: "Release Time", description: contestDetail.movieDetail?.releaseSeason ?? ""))
+            self.lblMovieDetails.attributedText = combination
+            
+            self.lblStarREcentHistory.text = "RECENT BOX-OFFICE HISTORY"
+            if let cast = self.cast{
+                self.lblStarREcentHistory.text = "\(cast.name ?? "") - RECENT BOX-OFFICE HISTORY".uppercased()
+            }
+        }
+        self.recentCollView.reloadData()
+        self.castCollView.reloadData()
+    }
     @IBAction func joinBtnAction(_ sender: Any) {
     
         let txnParm = PUMTxnParam()
@@ -157,120 +222,52 @@ class PlayGameViewController: UIViewController {
                 $0.backgroundColor = greenColor//.withAlphaComponent(0.2)
             }
         }
-        
-        
-        if let gameCard = self.gamePlayCard {
-            self.lblMovieTitle.text = ("GAME" + " - " + (gameCard.contestTitle ?? "")).uppercased()
-            self.btnJoin.setTitle("PLAY (₹\(gameCard.ticketPrice ?? 0))", for: .normal)
-            self.imgViewMovie.image = UIImage(named: gameCard.movieImageURL ?? "")
-            
-            self.lblExpectedRane1.text = gameCard.extepectedRanges?[0].uppercased()
-            self.lblExpectedRange2.text = gameCard.extepectedRanges?[1].uppercased()
-            self.lblExpectedRange3.text = gameCard.extepectedRanges?[2].uppercased()
-            
-            let combination = NSMutableAttributedString()
-            combination.append(self.getAttriburedText(title: "Title", description: gameCard.movieTitle ?? ""))
-            combination.append(self.getNewLine())
-            combination.append(self.getAttriburedText(title: "Genre", description: gameCard.movieGenre ?? ""))
-            combination.append(self.getNewLine())
-            combination.append(self.getAttriburedText(title: "Release Date", description: gameCard.releaseDate ?? ""))
-            combination.append(self.getNewLine())
-            combination.append(self.getAttriburedText(title: "Release Time", description: gameCard.releaseTime ?? ""))
-            self.lblMovieDetails.attributedText = combination
-        }
     }
+    
+    @IBAction func recentHistoryCancelBtnAction(_ sender: Any) {
+        self.recentHistoryContainer.isHidden = true
+        self.recentHistoryContainerHeight.constant = 0
+        self.recentHistoryBottomView.isHidden = true
+        self.recentHistoryBottomViewHeight.constant = 0
+    }
+    
 
 }
 
 extension PlayGameViewController:UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return collectionView == self.recentCollView ? self.gamePlayCard?.stars?.first?.recentHistoy?.count ?? 0 : self.gamePlayCard?.stars?.count ?? 0
+        return collectionView == self.recentCollView ? self.recentBoxoffice?.count ?? 0 : self.contestDetails?.lstCast?.count ?? 0
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if collectionView == self.recentCollView {
-            /*
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecentHistoryViewCell", for: indexPath as IndexPath) as! RecentHistoryViewCell
-            
-            if let stars = self.gamePlayCard?.stars, stars.count > 0, let recent = stars.first?.recentHistoy {
-                let history = recent[indexPath.row]
-                cell.imgView.image = UIImage(named: history.imageUrl ?? "")
-                
-                let combination = NSMutableAttributedString()
-                
-                combination.append(self.getRecentAttributedText(title: "Collection", description: history.collection?.first ?? ""))
-                combination.append(self.getNewLine())
-                combination.append(self.getRecentAttributedText(title: "Title", description: history.movieTitle ?? ""))
-                combination.append(self.getNewLine())
-                combination.append(self.getRecentAttributedText(title: "Genre", description: history.movieGenre ?? ""))
-                combination.append(self.getNewLine())
-                combination.append(self.getRecentAttributedText(title: "Verdict", description: history.verdict ?? "", isUppercased: true))
-              
-                cell.lblTitle.attributedText = combination
-                
-            }
- */
+     
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieCollectionViewCell", for: indexPath as IndexPath) as! MovieCollectionViewCell
-
-                       cell.imgBottomSpaceConstraint.constant = 0
-                       cell.btnPlayHeightConstraint.constant = 0
-                      
-                         cell.lblTitle.textAlignment = .left
-                     if let stars = self.gamePlayCard?.stars, stars.count > 0, let recent = stars.first?.recentHistoy {
-                      let history = recent[indexPath.row]
-                          cell.imgView.image = UIImage(named: history.imageUrl ?? "")
-                          
-                          let myAttribute = [ NSAttributedString.Key.font: UIFont(name: "Roboto-Bold", size: 12.0)! ]
-                        let mutableAttrString1 = NSMutableAttributedString(string: (history.collection?.first ?? "").uppercased(), attributes: myAttribute)
-                        
-                          let myAttribute1 = [ NSAttributedString.Key.font: UIFont(name: "Roboto-Medium", size: 10.0)! ]
-                          let mutableAttrString2 = NSMutableAttributedString(string: "\n" + (history.movieTitle ?? "").uppercased() , attributes: myAttribute1)
-
-                        let myAttribute3 = [ NSAttributedString.Key.font: UIFont(name: "Roboto-Medium", size: 10.0)! ]
-                        let mutableAttrString3 = NSMutableAttributedString(string: "\n" + (history.movieGenre ?? "").capitalized , attributes: myAttribute3)
-
-                        let myAttribute4 = [ NSAttributedString.Key.font: UIFont(name: "Roboto-Medium", size: 10.0)! ]
-                        let mutableAttrString4 = NSMutableAttributedString(string: "\n" + (history.verdict ?? "").uppercased() , attributes: myAttribute4)
-                        
-                          let combination = NSMutableAttributedString()
-                          combination.append(mutableAttrString1)
-                          combination.append(mutableAttrString2)
-                        combination.append(mutableAttrString3)
-                        combination.append(mutableAttrString4)
-                          cell.lblTitle.attributedText = combination
-                          
-                      }
+            
+            cell.imgBottomSpaceConstraint.constant = 0
+            cell.btnPlayHeightConstraint.constant = 0
+            cell.lblTitle.textAlignment = .left
+            
+            if let recent = self.recentBoxoffice, indexPath.row < recent.count {
+                cell.configure(recentBxOfc: recent[indexPath.row])
+            }
             
             return cell
         }
         else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieCollectionViewCell", for: indexPath as IndexPath) as! MovieCollectionViewCell
-
-             cell.imgBottomSpaceConstraint.constant = 0
-             cell.btnPlayHeightConstraint.constant = 0
             
-               cell.lblTitle.textAlignment = .left
-            if let stars = self.gamePlayCard?.stars, indexPath.count < stars.count {
-                let star = stars[indexPath.row]
-                cell.imgView.image = UIImage(named: star.imageUrl ?? "")
+            cell.imgBottomSpaceConstraint.constant = 0
+            cell.btnPlayHeightConstraint.constant = 0
             
-                let myAttribute = [ NSAttributedString.Key.font: UIFont(name: "Roboto-Bold", size: 12.0)! ]
-                let myAttribute1 = [ NSAttributedString.Key.font: UIFont(name: "Roboto-Medium", size: 10.0)! ]
-                
-                
-                let mutableAttrString1 = NSMutableAttributedString(string: (star.name ?? "").uppercased(), attributes: myAttribute)
-                var text = star.role ?? ""
-                let mutableAttrString2 = NSMutableAttributedString(string: "\n" + text.uppercased() , attributes: myAttribute1)
-                let combination = NSMutableAttributedString()
-                combination.append(mutableAttrString1)
-                combination.append(mutableAttrString2)
-                cell.lblTitle.attributedText = combination
-                
+            cell.lblTitle.textAlignment = .left
+            
+            if let castList = self.contestDetails?.lstCast, indexPath.row < castList.count {
+                cell.configure(cast: castList[indexPath.row])
             }
             return cell
         }
-        
        
     }
     
@@ -329,8 +326,17 @@ extension PlayGameViewController:UICollectionViewDataSource,UICollectionViewDele
         return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
   
-  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-      self.cellTapped()
-  }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! MovieCollectionViewCell
+        if collectionView == self.recentCollView {
+            cell.showTitle()
+        }
+        else {
+            if let cast = cell.cast {
+                self.cast = cast
+                self.getRecentBoxoffice(castId: cast.castId ?? 0)
+            }
+        }
+    }
   
 }

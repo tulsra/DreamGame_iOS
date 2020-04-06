@@ -8,6 +8,7 @@
 
 import UIKit
 import PDFKit
+import WebKit
 
 class TermsAndConditionsViewController: UIViewController {
 
@@ -15,11 +16,11 @@ class TermsAndConditionsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let pdfView = PDFView()
-
+        //let pdfView = PDFView()
+        let pdfView = WKWebView()
         pdfView.translatesAutoresizingMaskIntoConstraints = false
         pdfView.contentMode = .scaleAspectFit
-        pdfView.autoScales = true
+        //pdfView.autoScales = true
         view.addSubview(pdfView)
 
         pdfView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
@@ -27,12 +28,15 @@ class TermsAndConditionsViewController: UIViewController {
         pdfView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
         pdfView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         
-        
+        /*
         guard let path = Bundle.main.url(forResource: "Terms-and-Conditions-Template", withExtension: "pdf") else { return }
 
         if let document = PDFDocument(url: path) {
             pdfView.document = document
         }
+ */
+        let url = URL(string: "https://www.mymovieleague.in/terms.html")//"https://mymovieleague.in/howtoplay.html")
+        pdfView.load(URLRequest(url: url!))
     }
 
 
